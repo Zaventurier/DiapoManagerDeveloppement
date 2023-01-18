@@ -3,6 +3,34 @@ Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
 Version 1.3.1 - 18 Janvier 2023
 
+Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
+La dernière version du plugin permet d'ajouter des images, de les uploads dans la médiathèque.
+Actuellement, seuls les fonctionnalités suivantes sont disponible :
+> Ajout d'image
+> Un menu et des sous-menus personnalisés (ou presque)
+> Une gestion quasi indépendante des caroussels sur votre site
+
+Vous pouvez retrouver ici dans ce fichier, l'historique des corrections/ajouts qui sont réalisés dans le plugin.
+Nous nous éfforçons de regrouper au mieux les mises à jours.
+
+Pour plus de visibilité nous nous éfforçons de garder une syntaxe précise :
+
+DateMAJ - Version > [Version Ancienne/Actuelle]
+
+Dans notre code, nous gardons une syntaxe particulière :
+/**
+* Résumé de la fonction
+* return void
+* (Gacultatif) param $param 
+* @since Version
+* Modifié : VersionModificationFonction
+* Un petit résumé de la fonction
+**/
+
+Nous rappelons que ce plugin est réalisé en France à donc comme langue le français.
+
+[Remarque] : L'initialisation du répertoire GitHub ne coincident pas avec le début du projet : le 10 Janvier 2022
+
 ===== Historique des Mises à jours =====
 
 10 Janvier 2023 - 1.1.0 > [Version Ancienne]
@@ -56,5 +84,12 @@ Version 1.3.1 - 18 Janvier 2023
 > Changement du logo de l'onglet
 > Modification et Ajouts de texte déjà existants ou non existants
 
-18 Janvier 2023 - 1.3.1 > [Version Actuelle]
+18 Janvier 2023 - 1.3.1 > [Version Ancienne]
 > Correction d'un bug critique de fonctionnement : l'insertion dans la base de données ne fonctionnait plus
+
+18 Janvier 2023 - 1.4.1 > [Version Actuelle]
+> Correction du bug qui empêchait la création de la deuxième table de la base de données
+> Suppression d'un texte inutile sur un fichier
+> Supression de fichiers actuellement inutiles
+> Allègement du code : Séparation des différents sous-menus dans des fichiers différents
+> Début de la page de gestion des images

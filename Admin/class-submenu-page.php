@@ -6,11 +6,12 @@
  */
  
 /**
- * Créer une sous menu pour la page du plugin.
+ * Créer une sous menu pour la page principal du plugin.
  *
  * Fourni les fonctionnalité nécessaire pour le rendu de la page.
  *
- * @package Custom_Admin_Settings
+ * @since 1.1.0
+ * Modifié : -
  */
 
 /**

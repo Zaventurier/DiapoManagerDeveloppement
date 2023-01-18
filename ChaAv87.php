@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin gère automatiquement les images que vous importer à travers des tables de votre base de données unique et indépendantes du reste. L'historique des correctifs/Ajouts est à consulter dans readme.me.
  * Author: Guillaume Pascail
- * Version: 1.3.1 - 18/01/2023
+ * Version: 1.4.1 - 18/01/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -28,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Appel des fonctions qui vont s'éxécuter à l'activation du plugin
  * @since 1.1.2
- * Modifié : 1.4
+ * Modifié : 1.4.1
  * Remarque : __FILE__ signifie que la requête est présente dans le fichier.
  */
 
@@ -45,7 +45,7 @@ register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction 
  * Cette fonction ne gère pas les différentes erreurs qui pourrait être occasionnés.
  * Remarque : la table n'est pas relié au reste de la base de données et les images sont gérés de façon indépendantes du reste du site
  * @since 1.1.2
- * Modifié : 1.1.4
+ * Modifié : 1.1.4.1
  */
 function Prepare_To_Run() {
     global $wpdb;
@@ -79,7 +79,7 @@ function Prepare_To_Run() {
    * Résumé de Create_Caroussel
    * @return void
    * @since 1.1.3
-   * Modifié : 1.4
+   * Modifié : 1.4.1
    * Créer une deuxième table pour la gestion des Caroussels
    * Cette table à pour clé primaire idCaroussel et pour clé étrangère idImage de Image
    */
