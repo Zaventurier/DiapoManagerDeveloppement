@@ -58,17 +58,3 @@ Version 1.3.1 - 18 Janvier 2023
 
 18 Janvier 2023 - 1.3.1 > [Version Actuelle]
 > Correction d'un bug critique de fonctionnement : l'insertion dans la base de données ne fonctionnait plus
-
-?? Janvier 2023 - 1.4 > [Version Future]
-> Correction du bug qui empêchait la création de la deuxième table de la base de données
-> 
-
-
-
-
-
-
-
-
-?? ?? 2023 - ??? > [Version Futur]
-> Changement du nom du Plugin : ???
