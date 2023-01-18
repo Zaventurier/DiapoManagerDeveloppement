@@ -1,0 +1,12 @@
+
+
+<?php
+/*
+Plugin Name: ChasseAvenir87
+Plugin URI: 
+Description: Plugin pour le développement du site de l'association chasse avenir 87 - Affichage de photos
+Author: Guillaume Pascail
+Version: 1.0.1
+Author URI: 
+*/
+
