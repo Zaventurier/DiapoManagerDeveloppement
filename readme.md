@@ -21,7 +21,7 @@ Dans notre code, nous gardons une syntaxe particulière :
 /**
 * Résumé de la fonction
 * return void
-* (Gacultatif) param $param 
+* (Facultatif) param $param 
 * @since Version
 * Modifié : VersionModificationFonction
 * Un petit résumé de la fonction
