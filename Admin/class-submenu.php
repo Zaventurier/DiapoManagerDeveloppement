@@ -110,3 +110,4 @@ public function add_options_page() {
         );
 }
 }
+?>

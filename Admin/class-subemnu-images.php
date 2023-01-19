@@ -22,9 +22,14 @@
             <html lang="fr">
                 <head>
                     <style>
-                        /**
-                        * Code CSS nécessaire à la page à inclure ici
-                        */
+                        .UneImage {
+                            border: 2px solid yellow;
+                            width: 2%;
+                            padding: 50px;
+                            display:flex;
+                            flex-direction: column;
+                            margin-top: 9px;
+                        }
                     </style>
                 </head>
                 <body>
@@ -33,18 +38,20 @@
                     <div class="AllImages">
                         <?php
                         $images = $this->getAllImages();
-                        foreach($images as $image){?>
-                        
-    
-                        <?php
+                        //onclick="displayImageInfo(<?php echo json_encode($image);
+                        //style="background-image:url(<?php echo $image->cheminImage;
+                        foreach($images as $image){
+                             ?>
+                                <div class="UneImage">
+                                    <img src="<?php echo $image->guid; ?>">
+                                </div>
+                            <?php
                     }
                     ?>
                     </div>
                 </body>
                 <script>
-                    /**
-                    * Inclure le potentiel script JavaScript nécessaire au fonctionnement de la page
-                    */
+                    
                 </script>
             </html>
         <?php
@@ -60,15 +67,26 @@
    * Résumé de getAllImages
    * @return mixed
    * @since 1.3 - 17 Janvier 2023
-   * Modifié : -
+   * Modifié : 1.4.2
    * Récupère et renvoie l'id le nom et le chemin de l'image dans le but de les afficher sous forme de tableau assiocatif
    */
 
 function getAllImages(){
     global $wpdb;
-    $images = $wpdb->get_results( "SELECT ID, nomImage, cheminImage FROM {$wpdb->prefix}chasseavenirimage", ARRAY_A );
+    $images = $wpdb->get_results("SELECT * FROM v_photochasseavenir");
     return $images;
 }
+/**
+ * function insertImage(array $array){
+   *     global $wpdb;
+    *    $result = $wpdb->insert($wpdb->prefix . "chasseavenirimage", $array);
+     *   if (!$result) {
+      *      $wpdb->print_error();
+       * }else{
+        *    echo "insertion réussi !";
+        *}
+    *}
+ */
 
   /**
    * Résumé getAllImageById
@@ -81,8 +99,9 @@ function getAllImages(){
 
 function getAllImageById($UnId){
     global $wpdb;
-    $AllInfImages = $wpdb->get_results( "SELECT nomImage, cheminImage, DescriptionImage, extensionImages, poidsImage, dateAjout FROM {$wpdb->prefix}chasseavenirimage WHERE idImage = $UnId", ARRAY_A );
+    $AllInfImages = $wpdb->get_results( "SELECT * FROM  v_photochasseavenir WHERE idImage = $UnId", ARRAY_A );
     return $AllInfImages;
 }
     
  }
+ ?>

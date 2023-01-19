@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin gère automatiquement les images que vous importer à travers des tables de votre base de données unique et indépendantes du reste. L'historique des correctifs/Ajouts est à consulter dans readme.me.
  * Author: Guillaume Pascail
- * Version: 1.4.1 - 18/01/2023
+ * Version: 1.4.2 - 19/01/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -28,12 +28,13 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Appel des fonctions qui vont s'éxécuter à l'activation du plugin
  * @since 1.1.2
- * Modifié : 1.4.1
+ * Modifié : 1.4.2
  * Remarque : __FILE__ signifie que la requête est présente dans le fichier.
  */
 
 register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
-register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
+//register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
+register_activation_hook(__FILE__, 'Create_View');//On appelle la fonction Create_View contenu dans ce fichier.
 
 
 
@@ -104,13 +105,36 @@ function Create_Caroussel(){
     }
 }
 
+
+/**
+ * Résumé de Create_View
+ * @return void
+ * Créer une vue pour la base de données
+ * /!\ > Cette fonction est encore sujet à test grandeur nature
+ * @since 1.4.2
+ * Modifié : - 
+ */
+function Create_View(){
+    global $wpdb;
+    $name_view = 'v_photochasseavenir';
+    $charset_collate = $wpdb->get_charset_collate();
+
+    $view = "CREATE VIEW $name_view AS
+    select wp.guid AS guid, ca.idImage AS idImage,ca.cheminImage AS cheminImage,ca.nomImage AS nomImage,ca.DescriptionImage AS DescriptionImage,ca.extensionImage AS extensionImage,ca.poidsImage AS poidsImage,ca.dateAjout AS dateAjout,ca.estSupprime AS estSupprime,ca.dateSuppression AS dateSuppression,ca.mediaLibraryId AS mediaLibraryId 
+    from wp_chasseavenirimage ca left join wp_posts wp 
+    on wp.ID = ca.mediaLibraryId $charset_collate ";
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+    dbDelta( $view );
+    echo $wpdb->print_error();
+}
+
 class ChaAv87{
     
     /**
      * Summary of ver
      * @var string
      */
-    public $ver = '1.1.2';
+    public $ver = '1.4.1';
 
     public function __construct(){
 
@@ -173,4 +197,4 @@ add_action( 'admin_menu', 'capitaine_remove_menu_pages' );*/
 //add_shortcode permet de définir, en tapant [carousel] d'éxécuter la fonction carrousel_shortcode et d'intégrer le code dans la page souhaité.
 add_shortcode( 'carrousel', 'carrousel_shortcode' );
 
-
+?>
