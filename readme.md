@@ -98,7 +98,7 @@ Nous rappelons que ce plugin est réalisé en France à donc comme langue le fra
 > Modification de la structure de la base de données : Ajout de la fonctionnalité de création de la vue. /!\ > Cette fonctionnalité est actuellement non fonctionnel et nous travaillons à son fonctionnement
 > Correction de bug
 
-?? Janvier 2023 - 1.4.3 > [Version Actuelle]
+19 Janvier 2023 - 1.4.3 > [Version Actuelle]
 > Désactivation de la création de la vue à l'initialisation du plugin
 > Ajout d'un fichier "debug.log" permettant d'afficher les logs à des endroits particuliers et critiques
 
