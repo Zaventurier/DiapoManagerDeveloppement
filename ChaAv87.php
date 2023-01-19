@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin gère automatiquement les images que vous importer à travers des tables de votre base de données unique et indépendantes du reste. L'historique des correctifs/Ajouts est à consulter dans readme.me.
  * Author: Guillaume Pascail
- * Version: 1.4.2 - 19/01/2023
+ * Version: 1.4.3 - 19/01/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -25,6 +25,10 @@ if ( ! defined( 'WPINC' ) ) {
    }
 
 
+
+ini_set('error_log', dirname(__FILE__) . '/debug.log');
+
+
 /**
  * Appel des fonctions qui vont s'éxécuter à l'activation du plugin
  * @since 1.1.2
@@ -33,8 +37,10 @@ if ( ! defined( 'WPINC' ) ) {
  */
 
 register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
-//register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
-register_activation_hook(__FILE__, 'Create_View');//On appelle la fonction Create_View contenu dans ce fichier.
+register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
+//error_log('register_activation_hook function called.');
+//register_activation_hook(__FILE__, 'CreerVue');//On appelle la fonction CreerVue contenu dans ce fichier.
+
 
 
 
@@ -54,8 +60,10 @@ function Prepare_To_Run() {
     //Si elle n'existe pas, on va donc la créer.
     $table_name = $wpdb->prefix . "chasseavenirImage";
     $charset_collate = $wpdb->get_charset_collate();
+    error_log('Fonction Prepare_To_Run : Fonction correctement appellé !');
 
     if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+        error_log('Fonction Prepare_To_Run : Préparation de la requête !');
         $sql = "CREATE TABLE $table_name (
             idImage mediumint(11) NOT NULL AUTO_INCREMENT,
             cheminImage varchar(100) NOT NULL,
@@ -70,10 +78,19 @@ function Prepare_To_Run() {
             PRIMARY KEY (idImage),
             FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)
             ) $charset_collate;";
+        error_log('Fonction Prepare_To_Run : Requête préparé avec succés !');
         //Cette fonction necessite l'utilisation d'un fichier particulier : on va donc le chercher
         //ABSPATH permet de revenir à la racine du site
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $sql );
+        if(dbDelta($sql) == true){
+            error_log('Fonction Prepare_To_Run : Requête éxécuté avec succés !');
+        }else{
+            error_log('Echec lors de l"éxecution de la requête :' . $wpdb->print_error());
+
+        }
+    }else{
+        error_log('La table chasseavenirimages étant existante, pas besoin de la créer !');
     }
 }
   /**
@@ -112,21 +129,31 @@ function Create_Caroussel(){
  * Créer une vue pour la base de données
  * /!\ > Cette fonction est encore sujet à test grandeur nature
  * @since 1.4.2
- * Modifié : - 
+ * Modifié : -
+ * Désactivé : 1.4.3 
  */
-function Create_View(){
+/*function CreerVue(){
     global $wpdb;
     $name_view = 'v_photochasseavenir';
     $charset_collate = $wpdb->get_charset_collate();
+    $table_name = $wpdb->prefix . "chasseavenirImage";
+    error_log('Fonction CreerVue : Appel de la fonction réussi.');
 
-    $view = "CREATE VIEW $name_view AS
-    select wp.guid AS guid, ca.idImage AS idImage,ca.cheminImage AS cheminImage,ca.nomImage AS nomImage,ca.DescriptionImage AS DescriptionImage,ca.extensionImage AS extensionImage,ca.poidsImage AS poidsImage,ca.dateAjout AS dateAjout,ca.estSupprime AS estSupprime,ca.dateSuppression AS dateSuppression,ca.mediaLibraryId AS mediaLibraryId 
-    from wp_chasseavenirimage ca left join wp_posts wp 
-    on wp.ID = ca.mediaLibraryId $charset_collate ";
+    $view = "CREATE OR REPLACE VIEW $name_view AS 
+    select wp.guid AS guid, ca.idImage AS idImage,ca.cheminImage AS cheminImage,ca.nomImage AS nomImage,ca.DescriptionImage 
+    AS DescriptionImage,ca.extensionImage AS extensionImage,ca.poidsImage AS poidsImage,ca.dateAjout AS dateAjout,ca.estSupprime 
+    AS estSupprime,ca.dateSuppression AS dateSuppression,ca.mediaLibraryId AS mediaLibraryId 
+    from $table_name ca left join wp_posts wp 
+    on wp.ID = ca.idImage $charset_collate ";
     require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+    error_log('CreerVue : La requête est prête à être exécuté !');
     dbDelta( $view );
-    echo $wpdb->print_error();
-}
+    if(dbDelta($view) == true){
+        error_log('CreerVue : La requête à été exécuté !');
+    }else{
+        error_log('CreerVue : La requête n"a pas été exécuté : ' . $wpdb->print_error());
+    }
+}*/
 
 class ChaAv87{
     
