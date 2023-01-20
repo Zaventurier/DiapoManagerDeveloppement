@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin gère automatiquement les images que vous importer à travers des tables de votre base de données unique et indépendantes du reste. L'historique des correctifs/Ajouts est à consulter dans readme.me.
  * Author: Guillaume Pascail
- * Version: 1.4.3 - 19/01/2023
+ * Version: 1.4.4 - 20/01/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -25,8 +25,8 @@ if ( ! defined( 'WPINC' ) ) {
    }
 
 
-
-ini_set('error_log', dirname(__FILE__) . '/debug.log');
+//error_log('');
+ini_set('error_log', dirname(__FILE__) . 'Admin/logs/debug.log');
 
 
 /**
@@ -35,14 +35,22 @@ ini_set('error_log', dirname(__FILE__) . '/debug.log');
  * Modifié : 1.4.2
  * Remarque : __FILE__ signifie que la requête est présente dans le fichier.
  */
-
+register_activation_hook(__FILE__, 'Plugin_Activate');
 register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
 register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
-//error_log('register_activation_hook function called.');
-//register_activation_hook(__FILE__, 'CreerVue');//On appelle la fonction CreerVue contenu dans ce fichier.
+register_activation_hook(__FILE__, 'Create_Slide');//Appel de la fonction Create_Slide contenu dans ce fichier.
+
+register_deactivation_hook(__FILE__, 'Plugin_Disable');
 
 
 
+function Plugin_Activate(){
+    error_log('Le plugin est désormais activer !');
+}
+
+function Plugin_Disable() {
+    error_log('Le plugin est désormais désactiver !');
+}
 
 /**
  * Résumé de Prepare_To_Run
@@ -52,7 +60,7 @@ register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction 
  * Cette fonction ne gère pas les différentes erreurs qui pourrait être occasionnés.
  * Remarque : la table n'est pas relié au reste de la base de données et les images sont gérés de façon indépendantes du reste du site
  * @since 1.1.2
- * Modifié : 1.1.4.1
+ * Modifié : 1.1.4
  */
 function Prepare_To_Run() {
     global $wpdb;
@@ -93,6 +101,14 @@ function Prepare_To_Run() {
         error_log('La table chasseavenirimages étant existante, pas besoin de la créer !');
     }
 }
+
+
+function Delete_Caroussel(){
+    global $wpdb;
+    $nom_table = $wpdb->prefix . 'chasseavenircaroussel';
+    $charset_collate = $wpdb->get_charset_collate();
+    error_log('Fonction Create_Caroussel : Fonction correctement appellé !');
+}
   /**
    * Résumé de Create_Caroussel
    * @return void
@@ -106,54 +122,58 @@ function Create_Caroussel(){
     global $wpdb;
     $nom_table = $wpdb->prefix . 'chasseavenircaroussel';
     $charset_collate = $wpdb->get_charset_collate();
+    error_log('Fonction Create_Caroussel : Fonction correctement appellé !');
     /*On vérifie et on ajoute ici une seconde table pour la gestion des caroussels sur l'entièreté du site*/
     if($wpdb->get_var("SHOW TABLES LIKE '$nom_table'") != $nom_table) {
         $sql = "CREATE TABLE $nom_table (
             idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
-            idImage mediumint(11) NOT NULL,
-            page varchar(255) NOT NULL,
-            ordre int(11) NOT NULL,
-            PRIMARY KEY  (idCaroussel),
-            FOREIGN KEY (idImage) REFERENCES wp_chasseavenirimage(idImage)
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel)
         ) $charset_collate;";
+        error_log('Fonction Create_Caroussel : Requête préparé avec succés !');
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $sql );
         echo $wpdb->print_error();
     }
 }
 
+  /**
+   * Résumé de : Create_Slide
+   * @return void
+   * @since 1.5.1
+   * Modifié : -
+   * Créer une table SLIDE ayant pour clé étrangère la table posts de WordPress et Caroussel du plugin
+   */
 
-/**
- * Résumé de Create_View
- * @return void
- * Créer une vue pour la base de données
- * /!\ > Cette fonction est encore sujet à test grandeur nature
- * @since 1.4.2
- * Modifié : -
- * Désactivé : 1.4.3 
- */
-/*function CreerVue(){
+function Create_Slide(){
     global $wpdb;
-    $name_view = 'v_photochasseavenir';
+    $slide = $wpdb->prefix . 'chasseavenirslide';
+    $tableCar = $wpdb->prefix . 'chasseavenircaroussel';
+    $wppost = $wpdb->prefix . 'posts';
     $charset_collate = $wpdb->get_charset_collate();
-    $table_name = $wpdb->prefix . "chasseavenirImage";
-    error_log('Fonction CreerVue : Appel de la fonction réussi.');
-
-    $view = "CREATE OR REPLACE VIEW $name_view AS 
-    select wp.guid AS guid, ca.idImage AS idImage,ca.cheminImage AS cheminImage,ca.nomImage AS nomImage,ca.DescriptionImage 
-    AS DescriptionImage,ca.extensionImage AS extensionImage,ca.poidsImage AS poidsImage,ca.dateAjout AS dateAjout,ca.estSupprime 
-    AS estSupprime,ca.dateSuppression AS dateSuppression,ca.mediaLibraryId AS mediaLibraryId 
-    from $table_name ca left join wp_posts wp 
-    on wp.ID = ca.idImage $charset_collate ";
-    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-    error_log('CreerVue : La requête est prête à être exécuté !');
-    dbDelta( $view );
-    if(dbDelta($view) == true){
-        error_log('CreerVue : La requête à été exécuté !');
-    }else{
-        error_log('CreerVue : La requête n"a pas été exécuté : ' . $wpdb->print_error());
+    error_log('Create_Slide() : Fonction appellé avec succés !');
+    if($wpdb->get_var("SHOW TABLES LIKE '$slide'") != $slide) {
+        $reqSlide = "CREATE TABLE IF NOT EXISTS $slide (
+            idSlide mediumInt(11) NOT NULL AUTO_INCREMENT,
+            nomSlide varchar(50) NOT NULL,
+            idCaroussel mediumInt(11) NOT NULL,
+            mediaLibraryId mediumInt(11) NOT NULL,
+            PRIMARY KEY(idSlide),
+            FOREIGN KEY (idCaroussel) REFERENCES $tableCar(idCaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES $wppost(ID)
+            )$charset_collate";
+        error_log('Create_Slide : Requête préparé avec succcés !');
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+        dbDelta($reqSlide);
+        //Vérification et affichage message dans les logs
+        if(dbDelta($reqSlide)){
+            error_log('La reqûete à été exécuté avec succès !');
+        }else {
+            error_log('Une erreur est survenu et la requête n\'a pas été exécute avec succès :');
+            error_log($wpdb->print_error());
+        }
     }
-}*/
+}
 
 class ChaAv87{
     

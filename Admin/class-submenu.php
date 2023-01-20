@@ -12,6 +12,9 @@
  *
  * @package Custom_Admin_Settings
  */
+
+ //error_log('');
+ini_set('error_log', dirname(__FILE__) . '/debug.log');
 class Submenu {
 
 
@@ -41,6 +44,8 @@ private $submenu_aide;
 private $submenu_images;
 //Pour le sous menu Gérer les caroussels
 private $submenu_caroussel;
+//Pour la maintenance des pages
+private $maintenance;
 
 
  
@@ -55,6 +60,7 @@ public function __construct( $submenu_page /*$submenu_aide*/ ) {
     $this->submenu_aide = new Submenu_Aide();
     $this->submenu_images = new Submenu_Images();
     $this->submenu_caroussel = new Submenu_Caroussel();
+    $this->submenu_maintenance = new Submenu_maintenance();
  }
  
  /**
@@ -93,11 +99,11 @@ public function add_options_page() {
     // Ajout du sous-menu "Gérer les images"
     add_submenu_page( 
         'administrator-page', 
-        'Gérer les images', 
+        'Page indisponible',//Gérer les images 
         'Gérer les images', 
         'manage_options', 
         'chasseavenir-images', 
-        array( $this->submenu_images, 'render_images_page' )
+        array( $this->submenu_maintenance, 'render_page_maintenance' )//array( $this->submenu_images, 'render_images_page' )
     );
     //Ajout du sous-menu "Gérer les Caroussels"
     add_submenu_page(

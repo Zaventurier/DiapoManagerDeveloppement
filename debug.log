@@ -1,6 +1,0 @@
-[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
-[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Préparation de la requête !
-[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
-[19-Jan-2023 13:41:29 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
-[19-Jan-2023 13:41:29 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
-[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !

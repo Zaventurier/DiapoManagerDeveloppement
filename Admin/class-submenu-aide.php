@@ -7,6 +7,8 @@
  * @since 1.4.1
  * Modifié : -
  */
+ //error_log('');
+ ini_set('error_log', dirname(__FILE__) . './debug.log');
 
  class Submenu_Aide {
       /**
@@ -17,6 +19,7 @@
    * Modification : 1.4.1
    */
     public function render_aide_page(){
+        error_log('[ChasseAvenir87] > Utilisateur présent sur la page d\'aide !');
         // Code pour afficher le contenu de la page "Aide"?>
         <DOCTYPE html>
             <html lang="fr">

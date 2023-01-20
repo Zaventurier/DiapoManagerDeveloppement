@@ -1,0 +1,675 @@
+[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[19-Jan-2023 13:41:29 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:41:29 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:41:29 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[19-Jan-2023 13:48:30 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[19-Jan-2023 13:48:30 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[19-Jan-2023 13:48:30 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[19-Jan-2023 13:48:30 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:48:30 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:48:30 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[19-Jan-2023 13:48:30 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[19-Jan-2023 13:48:30 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[19-Jan-2023 13:48:30 UTC] WordPress database error Erreur de syntaxe près de 'INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COL' à la ligne 7 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            idImage mediumint(11) NOT NULL,
+            page varchar(255) NOT NULL,
+            ordre int(11) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+            FOREIGN KEY (idImage) INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel, dbDelta
+[19-Jan-2023 13:48:30 UTC] WordPress database error Erreur de syntaxe près de 'INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COL' à la ligne 7 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            idImage mediumint(11) NOT NULL,
+            page varchar(255) NOT NULL,
+            ordre int(11) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+            FOREIGN KEY (idImage) INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[19-Jan-2023 13:49:28 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[19-Jan-2023 13:49:28 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[19-Jan-2023 13:49:28 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[19-Jan-2023 13:49:28 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) INDEX wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) INDEX wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:49:28 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) INDEX wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) INDEX wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:49:28 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[19-Jan-2023 13:49:28 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[19-Jan-2023 13:49:28 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[19-Jan-2023 13:49:28 UTC] WordPress database error Erreur de syntaxe près de 'INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COL' à la ligne 7 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            idImage mediumint(11) NOT NULL,
+            page varchar(255) NOT NULL,
+            ordre int(11) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+            FOREIGN KEY (idImage) INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel, dbDelta
+[19-Jan-2023 13:49:28 UTC] WordPress database error Erreur de syntaxe près de 'INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COL' à la ligne 7 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            idImage mediumint(11) NOT NULL,
+            page varchar(255) NOT NULL,
+            ordre int(11) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+            FOREIGN KEY (idImage) INDEX wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[19-Jan-2023 13:49:42 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[19-Jan-2023 13:49:42 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[19-Jan-2023 13:49:42 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[19-Jan-2023 13:49:42 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:49:42 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:49:42 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[19-Jan-2023 13:49:42 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[19-Jan-2023 13:49:42 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[19-Jan-2023 13:49:42 UTC] WordPress database error  for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            idImage mediumint(11) NOT NULL,
+            page varchar(255) NOT NULL,
+            ordre int(11) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+            FOREIGN KEY (idImage) REFERENCES wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[19-Jan-2023 13:50:08 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[19-Jan-2023 13:50:08 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[19-Jan-2023 13:50:08 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[19-Jan-2023 13:50:08 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:50:08 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 13:50:08 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[19-Jan-2023 13:50:08 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[19-Jan-2023 14:24:58 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[19-Jan-2023 14:24:58 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[19-Jan-2023 14:24:58 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[19-Jan-2023 14:24:58 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 14:24:58 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[19-Jan-2023 14:24:58 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[19-Jan-2023 14:24:58 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[19-Jan-2023 14:25:10 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:25:10', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:25:10 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:25:10', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:25:10 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:25:10 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:25:10', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:25:25 UTC] Les données concernant l'image 77v1sn.jpg ont été inséré avec succés !
+[19-Jan-2023 14:25:45 UTC] Fonction getAllImage() éxecuté avec succés !
+[19-Jan-2023 14:28:37 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:28:37', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:28:37 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:28:37', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:28:37 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:28:37 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:28:37', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:29:03 UTC] Les données concernant l'image 77v1sn.jpg ont été inséré avec succés : 
+[19-Jan-2023 14:29:03 UTC] C:\wamp64\www\WordPressTest/wp-content/uploads/63c953af319127.32948270.jpg
+[19-Jan-2023 14:29:03 UTC] jpg
+[19-Jan-2023 14:29:03 UTC] 104158
+[19-Jan-2023 14:29:03 UTC] 2023-01-19 14:29:03
+[19-Jan-2023 14:29:03 UTC] 78[19-Jan-2023 14:49:52 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 14:49:52 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:49:52', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:49:52 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:49:52', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:49:52 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:49:52 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:49:52', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:51:41 UTC] Erreur : l'extension du fichier spécifié est incompatoble !
+[19-Jan-2023 14:51:41 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 14:51:41 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:51:41', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:51:41 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:51:41', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:51:41 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:51:41 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:51:41', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:52:22 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 14:52:22 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:52:22', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:52:22 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:52:22', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:52:22 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:52:22 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:52:22', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:52:48 UTC] Erreur : l'extension du fichier spécifié est incompatoble !
+[19-Jan-2023 14:52:48 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 14:52:48 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:52:48', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:52:48 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:52:48', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:52:48 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:52:48 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 14:52:48', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:54:02 UTC] Erreur : l'extension Calendrier annuel (1 mois par onglet)1.xlsx est incompatoble !
+[19-Jan-2023 14:54:02 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 14:54:02 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:54:02', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:54:02 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:54:02', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:54:02 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:54:02 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:54:02', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:54:44 UTC] Erreur : l'extension Array est incompatoble !
+[19-Jan-2023 14:54:44 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 14:54:44 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:54:44', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:54:44 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:54:44', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:54:44 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:54:44 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:54:44', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:55:32 UTC] Erreur : l'extension xlsx est incompatoble !
+[19-Jan-2023 14:55:32 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 14:55:32 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:55:32', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:55:32 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:55:32', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 14:55:32 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 14:55:32 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'Calendrier annuel (1 mois par onglet)1.xlsx', NULL, 'xlsx', '57649', '2023-01-19 14:55:32', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 15:10:12 UTC] Fonction getAllImage() éxecuté avec succés !
+[19-Jan-2023 15:15:58 UTC] Fonction getAllImage() éxecuté avec succés !
+[19-Jan-2023 15:30:38 UTC] Fonction getAllImage() éxecuté avec succés !
+[19-Jan-2023 15:43:24 UTC] Fonction getAllImage() éxecuté avec succés !
+[19-Jan-2023 15:56:01 UTC] Erreur : le fichier est trop volumineux !
+[19-Jan-2023 15:56:01 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 15:56:01 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'CV_2023-01-19_Guillaume_PASCAIL.pdf', NULL, 'pdf', '1082699', '2023-01-19 15:56:01', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 15:56:01 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'CV_2023-01-19_Guillaume_PASCAIL.pdf', NULL, 'pdf', '1082699', '2023-01-19 15:56:01', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 15:56:01 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 15:56:01 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, 'CV_2023-01-19_Guillaume_PASCAIL.pdf', NULL, 'pdf', '1082699', '2023-01-19 15:56:01', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 15:57:02 UTC] Fonction getAllImage() éxecuté avec succés !
+[19-Jan-2023 15:57:09 UTC] Erreur : l'extension  est incompatible !
+[19-Jan-2023 15:57:09 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 15:57:09 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 15:57:09', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 15:57:09 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 15:57:09', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 15:57:09 UTC] Fonction insertImage : Une erreur est survenu lors de l'insertion dans la base de données : 
+[19-Jan-2023 15:57:09 UTC] WordPress database error Le champ 'cheminImage' ne peut être vide (null) for query INSERT INTO `wp_chasseavenirimage` (`idImage`, `cheminImage`, `nomImage`, `descriptionImage`, `extensionImage`, `poidsImage`, `dateAjout`, `estSupprime`, `dateSuppression`, `mediaLibraryId`) VALUES (NULL, NULL, '', NULL, '', '0', '2023-01-19 15:57:09', '0', NULL, NULL) made by do_action('toplevel_page_administrator-page'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Page->render, Submenu_Page->insertImage
+[19-Jan-2023 15:57:34 UTC] Fonction insertImage appellé avec succés !
+[19-Jan-2023 15:57:34 UTC] Les données concernant l'image pp.png ont été inséré avec succés : 
+[19-Jan-2023 15:57:34 UTC] C:\wamp64\www\WordPressTest/wp-content/uploads/63c9686e5fc5f9.09599287.png
+[19-Jan-2023 15:57:34 UTC] png
+[19-Jan-2023 15:57:34 UTC] 158652
+[19-Jan-2023 15:57:34 UTC] 2023-01-19 15:57:34
+[19-Jan-2023 15:57:34 UTC] 79
+[20-Jan-2023 07:54:07 UTC] Fonction insertImage appellé avec succés !
+[20-Jan-2023 07:54:07 UTC] Les données concernant l'image flambinoshiny.png ont été inséré avec succés : 
+[20-Jan-2023 07:54:07 UTC] C:\wamp64\www\WordPressTest/wp-content/uploads/63ca489f46b450.44487640.png
+[20-Jan-2023 07:54:07 UTC] png
+[20-Jan-2023 07:54:07 UTC] 81887
+[20-Jan-2023 07:54:07 UTC] 2023-01-20 07:54:07
+[20-Jan-2023 07:54:07 UTC] 80
+[20-Jan-2023 07:56:58 UTC] Fonction getAllImage() éxecuté avec succés !
+[20-Jan-2023 09:06:42 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:06:42 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:06:42 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:06:42 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:06:42 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:06:42 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:06:42 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:06:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_charset_collate() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:147
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide(false)
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php(691): do_action('activate_Chasse...', false)
+#4 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(58): activate_plugin('ChasseAvenir87/...', 'http://siteword...', false)
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 147
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:06:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:06:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:06:43 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:06:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_charset_collate() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:147
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(194): do_action('activate_Chasse...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 147
+[20-Jan-2023 09:06:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:06:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:06:43 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:06:43 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:06:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_charset_collate() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:147
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(194): do_action('activate_Chasse...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 147
+[20-Jan-2023 09:07:45 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:07:45 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:07:45 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:07:45 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:07:45 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:07:45 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:07:45 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:07:45 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:07:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide(false)
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php(691): do_action('activate_Chasse...', false)
+#4 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(58): activate_plugin('ChasseAvenir87/...', 'http://siteword...', false)
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 149
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:07:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:07:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:07:46 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:07:46 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:07:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(194): do_action('activate_Chasse...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 149
+[20-Jan-2023 09:07:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:07:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:07:46 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:07:46 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:07:46 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:07:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(194): do_action('activate_Chasse...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 149
+[20-Jan-2023 09:08:42 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:08:42 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:08:42 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:08:42 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:08:42 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:08:42 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:08:42 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:08:42 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:08:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide(false)
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php(691): do_action('activate_Chasse...', false)
+#4 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(58): activate_plugin('ChasseAvenir87/...', 'http://siteword...', false)
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 149
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:08:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:08:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:08:43 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:08:43 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:08:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(194): do_action('activate_Chasse...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 149
+[20-Jan-2023 09:08:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:08:43 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:08:43 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:08:43 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:08:43 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:08:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_var() on null in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Create_Slide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(194): do_action('activate_Chasse...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 149
+[20-Jan-2023 09:09:58 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:09:58 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:09:58 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:09:58 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:09:58 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:09:58 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:09:58 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:09:58 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:09:58 UTC] Create_Slide : Requête préparé avec succcés !
+[20-Jan-2023 09:09:58 UTC] WordPress database error Erreur de syntaxe près de '(wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES' à la ligne 7 for query CREATE TABLE IF NOT EXISTS wp_chasseavenirslide (
+            idSlide mediumInt(11) NOT NULL AUTO_INCREMENT,
+            nomSlide varchar(50) NOT NULL,
+            idCaroussel mediumInt(11) NOT NULL,
+            mediaLibraryId mediumInt(11) NOT NULL,
+            PRIMARY KEY(idSlide),
+            FOREIGN KEY (idCaroussel) REFERENCES (wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES (wp_posts)
+            ) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Slide, dbDelta
+[20-Jan-2023 09:09:58 UTC] WordPress database error Erreur de syntaxe près de '(wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES' à la ligne 7 for query CREATE TABLE IF NOT EXISTS wp_chasseavenirslide (
+            idSlide mediumInt(11) NOT NULL AUTO_INCREMENT,
+            nomSlide varchar(50) NOT NULL,
+            idCaroussel mediumInt(11) NOT NULL,
+            mediaLibraryId mediumInt(11) NOT NULL,
+            PRIMARY KEY(idSlide),
+            FOREIGN KEY (idCaroussel) REFERENCES (wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES (wp_posts)
+            ) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Slide, dbDelta
+[20-Jan-2023 09:09:58 UTC] La reqûete à été exécuté avec succès !
+[20-Jan-2023 09:11:46 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:11:46 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:11:46 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:11:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:11:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:11:46 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:11:46 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:11:46 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:11:46 UTC] Create_Slide : Requête préparé avec succcés !
+[20-Jan-2023 09:11:46 UTC] WordPress database error Erreur de syntaxe près de '(wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES' à la ligne 7 for query CREATE TABLE IF NOT EXISTS wp_chasseavenirslide (
+            idSlide mediumInt(11) NOT NULL AUTO_INCREMENT,
+            nomSlide varchar(50) NOT NULL,
+            idCaroussel mediumInt(11) NOT NULL,
+            mediaLibraryId mediumInt(11) NOT NULL,
+            PRIMARY KEY(idSlide),
+            FOREIGN KEY (idCaroussel) REFERENCES (wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES (wp_posts)
+            )DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Slide, dbDelta
+[20-Jan-2023 09:11:46 UTC] WordPress database error Erreur de syntaxe près de '(wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES' à la ligne 7 for query CREATE TABLE IF NOT EXISTS wp_chasseavenirslide (
+            idSlide mediumInt(11) NOT NULL AUTO_INCREMENT,
+            nomSlide varchar(50) NOT NULL,
+            idCaroussel mediumInt(11) NOT NULL,
+            mediaLibraryId mediumInt(11) NOT NULL,
+            PRIMARY KEY(idSlide),
+            FOREIGN KEY (idCaroussel) REFERENCES (wp_chasseavenircaroussel),
+            FOREIGN KEY (mediaLibraryId) REFERENCES (wp_posts)
+            )DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Slide, dbDelta
+[20-Jan-2023 09:11:46 UTC] La reqûete à été exécuté avec succès !
+[20-Jan-2023 09:22:48 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:22:48 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:22:48 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:22:48 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:22:48 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:22:48 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:22:48 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:22:48 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:22:48 UTC] Create_Slide : Requête préparé avec succcés !
+[20-Jan-2023 09:22:48 UTC] La reqûete à été exécuté avec succès !
+[20-Jan-2023 09:27:22 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:27:22 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:27:22 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:27:22 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:27:22 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:27:22 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:27:22 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:27:22 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[20-Jan-2023 09:27:22 UTC] WordPress database error  for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            idImage mediumint(11) NOT NULL,
+            page varchar(255) NOT NULL,
+            ordre int(11) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+            FOREIGN KEY (idImage) REFERENCES wp_chasseavenirimage(idImage)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[20-Jan-2023 09:27:22 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:29:31 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:29:31 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:29:31 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:29:31 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:29:31 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:29:31 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:29:31 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:29:31 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 09:30:26 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 09:30:26 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 09:30:26 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 09:30:26 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:30:26 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 09:30:26 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 09:30:26 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 09:30:26 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[20-Jan-2023 09:30:26 UTC] WordPress database error Erreur de syntaxe près de ') DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel, dbDelta
+[20-Jan-2023 09:30:26 UTC] WordPress database error Erreur de syntaxe près de ') DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[20-Jan-2023 09:30:26 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:12:05 UTC] Fonction getAllImage() éxecuté avec succés !
+[20-Jan-2023 13:12:22 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:12:22 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:12:22 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:12:22 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:12:22 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:12:22 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:12:22 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:12:22 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[20-Jan-2023 13:12:22 UTC] WordPress database error Erreur de syntaxe près de ') DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel, dbDelta
+[20-Jan-2023 13:12:22 UTC] WordPress database error Erreur de syntaxe près de ') DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[20-Jan-2023 13:12:22 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:12:58 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:12:58 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:12:58 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:12:58 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:12:58 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:12:58 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:12:58 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:12:58 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[20-Jan-2023 13:12:58 UTC] WordPress database error Erreur de syntaxe près de ')' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel, dbDelta
+[20-Jan-2023 13:12:58 UTC] WordPress database error Erreur de syntaxe près de ')' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[20-Jan-2023 13:12:58 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:13:28 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:13:28 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:13:28 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:13:28 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:13:28 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:13:28 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:13:28 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:13:28 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[20-Jan-2023 13:13:28 UTC] WordPress database error Erreur de syntaxe près de ') DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel, dbDelta
+[20-Jan-2023 13:13:28 UTC] WordPress database error Erreur de syntaxe près de ') DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[20-Jan-2023 13:13:28 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:14:27 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:14:27 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:14:27 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:14:27 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:14:27 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:14:27 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:14:27 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:14:27 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[20-Jan-2023 13:14:27 UTC] WordPress database error Erreur de syntaxe près de ')' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel, dbDelta
+[20-Jan-2023 13:14:27 UTC] WordPress database error Erreur de syntaxe près de ')' à la ligne 5 for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel),
+        ) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[20-Jan-2023 13:14:27 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:18:50 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:18:50 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:18:50 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:18:50 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:18:50 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:18:50 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:18:50 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:18:50 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[20-Jan-2023 13:18:50 UTC] WordPress database error  for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[20-Jan-2023 13:18:50 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:22:40 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:22:40 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:22:40 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:22:40 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:22:40 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:22:40 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:22:40 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:22:40 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:23:24 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:23:24 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:23:24 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:23:24 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:23:24 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:23:24 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:23:24 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:23:24 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:24:44 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:24:44 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:24:44 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:24:44 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:24:44 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:24:44 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:24:44 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:24:44 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:29:36 UTC] Le plugin est désormais désactiver !
+[20-Jan-2023 13:29:46 UTC] Le plugin est désormais activer !
+[20-Jan-2023 13:29:46 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:29:46 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:29:46 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:29:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:29:46 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:29:46 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:29:46 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:29:46 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:36:16 UTC] Le plugin est désormais désactiver !
+[20-Jan-2023 13:36:19 UTC] Le plugin est désormais activer !
+[20-Jan-2023 13:36:19 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:36:19 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:36:19 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:36:19 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:36:19 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:36:19 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:36:19 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:36:19 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:36:19 UTC] PHP Warning:  fopen(Admin/log20230120.log): failed to open stream: No such file or directory in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 58
+[20-Jan-2023 13:36:19 UTC] PHP Stack trace:
+[20-Jan-2023 13:36:19 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:0
+[20-Jan-2023 13:36:19 UTC] PHP   2. activate_plugin() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:58
+[20-Jan-2023 13:36:19 UTC] PHP   3. do_action() C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php:691
+[20-Jan-2023 13:36:19 UTC] PHP   4. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[20-Jan-2023 13:36:19 UTC] PHP   5. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[20-Jan-2023 13:36:19 UTC] PHP   6. Create_Log() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[20-Jan-2023 13:36:19 UTC] PHP   7. fopen() C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:58
+[20-Jan-2023 13:37:08 UTC] Le plugin est désormais désactiver !
+[20-Jan-2023 13:37:10 UTC] Le plugin est désormais activer !
+[20-Jan-2023 13:37:10 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:37:10 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:37:10 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:37:10 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:37:10 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:37:10 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:37:10 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:37:10 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:37:10 UTC] PHP Warning:  fopen(Admin/logs20230120.log): failed to open stream: No such file or directory in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 58
+[20-Jan-2023 13:37:10 UTC] PHP Stack trace:
+[20-Jan-2023 13:37:10 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:0
+[20-Jan-2023 13:37:10 UTC] PHP   2. activate_plugin() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:58
+[20-Jan-2023 13:37:10 UTC] PHP   3. do_action() C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php:691
+[20-Jan-2023 13:37:10 UTC] PHP   4. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[20-Jan-2023 13:37:10 UTC] PHP   5. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[20-Jan-2023 13:37:10 UTC] PHP   6. Create_Log() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[20-Jan-2023 13:37:10 UTC] PHP   7. fopen() C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:58
+[20-Jan-2023 13:38:17 UTC] Le plugin est désormais désactiver !
+[20-Jan-2023 13:38:20 UTC] Le plugin est désormais activer !
+[20-Jan-2023 13:38:20 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:38:20 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:38:20 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:38:20 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:38:20 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:38:20 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:38:20 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:38:20 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:38:20 UTC] PHP Warning:  fopen(Admin/logs20230120.log): failed to open stream: No such file or directory in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 58
+[20-Jan-2023 13:38:20 UTC] PHP Stack trace:
+[20-Jan-2023 13:38:20 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:0
+[20-Jan-2023 13:38:20 UTC] PHP   2. activate_plugin() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:58
+[20-Jan-2023 13:38:20 UTC] PHP   3. do_action() C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php:691
+[20-Jan-2023 13:38:20 UTC] PHP   4. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[20-Jan-2023 13:38:20 UTC] PHP   5. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[20-Jan-2023 13:38:20 UTC] PHP   6. Create_Log() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[20-Jan-2023 13:38:20 UTC] PHP   7. fopen() C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:58
+[20-Jan-2023 13:38:25 UTC] Le plugin est désormais désactiver !
+[20-Jan-2023 13:38:28 UTC] Le plugin est désormais activer !
+[20-Jan-2023 13:38:28 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:38:28 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:38:28 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:38:28 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:38:28 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:38:28 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:38:28 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:38:28 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:38:28 UTC] PHP Warning:  fopen(Admin/logs/20230120.log): failed to open stream: No such file or directory in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php on line 58
+[20-Jan-2023 13:38:28 UTC] PHP Stack trace:
+[20-Jan-2023 13:38:28 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:0
+[20-Jan-2023 13:38:28 UTC] PHP   2. activate_plugin() C:\wamp64\www\WordPressTest\wp-admin\plugins.php:58
+[20-Jan-2023 13:38:28 UTC] PHP   3. do_action() C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php:691
+[20-Jan-2023 13:38:28 UTC] PHP   4. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[20-Jan-2023 13:38:28 UTC] PHP   5. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[20-Jan-2023 13:38:28 UTC] PHP   6. Create_Log() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[20-Jan-2023 13:38:28 UTC] PHP   7. fopen() C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php:58
+[20-Jan-2023 13:39:37 UTC] Le plugin est désormais désactiver !
+[20-Jan-2023 13:39:40 UTC] Le plugin est désormais activer !
+[20-Jan-2023 13:39:40 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:39:40 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:39:40 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:39:40 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:39:40 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:39:40 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:39:40 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:39:40 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:41:05 UTC] Le plugin est désormais désactiver !
+[20-Jan-2023 13:41:07 UTC] Le plugin est désormais activer !
+[20-Jan-2023 13:41:07 UTC] Fonction Prepare_To_Run : Fonction correctement appellé !
+[20-Jan-2023 13:41:07 UTC] Fonction Prepare_To_Run : Préparation de la requête !
+[20-Jan-2023 13:41:07 UTC] Fonction Prepare_To_Run : Requête préparé avec succés !
+[20-Jan-2023 13:41:07 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:41:07 UTC] WordPress database error Erreur de syntaxe près de 'FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)' à la ligne 1 for query ALTER TABLE wp_chasseavenirImage ADD COLUMN FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID) made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Prepare_To_Run, dbDelta
+[20-Jan-2023 13:41:07 UTC] Fonction Prepare_To_Run : Requête éxécuté avec succés !
+[20-Jan-2023 13:41:07 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Jan-2023 13:41:07 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Jan-2023 13:42:37 UTC] Fonction insertImage appellé avec succés !
+[20-Jan-2023 13:42:37 UTC] Les données concernant l'image flambinoshiny.png ont été inséré avec succés : 
+[20-Jan-2023 13:42:37 UTC] C:\wamp64\www\WordPressTest/wp-content/uploads/63ca9a4dd0fc37.81525941.png
+[20-Jan-2023 13:42:37 UTC] png
+[20-Jan-2023 13:42:37 UTC] 81887
+[20-Jan-2023 13:42:37 UTC] 2023-01-20 13:42:37
+[20-Jan-2023 13:42:37 UTC] 81
+[20-Jan-2023 14:24:51 UTC] Create_Caroussel : Fonction appellé correctement !
+[20-Jan-2023 14:32:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Submenu_maintenance' not found in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu.php:63
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\ChaAv87.php(215): Submenu->__construct(Object(Submenu_Page))
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): tutsplus_custom_admin_settings('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-settings.php(480): do_action('plugins_loaded')
+#5 C:\wamp64\www\WordPressTest\wp-config.php(98): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\WordPressTest\wp-load.php(50): require_once('C:\\wamp64\\www\\W...')
+#7 C:\wamp64\www\WordPressTest\wp-admin\admin-ajax.php(22): require_once('C:\\wamp64\\www\\W...')
+#8 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu.php on line 63
+[20-Jan-2023 14:35:49 UTC] Fonction getAllImage() éxecuté avec succés !

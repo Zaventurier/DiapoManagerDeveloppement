@@ -21,8 +21,11 @@
 * Modifié : -
 * Fonction permettant d'importer la feuille de style
 */
+ //error_log('');
+ ini_set('error_log', dirname(__FILE__) . '/debug.log');
 
 function load_plugin_styles() {
+    error_log('Foncyion load_plugin_style : Fonction appellé !');
     wp_register_style( 'custom-style', plugin_dir_url( __FILE__ ) . 'inc/css/form.css' );
     wp_enqueue_style( 'custom-style' );
     add_action( 'wp_enqueue_style', 'load_plugin_styles' );
@@ -38,6 +41,7 @@ function load_plugin_styles() {
 */
 
 function load_plugin_scripts() {
+    error_log('Foncyion load_plugin_scripts : Fonction appellé !');
     wp_register_script( 'custom-script', plugin_dir_url( __FILE__ ) . 'inc/js/script.js' );
     wp_enqueue_script( 'custom-script' );
     add_action('wp_enqueue_script', 'load_plugin_scripts');
@@ -49,14 +53,16 @@ function load_plugin_scripts() {
 
 class Submenu_Page
 {
+    
 
     /**
      * Cette fonction renvoi un contenu associé à un menu qui assure le rendu.
      */
 
     //plugins_url( 'myscript.js', __FILE__ );
-    public function render()
-    { ?>
+    function render()
+    { 
+        error_log('[ChasseAvenir87] > Utilisateur présent sur page d\'ajout d\'image !');?>
     <head>
         <!--<link rel="stylesheet" type="text/css" href="css/inc/form.css">-->
     </head>
@@ -197,15 +203,16 @@ class Submenu_Page
                                 wp_update_attachment_metadata($attach_id, $attach_data);
                         //echo "<img src='images/check.png'>Image ajoutée à la médiathèque avec succès !<br/>";
                     } else {
+                        error_log('Erreur : le fichier est trop volumineux !');
                         echo "<img src='images/warning.png'> Votre fichier est trop volumineux !<br/>";
                     }
                 } else {
+                    error_log('Une erreur inconnu s\'est produite durant le téléversement du fichier !');
                     echo "<img src='images/warning.png'> Une erreur s'est produite durant le téléversement de votre fichier !<br/>";
                 }
 
             } else {
-                /*load_plugin_styles();
-                load_plugin_scripts();*/
+                error_log('Erreur : l\'extension ' .$fileActualExt. ' est incompatible !');
                 ?>
                         <div class="popup" id="popup" style="top: 30%;left: 65%;">
                             <span class="close" onclick="closePopup()">&times;</span>
@@ -247,11 +254,19 @@ class Submenu_Page
      * Modifié : 1.3
      */
     function insertImage(array $array){
+        error_log('Fonction insertImage appellé avec succés !');
         global $wpdb;
         $result = $wpdb->insert($wpdb->prefix . "chasseavenirimage", $array);
         if (!$result) {
+            error_log('Fonction insertImage : Une erreur est survenu lors de l\'insertion dans la base de données : ' .$wpdb->print_error());
             $wpdb->print_error();
         }else{
+            error_log('Les données concernant l\'image ' . $array['nomImage'] . ' ont été inséré avec succés : ');
+            error_log($array['cheminImage']);
+            error_log($array['extensionImage']);
+            error_log($array['poidsImage']);
+            error_log($array['dateAjout']);
+            error_log($array['mediaLibraryId']);
             echo "insertion réussi !";
         }
     }
