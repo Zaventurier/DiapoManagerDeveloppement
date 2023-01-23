@@ -8,46 +8,66 @@
  * @wordpress-plugin
  * Plugin Name: ChasseAvenir87
  * Plugin URI: 
- * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin gère automatiquement les images que vous importer à travers des tables de votre base de données unique et indépendantes du reste. L'historique des correctifs/Ajouts est à consulter dans readme.me.
+ * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin utilise Bootstrap 5.0.3 importer directement dedans pour le visuel. Ceci peut causer des soucis de compatibilité avec certains plugins/thèmes
  * Author: Guillaume Pascail
- * Version: 1.4.4 - 20/01/2023
+ * Version: 1.5.0 - 23/01/2023
  * Author URI: 
  * License: 
  * License URI: 
  */
 
  //Fichiers requis
-require_once( ABSPATH . 'wp-includes/shortcodes.php' );
-require_once plugin_dir_path(__FILE__) . 'inc/ChAv-functions.php';
+ require_once( ABSPATH . 'wp-includes/shortcodes.php' );
+ require_once plugin_dir_path(__FILE__) . 'inc/ChAv-functions.php';
+ 
+ if ( ! defined( 'ABSPATH' ) ) {
+     die;
+ }
+ 
+ //error_log('');
+ ini_set('error_log', dirname(__FILE__) . '/Admin/logs/debug.log');
+ 
+ /**
+  * Appel des fonctions qui vont s'éxécuter à l'activation du plugin
+  * @since 1.1.2
+  * Modifié : 1.4.2
+  * Remarque : __FILE__ signifie que la fonction est présente dans le fichier.
+  */
+ register_activation_hook(__FILE__, 'Plugin_Activate');//On appelle la fonction Plugin_Activate contenu dans ce fichier
+ register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
+ register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
+ register_activation_hook(__FILE__, 'Create_Slide');//Appel de la fonction Create_Slide contenu dans ce fichier.
+ 
 
-if ( ! defined( 'WPINC' ) ) {
-    die;
-   }
+/**
+ * Appel des fonctions qui vont s'éxécuter à la désactivation du plugin
+ * @since 1.4.4
+ * Modifié : - 
+ * Remarque : __FILE__ signifie que la fonction est présente dans ce fichier
+ */
 
-
-//error_log('');
-ini_set('error_log', dirname(__FILE__) . 'Admin/logs/debug.log');
+register_deactivation_hook(__FILE__, 'Plugin_Disable');//On appelle la fonction Plugin_Disable contenu dans ce fichier
 
 
 /**
- * Appel des fonctions qui vont s'éxécuter à l'activation du plugin
- * @since 1.1.2
- * Modifié : 1.4.2
- * Remarque : __FILE__ signifie que la requête est présente dans le fichier.
+ * Résumé de Plugin_Activate
+ * @return void
+ * @since 1.4.4
+ * Modifié : -
+ * Permet d'afficher un message dans les logs lorsque le plugin est activé.
  */
-register_activation_hook(__FILE__, 'Plugin_Activate');
-register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
-register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
-register_activation_hook(__FILE__, 'Create_Slide');//Appel de la fonction Create_Slide contenu dans ce fichier.
-
-register_deactivation_hook(__FILE__, 'Plugin_Disable');
-
-
-
 function Plugin_Activate(){
     error_log('Le plugin est désormais activer !');
 }
 
+
+/**
+ * Résumé de : Plugin_Disable
+ * @return void
+ * @since 1.4.4
+ * Modifié : -
+ * Permet d'afficher un message dans les logs lorsque le plugin est désactivé.
+ */
 function Plugin_Disable() {
     error_log('Le plugin est désormais désactiver !');
 }
@@ -221,7 +241,6 @@ add_action( 'admin_menu', 'capitaine_remove_menu_pages' );*/
 
     //$this->admin->add_page($titre, 'ChasseAvenir87');
    }
-
 
    /*function StyleFormulaire() {
     wp_enqueue_style( 'StyleFormulaire', plugin_dir_url( __FILE__ ) . 'inc/css/form.css' );

@@ -60,7 +60,6 @@ public function __construct( $submenu_page /*$submenu_aide*/ ) {
     $this->submenu_aide = new Submenu_Aide();
     $this->submenu_images = new Submenu_Images();
     $this->submenu_caroussel = new Submenu_Caroussel();
-    $this->submenu_maintenance = new Submenu_maintenance();
  }
  
  /**
@@ -103,7 +102,7 @@ public function add_options_page() {
         'Gérer les images', 
         'manage_options', 
         'chasseavenir-images', 
-        array( $this->submenu_maintenance, 'render_page_maintenance' )//array( $this->submenu_images, 'render_images_page' )
+        array( $this->submenu_images, 'render_images_page' )//
     );
     //Ajout du sous-menu "Gérer les Caroussels"
     add_submenu_page(

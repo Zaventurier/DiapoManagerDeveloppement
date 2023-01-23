@@ -24,33 +24,6 @@
  //error_log('');
  ini_set('error_log', dirname(__FILE__) . '/debug.log');
 
-function load_plugin_styles() {
-    error_log('Foncyion load_plugin_style : Fonction appellé !');
-    wp_register_style( 'custom-style', plugin_dir_url( __FILE__ ) . 'inc/css/form.css' );
-    wp_enqueue_style( 'custom-style' );
-    add_action( 'wp_enqueue_style', 'load_plugin_styles' );
-}
-
-
-/**
-* Résumé de load_plugin_scripts
-* @return void
-* @since 1.2.1
-* Modifié : -
-* Fonction permettant d'importer le script JavaScript
-*/
-
-function load_plugin_scripts() {
-    error_log('Foncyion load_plugin_scripts : Fonction appellé !');
-    wp_register_script( 'custom-script', plugin_dir_url( __FILE__ ) . 'inc/js/script.js' );
-    wp_enqueue_script( 'custom-script' );
-    add_action('wp_enqueue_script', 'load_plugin_scripts');
-}
-
-
-
-
-
 class Submenu_Page
 {
     
@@ -64,7 +37,7 @@ class Submenu_Page
     { 
         error_log('[ChasseAvenir87] > Utilisateur présent sur page d\'ajout d\'image !');?>
     <head>
-        <!--<link rel="stylesheet" type="text/css" href="css/inc/form.css">-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     </head>
         <h1 style = "text-align: center;"><strong>ChasseAvenir87</strong> - Ajouter des Images</h1><br/>
         <p style="text-align:center;">Ajouter vos images directement depuis votre Panel de Gestion<br/>

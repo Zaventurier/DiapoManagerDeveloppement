@@ -1,7 +1,7 @@
 ==== Plugin ChasseAvenir87 ====
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
-Version 1.4.4- 20 Janvier 2023
+Version 1.5.0 - 23 Janvier 2023
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
 La dernière version du plugin permet d'ajouter des images, de les uploads dans la médiathèque.
@@ -9,6 +9,8 @@ Actuellement, seuls les fonctionnalités suivantes sont disponible :
 > Ajout d'image;
 > Un menu et des sous-menus personnalisés (ou presque);
 > Une gestion quasi indépendante des caroussels sur votre site;
+
+[/!\] > Depuis la version 1.5.0, le plugin utilise Boostrap 5.0.3 nécessaire à son fonctionnement. Cette utilisation peut révéler une incompatibilité avec certains thèmes/plugins. Certaines fonctionnalités nécessiteron une mise à jour de Bootsrap, ce qui sera spécifié dans se Patch Note.
 
 Vous pouvez retrouver ici dans ce fichier, l'historique des corrections/ajouts qui sont réalisés dans le plugin.
 Nous nous éfforçons de regrouper au mieux les mises à jours.
@@ -98,11 +100,11 @@ Nous rappelons que ce plugin est réalisé en France à donc comme langue le fra
 > Modification de la structure de la base de données : Ajout de la fonctionnalité de création de la vue.;
 > Correction de bug;
 
-19 Janvier 2023 - 1.4.3 > [Version Ancienne]
+19 Janvier 2023 - 1.4.3 > 
 > Désactivation de la création de la vue à l'initialisation du plugin;
 > Ajout d'un fichier "debug.log" permettant d'afficher les logs à des endroits particuliers et critiques;
 
-20 Janvier 2023 - 1.4.4 > [Version Actuelle]
+20 Janvier 2023 - 1.4.4 > [Version Ancienne]
 > Modification de l'emplacement du fichier de logs;
 > Correction de l'affichage des images : Plus besoin de vue, tout ce fait à l'aide d'une requête plus simple;
 > Grossisement des images dans leurs div;
@@ -110,3 +112,11 @@ Nous rappelons que ce plugin est réalisé en France à donc comme langue le fra
 > Début de la gestion des caroussels;
 > Désactivation de la gestion des images [Temporaire];
 > Nettoyage du fichier de log (Sauvegarder);
+
+?? Janvier 2023 - 1.5.0 > [Version Actuelle]
+> Installation et Utilisation de Bootstrap 5.0.3 -> [Potentiel Incompatibilitiés avec des Thèmes/Plugins];
+> Mise à jour de la page de gestion des carroussels;
+> Réactivation de la gestion des images [Bug] -> Gestion toujours non disponible;
+> Ajout de lien pour les icônes;
+> Allègement du code : Suppression de fonction innutlisés;
+> [Fonctionnalité] > L'utilisateur peut désormais ajouter un caroussel => Lq gestion des caroussels sera ajoutée dans la prochaine mise  à jour;

@@ -1,18 +1,10 @@
 <?php
 
 /**
- * Ajout d'un nouveau menu au pannel administrateur
+ * Résumé de ImportCSS
  * @return void
+ * @since 1.5
+ * Modifié : -
+ * Fonction pour l'import des fichiers CSS de Boostrap
  */
-
-/*add_action('admin_menu', 'ChAv_Add_My_Admin_Link');
-function ChAv_Add_My_Admin_Link(){
-    add_menu_page(
-        'ChasseAvenir87',
-        'ChasseAvenir87',
-        'manage_options',
-        'admin.php?page=ChAv'
-    );
-
-}*/
 ?>
