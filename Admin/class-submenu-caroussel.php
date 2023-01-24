@@ -77,6 +77,26 @@ class Submenu_Caroussel
                             </div>
                         </div>
                     </div>
+                    <div class="modal" id="data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen-xxl-down">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier le diaporama</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Saisissez un nom pour votre diaporama :</h5>
+                                    <form method="post">
+                                        <input type= "text" name="nomCaroussel"></input>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                            <button type="submit" name="Valider" class="btn btn-primary">Valider</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2 text-center" style='background:rgb(250, 250, 188); '>
@@ -91,14 +111,14 @@ class Submenu_Caroussel
                         foreach ($AllCaroussel as $unCaroussel) {
                             ?>
                             <div class='col-md-1 text-center' style='background:rgb(250, 250, 188); border:1px dashed white;'>
-                                <button  data-bs-toggle="modal" data-bs-target="#" type="submit" name="creer" class="btn" style="border:none;border-radius:initial;background:rgb(250, 250, 188);;;cursor:pointer;font-family: Helvetica;"><?php echo $unCaroussel['nomCaroussel'];?></button><?php
+                                <button  data-bs-toggle="modal" data-bs-target="#data" type="submit" name="creer" class="btn" style="border:none;border-radius:initial;background:rgb(250, 250, 188);;;cursor:pointer;font-family: Helvetica;"><?php echo $unCaroussel['nomCaroussel'];?></button><?php
                                 //echo "<button type='button' class='btn btn-outline-primary'>Modifier</button>";
                                 ?>
                             </div>
                             <?php
                         }?>
-                </div>
-                </body>
+            </div>
+            </body>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
                 <?php
                 if (isset($_POST['Valider'])) {
@@ -126,13 +146,30 @@ class Submenu_Caroussel
     function Creer_Caroussel(array $array){
         error_log('Create_Caroussel > Fonction appellé avec succès !');
         global $wpdb;
-        $result = $wpdb->insert($wpdb->prefix . "chasseavenircaroussel", $array);
-        if (!$result) {
-            error_log('Create_Caroussel > Une erreur est survenu lors de l\'insertion dans la base de données : ' .$wpdb->print_error());
-            $wpdb->print_error();
+        if ($array['nomCaroussel'] == null) {
+            error_log('L\'insertion n\'a pu être exécuté car le champ "nomCaroussel" est vide !');
+            $this->alertNull();
+            exit;
         }else{
+            $result = $wpdb->insert($wpdb->prefix . "chasseavenircaroussel", $array);
+            if (!$result) {
+                error_log('Create_Caroussel > Une erreur est survenu lors de l\'insertion dans la base de données : ' .$wpdb->print_error());
+                $wpdb->print_error();
+            }else{
             error_log('Create_Caroussel > Insertion effectué avec succès !');
-        }
+            //wp_redirect( $_SERVER['REQUEST_URI']);
+            //exit;
+            }
+            exit;
+        } 
+    }
+
+
+    function alertNull(){
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Erreur > </strong>Le champs "nomCaroussel" ne peut être null !
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>';
     }
     
 

@@ -1,7 +1,7 @@
 ==== Plugin ChasseAvenir87 ====
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
-Version 1.5.0 - 23 Janvier 2023
+Version 1.5.1 - 24 Janvier 2023
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
 La dernière version du plugin permet d'ajouter des images, de les uploads dans la médiathèque.
@@ -113,10 +113,15 @@ Nous rappelons que ce plugin est réalisé en France à donc comme langue le fra
 > Désactivation de la gestion des images [Temporaire];
 > Nettoyage du fichier de log (Sauvegarder);
 
-?? Janvier 2023 - 1.5.0 > [Version Actuelle]
+23 Janvier 2023 - 1.5.0 > [Version Ancienne]
 > Installation et Utilisation de Bootstrap 5.0.3 -> [Potentiel Incompatibilitiés avec des Thèmes/Plugins];
 > Mise à jour de la page de gestion des carroussels;
 > Réactivation de la gestion des images [Bug] -> Gestion toujours non disponible;
 > Ajout de lien pour les icônes;
 > Allègement du code : Suppression de fonction innutlisés;
 > [Fonctionnalité] > L'utilisateur peut désormais ajouter un caroussel => Lq gestion des caroussels sera ajoutée dans la prochaine mise  à jour;
+
+24 Janvier 2023 - 1.5.1 > [Version Actuelle]
+> Ajout d'un message d'erreur dans les logs lorsque le champ est vide dans l'ajout de caroussel;
+> Ajout d'un message d'erreur lorsque le champ est vide dans l'ajout de caroussel;
+> Refus de la saisie lorsque le champ est vide dans l'ajout de caroussel;
