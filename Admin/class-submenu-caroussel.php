@@ -24,7 +24,7 @@ class Submenu_Caroussel
      * @return void
      * Cette fonction gère l'affichage du sous menu Gérer les caroussels
      * @since 1.1.3
-     * Modification : 1.4.1.
+     * Modification : 1.5.2
      */
     function render_caroussel_page()
     {
@@ -33,8 +33,10 @@ class Submenu_Caroussel
         <DOCTYPE html>
             <html>
             <head>
+            <!-- Import du CSS de Bootsrap 5.3.0  -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-            <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+            <!-- Import des icônes Bootsrap 1.10.3 -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
                 <style>
                     .entete {
                         background-color: beige;
@@ -77,36 +79,75 @@ class Submenu_Caroussel
                             </div>
                         </div>
                     </div>
+                    <!-- Modification du diaporama : Ajout d'images et Modification des informations -->
+                    <!-- Début de la Pop-Up de moficiation de chaque diaporama -->
                     <div class="modal" id="data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-fullscreen-xxl-down">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier le diaporama</h1>
+                                    <!-- Début de la bare de navigation -->
+                                    <nav>
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Acceuil</button>
+                                            <button class="nav-link" id="nav-diapo-tab" data-bs-toggle="tab" data-bs-target="#nav-diapo" type="button" role="tab" aria-controls="nav-diapo" aria-selected="false">Diaporama</button>
+                                            <button class="nav-link" id="nav-images-tab" data-bs-toggle="tab" data-bs-target="#nav-images" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Images</button>
+                                            <button class="nav-link" id="nav-supprimer-tab" data-bs-toggle="tab" data-bs-target="#nav-supprimer" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Supprimer</button>
+                                        </div>
+                                    </nav>
+                                    <!-- Fin de la barre de navigation -->
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
+                                <!-- Fin du Header -->
+                                <!-- Début du corps de la Pop-Up -->
                                 <div class="modal-body">
-                                    <h5>Saisissez un nom pour votre diaporama :</h5>
-                                    <form method="post">
-                                        <input type= "text" name="nomCaroussel"></input>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                            <button type="submit" name="Valider" class="btn btn-primary">Valider</button>
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                                        <?php error_log('[Gestion des Caroussels] > Menu Acceuil ouvert avec succés !');?>
+                                        <span class="badge text-bg-warning">En développement...</span>
+                                            
                                         </div>
-                                    </form>
+                                        <div class="tab-pane fade" id="nav-diapo" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                                        <?php error_log('[Gestion des Caroussels] > Menu Diapo ouvert avec succés !');?>
+                                        <span class="badge text-bg-warning">En développement...</span>
+                                            
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-images" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                                        <?php error_log('[Gestion des Caroussels] > Menu Images ouvert avec succés !');?>
+                                        <span class="badge text-bg-warning">En développement...</span>
+                                            
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-supprimer" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+                                        <?php error_log('[Gestion des Caroussels] > Menu Supprimer ouvert avec succés !');?>
+                                        <span class="badge text-bg-warning">En développement...</span>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                    <button type="submit" name="Valider" class="btn btn-primary" disabled data-bs-toggle="button">Valider</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2 text-center" style='background:rgb(250, 250, 188); '>
-                        <div>
-                            <button  data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" name="creer" class="btn" style="border:none;border-radius:initial;background:rgb(250, 250, 188);;;cursor:pointer;font-family: Helvetica;">
-                                <img src="images/add.svg"><br />
-                                Ajouter un caroussel
-                            </button>
-                        </div>
-                    </div><?php
+            </div>
+            <div class="row">
+                <div class="col-md-1 text-center" style='background:rgb(250, 250, 188); '>
+                    <div>
+                        <button  data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" name="creer" class="btn" style="border:none;border-radius:initial;background:rgb(250, 250, 188);;;cursor:pointer;font-family: Helvetica;">
+                            <i class="bi bi-plus-square"></i><br />
+                            Créer
+                        </button>
+                    </div>
+                </div><?php
                         $AllCaroussel = $this->getAllCaroussel();
                         foreach ($AllCaroussel as $unCaroussel) {
                             ?>
@@ -119,7 +160,21 @@ class Submenu_Caroussel
                         }?>
             </div>
             </body>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+            <!-- Import du JS de Bootsrap 5.3.0  -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const target = e.target.getAttribute('data-target');
+                            document.querySelectorAll('.content').forEach(content => {
+                                content.style.display = 'none';
+                            });
+                            if(target === "supprimer-diapo"){
+                                document.querySelector(target).style.display = 'block';
+                            }
+                        });
+                    });
+                </script>
                 <?php
                 if (isset($_POST['Valider'])) {
                     $unNom = $_POST['nomCaroussel'];
@@ -137,10 +192,10 @@ class Submenu_Caroussel
     /**
      * Résumé de Create_Caroussel
      * @return void
-     * @param Array $nom
+     * @param array $nom
      * Créer un caroussel dans la base de données avec le nom donné par l'utilisateur
      * @since 1.5.1
-     * Modifié : -
+     * Modifié : 1.5.2
      */
 
     function Creer_Caroussel(array $array){
@@ -148,7 +203,8 @@ class Submenu_Caroussel
         global $wpdb;
         if ($array['nomCaroussel'] == null) {
             error_log('L\'insertion n\'a pu être exécuté car le champ "nomCaroussel" est vide !');
-            $this->alertNull();
+            //Appel de la fonction alert en rentrant le numéro de l'erreur.
+            $this->alert(1);
             exit;
         }else{
             $result = $wpdb->insert($wpdb->prefix . "chasseavenircaroussel", $array);
@@ -157,19 +213,30 @@ class Submenu_Caroussel
                 $wpdb->print_error();
             }else{
             error_log('Create_Caroussel > Insertion effectué avec succès !');
-            //wp_redirect( $_SERVER['REQUEST_URI']);
-            //exit;
+            echo '<script type="text/javascript">location.reload();</script>';
+            exit;
             }
             exit;
         } 
     }
 
+      /**
+       * Résumé de alertNull
+       * @return void
+       * @since 1.5.1
+       * @param int $nbr
+       * Modifié : 1.5.2 
+       * Fonction permettant de gérer toutes les alertes en fonction d'un chiffre définit
+       */
 
-    function alertNull(){
-        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Erreur > </strong>Le champs "nomCaroussel" ne peut être null !
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>';
+    function alert(int $nbr){
+        if($nbr == 1){
+            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Erreur > </strong>Le champ "nomCaroussel" ne peut être null !
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
+            exit;
+        }
     }
     
 
@@ -177,7 +244,7 @@ class Submenu_Caroussel
        * Résumé de getAllCaroussel
        * @return mixed
        * @since 1.5.0
-       * 
+       * Modifié : -
        */
 
     function getAllCaroussel(){

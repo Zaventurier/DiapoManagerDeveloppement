@@ -1,7 +1,7 @@
 ==== Plugin ChasseAvenir87 ====
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
-Version 1.5.1 - 24 Janvier 2023
+Version 1.5.2 - 24 Janvier 2023
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
 La dernière version du plugin permet d'ajouter des images, de les uploads dans la médiathèque.
@@ -11,6 +11,7 @@ Actuellement, seuls les fonctionnalités suivantes sont disponible :
 > Une gestion quasi indépendante des caroussels sur votre site;
 
 [/!\] > Depuis la version 1.5.0, le plugin utilise Boostrap 5.0.3 nécessaire à son fonctionnement. Cette utilisation peut révéler une incompatibilité avec certains thèmes/plugins. Certaines fonctionnalités nécessiteron une mise à jour de Bootsrap, ce qui sera spécifié dans se Patch Note.
+[/!\] > Depuis la version 1.5.2, le plugin utilise la bibiothèque d'icônes de Boostrap 1.10.3 nécessaire à son fonctionnement. Cette utilisation peut entraîner de potentielles incompatibilité avec certains thèmes/plugins.
 
 Vous pouvez retrouver ici dans ce fichier, l'historique des corrections/ajouts qui sont réalisés dans le plugin.
 Nous nous éfforçons de regrouper au mieux les mises à jours.
@@ -119,9 +120,17 @@ Nous rappelons que ce plugin est réalisé en France à donc comme langue le fra
 > Réactivation de la gestion des images [Bug] -> Gestion toujours non disponible;
 > Ajout de lien pour les icônes;
 > Allègement du code : Suppression de fonction innutlisés;
-> [Fonctionnalité] > L'utilisateur peut désormais ajouter un caroussel => Lq gestion des caroussels sera ajoutée dans la prochaine mise  à jour;
+> [Fonctionnalité] > L'utilisateur peut désormais ajouter un caroussel => La gestion des caroussels sera ajoutée dans la prochaine mise  à jour;
 
-24 Janvier 2023 - 1.5.1 > [Version Actuelle]
+24 Janvier 2023 - 1.5.1 > [Version Ancienne]
 > Ajout d'un message d'erreur dans les logs lorsque le champ est vide dans l'ajout de caroussel;
 > Ajout d'un message d'erreur lorsque le champ est vide dans l'ajout de caroussel;
 > Refus de la saisie lorsque le champ est vide dans l'ajout de caroussel;
+
+24 Janvier 2023 - 1.5.2 > [Version Actuelle]
+> [Fonctionnalité] > Raffraichissement automatique de la page après l'ajout d'un caroussel;
+> Modification du système d'erreur
+> Import et utilisation de la bibliotheque d'icônes de Boostrap 1.10.3
+> Modification de certaines interfaces
+> [Fonctionnalité Désactivée] > L'insertion d'images n'est plus possible à l'heure actuelle suite à de nombreux bugs;
+> [Fonctionnalité] > Menu pour la gestion des Diaporamas

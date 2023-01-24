@@ -37,7 +37,10 @@ class Submenu_Page
     { 
         error_log('[ChasseAvenir87] > Utilisateur présent sur page d\'ajout d\'image !');?>
     <head>
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- Import du CSS de Bootsrap 5.3.0  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!-- Import des icônes Bootsrap 1.10.3 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     </head>
         <h1 style = "text-align: center;"><strong>ChasseAvenir87</strong> - Ajouter des Images</h1><br/>
         <p style="text-align:center;">Ajouter vos images directement depuis votre Panel de Gestion<br/>
@@ -80,13 +83,12 @@ class Submenu_Page
             <div style="width:35%; background-color:gray;padding:15px;border-radius: 25px;border: 5px solid yellow;display:flex;flex-direction:column;">
                 <p style="color:white;">Choisissez ou deposez une image à télécharger et cliquer sur "Télécharger"<br/>
                 La <strong>taille maximale</strong> de fichier est de <strong>50Mo</strong> et seul les fichiers en <strong>.jpg, .png, .jpeg, .pdf ou .svg sont acceptés !</strong></p>
+                <span class="badge text-bg-warning">Attention : Fonctionnalité temporairement désactivée !</span><br />
                     <div id="drop_zone" style="color:white;">Glissez-déposez votre fichier ici
                         <input type="file" id="image" name="image">
                     </div>
                     <div style="text-align:center; background-color:gray;align-self:center;">
-                        <button class="button" type="submit" name='submit' style="background-color:gray; cursor:pointer; border:none;display:flex;">
-                            <img tag="img" src="images/upload.png">
-                        </button>
+                    <button type="submit" type="submit" class="btn btn-outline-warning" disabled>Téléverser</button>
                     </div>
                 </div>
             </form>
@@ -191,7 +193,7 @@ class Submenu_Page
                             <span class="close" onclick="closePopup()">&times;</span>
                             <img src="images/warning.png"><p style="color:white;">Le format du fichier déposé ne correspond pas aux extensions proposés.</p>
                         </div>
-                        <script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"">
                             function closePopup() {
                                 // Cacher la div de pop-up
                                 document.getElementById("popup").style.display = "none";
