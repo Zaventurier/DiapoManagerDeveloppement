@@ -1,7 +1,7 @@
 ==== Plugin ChasseAvenir87 ====
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
-Version 1.5.2 - 24 Janvier 2023
+Version 1.5.3 - 25 Janvier 2023
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
 La dernière version du plugin permet d'ajouter des images, de les uploads dans la médiathèque.
@@ -127,10 +127,16 @@ Nous rappelons que ce plugin est réalisé en France à donc comme langue le fra
 > Ajout d'un message d'erreur lorsque le champ est vide dans l'ajout de caroussel;
 > Refus de la saisie lorsque le champ est vide dans l'ajout de caroussel;
 
-24 Janvier 2023 - 1.5.2 > [Version Actuelle]
+24 Janvier 2023 - 1.5.2 > [Version Ancienne]
 > [Fonctionnalité] > Raffraichissement automatique de la page après l'ajout d'un caroussel;
 > Modification du système d'erreur
 > Import et utilisation de la bibliotheque d'icônes de Boostrap 1.10.3
 > Modification de certaines interfaces
 > [Fonctionnalité Désactivée] > L'insertion d'images n'est plus possible à l'heure actuelle suite à de nombreux bugs;
-> [Fonctionnalité] > Menu pour la gestion des Diaporamas
+> [Fonctionnalité] > Menu pour la gestion des Diaporamas;
+
+25 Janvier 2023 - 1.5.3 > [Version Actuelle]
+> Patch du bug du Téléversement des images;
+> Relooking des messages de confirmations, warnings et échec;
+> Suppression de pages inutiles
+> Ajout d'icônes pour chaque diaporama dans la gestion des caroussels
