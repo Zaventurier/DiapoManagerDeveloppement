@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 /**
  * Fichier permettant l'affichage de la page "Gérer les Caroussels"
  *
@@ -9,6 +11,8 @@
  */
 //error_log('');
 ini_set('error_log', dirname(__FILE__) . '/debug.log');
+//On inclut le fichier qui contient la gestion du header
+require_once plugin_dir_path(__FILE__) . '/class-header.php';
 
 //wp_enqueue_script( 'bootstrap-js', plugins_url( 'js/bootstrap.min.js', __DIR__ ), array( 'jquery' ), null, true );
 
@@ -39,170 +43,77 @@ class Submenu_Diapo
                     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
                 <!-- Import des icônes Bootsrap 1.10.3 -->
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-                <style>
-                    .entete {
-                        background-color: beige;
-                        width: 100%;
-                        height: auto;
-                        text-align: left;
-                        padding: 10px;
-                        font-size: medium;
-                        text-align: center;
-                        margin-bottom: 20px;
-                        position: fixed;
-                    }
 
-                    .btn:hover {
-                        opacity: 0.6;
-                    }
-                </style>
             </head>
 
             <body>
-                <div class="row">
-                    <div class="col-md-1 text-center" style='background:rgb(250, 250, 188); '>
-                        <div>
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="submit" name="creer" class="btn"
-                                style="border:none;border-radius:initial;background:rgb(250, 250, 188);;;cursor:pointer;font-family: Helvetica;">
-                                <i class="bi bi-plus-square"></i><br />
-                                Créer
-                            </button>
-                        </div>
-                    </div>
-                    <?php
-                    $AllCaroussel = $this->getAllCaroussel();
-                    foreach ($AllCaroussel as $unCaroussel) {
-                        ?>
-                        
-                        <div class='col-md-1 text-center' style='background:rgb(250, 250, 188); border:1px dashed white;'>
-                            <input type="hidden" name="caroussel_id" value="<?php echo $unCaroussel['idCaroussel']; ?>">
-                            <button onclick="<?php $_SESSION['idCaroussel'] = $unCaroussel['idCaroussel']; ?>" data-bs-toggle="modal" data-bs-target="#data" type="submit" name="diapo" class="btn"
-                                style="border:none;border-radius:initial;background:rgb(250, 250, 188);;;cursor:pointer;font-family: Helvetica;">
-                                <i class="bi bi-images"></i>
-                                <?php echo $unCaroussel['nomCaroussel']; ?>
-                                
-                            </button>
-                        </div>
-                        <?php
-                    } ?>
-                </div>
+                <?php
+                //Appel de la fonction qui gère le header
+                render_header();
+                ?> 
                 <div>
-                    <div>
-                        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un nouveau diaporama</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h5>Saisissez un nom pour votre diaporama :</h5>
-                                        <form method="post">
-                                            <input type="text" name="nomCaroussel"></input>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Fermer</button>
-                                                <button type="submit" name="Valider" class="btn btn-primary">Valider</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="margin-top:2%;">
+                            <button class="nav-link" id="nav-diapo-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-diapo" type="button" role="tab"
+                                aria-controls="nav-diapo" aria-selected="false">Diaporama
+                            </button>
+                            <button class="nav-link" id="nav-images-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-images" type="button" role="tab"
+                                aria-controls="nav-images" aria-selected="false">Images
+                            </button>
+                            <button class="nav-link" id="nav-supprimer-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-supprimer" type="button" role="tab"
+                                aria-controls="nav-disabled" aria-selected="false">Supprimer
+                            </button>
                         </div>
-                        <!-- Modification du diaporama : Ajout d'images et Modification des informations -->
-                        <!-- Début de la Pop-Up de moficiation de chaque diaporama -->
-                        <div class="modal" id="data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:5%;margin-left:5%">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <!-- Début de la bare de navigation -->
-                                        <nav>
-                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                                    aria-selected="true">Acceuil
-                                                </button>
-                                                <button class="nav-link" id="nav-diapo-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#nav-diapo" type="button" role="tab"
-                                                    aria-controls="nav-diapo" aria-selected="false">Diaporama
-                                                </button>
-                                                <button class="nav-link" id="nav-images-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#nav-images" type="button" role="tab"
-                                                    aria-controls="nav-contact" aria-selected="false">Images
-                                                </button>
-                                                <button class="nav-link" id="nav-supprimer-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#nav-supprimer" type="button" role="tab"
-                                                    aria-controls="nav-disabled" aria-selected="false">Supprimer
-                                                </button>
-                                            </div>
-                                        </nav>
-                                        <!-- Fin de la barre de navigation -->
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <!-- Fin du Header -->
-                                    <!-- Début du corps de la Pop-Up -->
-                                    <div class="modal-body">
-                                        <div class="tab-content" id="nav-tabContent">
-                                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
-                                                aria-labelledby="nav-home-tab" tabindex="0">
-                                                <?php error_log('[Gestion des Caroussels] > Menu Acceuil ouvert avec succés !'); ?>
-                                                <span class="badge text-bg-warning">En développement...</span><?php
-                                                $idCaroussel = $_SESSION['idCaroussel'];
-                                                echo $idCaroussel;
-                                                ?>
-                                                Acceuil
-                                            </div>
-                                            <div class="tab-pane fade" id="nav-diapo" role="tabpanel"
-                                                aria-labelledby="nav-profile-tab" tabindex="0">
-                                                <?php error_log('[Gestion des Caroussels] > Menu Diapo ouvert avec succés !'); ?>
-                                                <span class="badge text-bg-warning">En développement...</span>
-
-                                            </div>
-                                            <div class="tab-pane fade" id="nav-images" role="tabpanel"
-                                                aria-labelledby="nav-contact-tab" tabindex="0">
-                                                <?php error_log('[Gestion des Caroussels] > Menu Images ouvert avec succés !'); ?>
-                                                <span class="badge text-bg-warning">En développement...</span>
-
-                                            </div>
-                                            <div class="tab-pane fade" id="nav-supprimer" role="tabpanel"
-                                                aria-labelledby="nav-disabled-tab" tabindex="0">
-                                                <?php error_log('[Gestion des Caroussels] > Menu Supprimer ouvert avec succés !'); ?>
-                                                <button type="button" class="btn btn-outline-danger" disabled>
-                                                    <i class="bi bi-trash3"></i>
-                                                    Supprimer
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                        <button type="submit" name="Valider" class="btn btn-primary" disabled
-                                            data-bs-toggle="button">Valider</button>
-                                    </div>
-                                </div>
+                    </nav>
+                </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade" id="nav-diapo" role="tabpanel"
+                                aria-labelledby="nav-profile-tab" tabindex="0">
+                                <?php error_log('[Gestion des Caroussels] > Menu Diapo ouvert avec succés !'); ?>
+                                <span class="badge text-bg-warning">En développement...</span>
+                                <?php
+                                $idCaroussel = $_SESSION['idCaroussel'];
+                                echo $idCaroussel;
+                                ?>
+                            </div>
+                            <div class="tab-pane fade" id="nav-images" role="tabpanel"
+                                aria-labelledby="nav-contact-tab" tabindex="0">
+                                <?php error_log('[Gestion des Caroussels] > Menu Images ouvert avec succés !'); ?>
+                                <span class="badge text-bg-warning">En développement...</span>
+                            </div>
+                            <div class="tab-pane fade" id="nav-supprimer" role="tabpanel"
+                                aria-labelledby="nav-disabled-tab" tabindex="0" style="text-align:center;">
+                                <?php error_log('[Gestion des Caroussels] > Menu Supprimer ouvert avec succés !'); ?>
+                                <form action="" method="post">
+                                    <button type="submit" name="SuppDiapo" class="btn btn-outline-danger" style="margin-top:5%;">
+                                        <i class="bi bi-trash3"></i>
+                                        Supprimer
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </body>
-            <!-- Import du JS de Bootsrap 5.3.0  -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            const target = e.target.getAttribute('data-target');
-                            document.querySelectorAll('.content').forEach(content => {
-                                content.style.display = 'none';
-                            });
-                            if (target === "supprimer-diapo") {
+                <!-- Import du JS de Bootsrap 5.3.0  -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                const target = e.target.getAttribute('data-target');
+                                document.querySelectorAll('.content').forEach(content => {
+                                    content.style.display = 'none';
+                                });
+                                if (target === "supprimer-diapo") {
                                 document.querySelector(target).style.display = 'block';
-                            }
+                                }
+                            });
                         });
-                    });
-                </script>
+                    </script>
             <?php
             if (isset($_POST['Valider'])) {
                 $unNom = $_POST['nomCaroussel'];
@@ -211,7 +122,17 @@ class Submenu_Diapo
                     'nomCaroussel' => $unNom
                 );
                 $this->Creer_Caroussel($data);
-            } ?>
+            }
+
+            if(isset($_POST['SuppDiapo'])) {
+                echo '
+                <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+              </div>';
+            }
+            
+            ?>
 
             </html>
             <?php
