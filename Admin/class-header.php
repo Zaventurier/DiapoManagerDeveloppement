@@ -1,15 +1,19 @@
 <?php
 
+
+
     /**
-     * Summary of Header
+     * Résumé de render_header
+     * @return void
+     * @since 1.5.4
+     * Modifié : -
+     * Affichage du header de la page de Gestion des Diaporamas
      */
 
-
-
-
-
-function render_header() {?>
-
+function render_header() {
+    $action = plugin_dir_path(__FILE__) . 'class-submenu-caroussel.php';
+    require_once plugin_dir_path(__FILE__) . '/class-submenu-caroussel.php';?>
+    
 <DOCTYPE html>
     <html>
         <head>
@@ -36,7 +40,6 @@ function render_header() {?>
                 }
             </style>
         </head>
-
         <body>
             <div class="row">
                 <div class="col-md-1 text-center" style='background:rgb(250, 250, 188); '>
@@ -53,11 +56,14 @@ function render_header() {?>
                 foreach ($AllCaroussel as $unCaroussel) {
                     ?>
                     <div class='col-md-1 text-center' style='background:rgb(250, 250, 188); border:1px dashed white;'>
-                        <button onclick="$_SESSION['idCaroussel'] = $unCaroussel['idCaroussel']" data-bs-toggle="modal" data-bs-target="#data" type="submit" name="diapo" class="btn"
-                            style="border:none;border-radius:initial;background:rgb(250, 250, 188);cursor:pointer;font-family: Helvetica;">
-                            <i class="bi bi-images"></i>
-                            <?php echo $unCaroussel['nomCaroussel']; ?> 
-                        </button>
+                        <form action="<?php plugin_dir_path(__FILE__) . 'class-submenu-caroussel.php';?>" method="post">
+                            <input type="hidden" name="id" value="<? echo $unCaroussel['idCaroussel'];?>">
+                            <button data-bs-toggle="modal" data-bs-target="#data" type="submit" name="diapo" class="btn"
+                                style="border:none;border-radius:initial;background:rgb(250, 250, 188);cursor:pointer;font-family: Helvetica;">
+                                <i class="bi bi-images"></i>
+                                <?php echo $unCaroussel['nomCaroussel'];?> 
+                            </button>
+                        </form>
                     </div>
                     <?php
                 } ?>
@@ -85,8 +91,15 @@ function render_header() {?>
         </body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </html>
-<?php
-
+    <?php
+        if (isset($_POST['Valider'])) {
+            $unNom = $_POST['nomCaroussel'];
+            $data = array(
+                'idCaroussel' => null,
+                'nomCaroussel' => $unNom
+            );
+            Creer_Caroussel($data);
+        } 
 }
 
 
@@ -106,7 +119,7 @@ function Creer_Caroussel(array $array)
     if ($array['nomCaroussel'] == null) {
         error_log('L\'insertion n\'a pu être exécuté car le champ "nomCaroussel" est vide !');
         //Appel de la fonction alert en rentrant le numéro de l'erreur.
-        alert(1);
+        //alert(1);
         exit;
     } else {
         $result = $wpdb->insert($wpdb->prefix . "chasseavenircaroussel", $array);
@@ -121,21 +134,4 @@ function Creer_Caroussel(array $array)
         exit;
     }
 }
-
-/**
- * Résumé de getAllCaroussel
- * @return mixed
- * @since 1.5.0
- * Modifié : -
- */
-
-    function getAllCaroussel()
-    {
-        error_log('getAllCaroussel > Fonction appellé avec succès !');
-        global $wpdb;
-        $AllCaroussel = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "chasseavenircaroussel", ARRAY_A);
-        return $AllCaroussel;
-    }
-
-
-
+?>

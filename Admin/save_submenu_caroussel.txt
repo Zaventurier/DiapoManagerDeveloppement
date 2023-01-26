@@ -1,0 +1,43 @@
+<div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist" style="margin-top:2%;">
+                                <button class="nav-link" id="nav-diapo-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-diapo" type="button" role="tab"
+                                    aria-controls="nav-diapo" aria-selected="false">Diaporama
+                                </button>
+                                <button class="nav-link" id="nav-images-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-images" type="button" role="tab"
+                                    aria-controls="nav-images" aria-selected="false">Images
+                                </button>
+                                <button class="nav-link" id="nav-supprimer-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-supprimer" type="button" role="tab"
+                                    aria-controls="nav-disabled" aria-selected="false" disabled>Supprimer
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade" id="nav-diapo" role="tabpanel"
+                            aria-labelledby="nav-profile-tab" tabindex="0">
+                            <?php error_log('[Gestion des Caroussels] > Menu Diapo ouvert avec succés !'); ?>
+                            <span class="badge text-bg-warning">En développement...</span>
+                            <?php
+
+                            ?>
+                        </div>
+                        <div class="tab-pane fade" id="nav-images" role="tabpanel"
+                            aria-labelledby="nav-contact-tab" tabindex="0">
+                            <?php error_log('[Gestion des Caroussels] > Menu Images ouvert avec succés !'); ?>
+                            <span class="badge text-bg-warning">En développement...</span>
+                        </div>
+                        <div class="tab-pane fade" id="nav-supprimer" role="tabpanel"
+                            aria-labelledby="nav-disabled-tab" tabindex="0" style="text-align:center;">
+                            <?php error_log('[Gestion des Caroussels] > Menu Supprimer ouvert avec succés !'); ?>
+                            <form action="" method="post">
+                                <button type="submit" name="SuppDiapo" class="btn btn-outline-danger" style="margin-top:5%;">
+                                    <i class="bi bi-trash3"></i>
+                                    Supprimer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
