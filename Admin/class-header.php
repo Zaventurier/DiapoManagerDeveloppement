@@ -57,8 +57,9 @@ function render_header() {
                     ?>
                     <div class='col-md-1 text-center' style='background:rgb(250, 250, 188); border:1px dashed white;'>
                         <form action="<?php plugin_dir_path(__FILE__) . 'class-submenu-caroussel.php';?>" method="post">
-                            <input type="hidden" name="id" value="<? echo $unCaroussel['idCaroussel'];?>">
-                            <button data-bs-toggle="modal" data-bs-target="#data" type="submit" name="diapo" class="btn"
+                            <input type="hidden" name="id" value="<?php echo $unCaroussel['idCaroussel'];?>">
+                            <input type="hidden" name="nom" value="<?php echo $unCaroussel['nomCaroussel'];?> ">
+                            <button value=" " data-bs-toggle="modal" data-bs-target="#data" type="submit" name="diapo" class="btn"
                                 style="border:none;border-radius:initial;background:rgb(250, 250, 188);cursor:pointer;font-family: Helvetica;">
                                 <i class="bi bi-images"></i>
                                 <?php echo $unCaroussel['nomCaroussel'];?> 
@@ -74,7 +75,8 @@ function render_header() {
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un nouveau diaporama</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
+                                aria-label="Close">
+                            </button>
                         </div>
                         <div class="modal-body">
                             <form method="post">

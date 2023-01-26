@@ -34,44 +34,107 @@ class Submenu_Diapo
                         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
                     <!-- Import des icônes Bootsrap 1.10.3 -->
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-                    <style>
-                        
-                    </style>
-
-
                 </head>
                 <body>
                     <?php
                     //Appel de la fonction qui gère le header
                     render_header();
+                    if(isset($_POST['diapo'])){
+                        $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
+                        $id = isset($_POST['id']) ? $_POST['id'] : '';
+                    }else{
+                        $nom = "";
+                        $id = "";
+                    }  
                     ?>
                     <hr style="border-top: 2px solid gray;">
                     <div class="row">
-                        <div class="col-md-2 text-center" style='border-right:2px solid gray; height:75vh;background:#efefee;'>
+                        <div class="col-md-2 text-center" style='border-right:2px solid gray;border-bottom:2px solid gray; height:75vh;background:#efefee;'>
                             <form class="form-floating" action="" method="post">
-                                <input type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" disabled>
+                                <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $nom ?>" disabled>
                                 <label for="floatingInputValue">Nom du Diaporama</label>
-                                <div class="Modif" style="margin-top:5px;">
-                                    <button type="submit" name="modify" class="btn btn-primary" style="background-color:green;border-color:green;"><i class="bi bi-pencil-square"></i></button>
-                                    <button type="submit" name="delete" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
+                                <div class="ModifDiapo" style="margin-top:5px;">
+                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" disabled ><i class="bi bi-pencil-square"></i></button>
+                                    <button value="<?php echo $id; ?>" type="submit" name="deleteDiapo" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
                                 </div>
                             </form>
+                            <?php
+                            /**
+                             * Vérification : Si les champs du formulaire sont null, on ne fait rien
+                             */                        
+                            //Vérification des conditions du formulaire
+                            if (isset($_POST['deleteDiapo'])) {
+                                //Si le bouton supprimer est cliquer
+                                $idDiapo = $_POST['deleteDiapo'];
+                                deleteDiapo($idDiapo);
+                            }
+                            if (isset($_POST['modifyDiapo'])) {
+                                //Si le bouton modifier est cliquer
+                                $newName = $_POST['nomDiapo'];
+                                $idDiapo = $_POST['modifyDiapo'];
+                                ModifDiapo($idDiapo, $newName);                            
+                            }
+                            ?>
                             <hr style="border-top: 2px solid gray;">
-                            <form class="form-floating" action="" method="post">
-                                <button type="submit" name="AddImage" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i>Ajouter une Slide</button>
-                            </form>
+                            <div class="AddSlide">
+                                <button data-bs-toggle="modal" data-bs-target="#AddSlide" type="submit" name="creer" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i>Ajouter un Slide</button>
+                            </div>
                             <hr style="border-top: 2px solid gray;">
                             <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Utiliser le shortcode :</label>
+                                <label class="form-label">Utiliser le shortcode :</label>
                                 <input class="form-control" type="text" aria-label="readonly input example" style="height:150px" readonly>
                             </div>
                             <hr style="border-top: 2px solid gray;">
                         </div>
-                        <div class="col-md-9 text-center" style='border:none;border-left:none; height: 75vh;'>
-                    
+                        <div class="col-md-7 text-center" style='border-bottom:2px solid gray; height: 75vh;'>
+                            Affichages de toutes les images présentes dans le diaporama 
+                            <?php
+                            ?>                
+                        </div>
+                        <div class="col-md-2 text-center" style='border-left:2px solid gray;border-bottom:2px solid gray;height:75vh;background:#efefee;'>
+                            <form class="form-floating" action="" method="post">
+                                <input type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" disabled>
+                                <label for="floatingInputValue">Nom du Slide</label>
+                                <div class="ModifImage" style="margin-top:5px;">
+                                    <button type="submit" name="deleteImage" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
+                                </div>
+                            </form>
+                            <hr style="border-top: 2px solid gray;">
+                            <form class="form-floating" action="" method="post">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <label for="floatingInputValue">Description</label>
+                                <button type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green; margin-top:5px;"><i class="bi bi-check2"></i></button>
+                            </form>
+                            <hr style="border-top: 2px solid gray;">
                         </div>
                     </div>
+                    <div class="modal" id="AddSlide" tabindex="-1" aria-labelledby="AddSlide" aria-hidden="true">
+                        <div class="modal-dialog" style="margin-top:15%;margin-left:20%;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un Slide pour <?php echo $nom; ?></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close">
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post">
+                                        <input type="text" name="nomCarousselModif" placeholder="Saisissez un nom " style="margin-bottom:4%;width:50%"></input>
+                                        <div class="modal-footer" style="display:block;text-align:center;">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;border-color:red;"><i class="bi bi-x"></i></button>
+                                            <button value="<?php echo $id ?>" type="submit" name="Modifier" class="btn btn-primary" style="background-color:green;border-color:green;"><i class="bi bi-check2"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                    if (isset($_POST['Modifier'])) {
+                        //NF pour le moment...
+                    }
 
+                    ?>
                 </body>
                 <!-- Import du JS de Bootsrap 5.3.0  -->
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
@@ -113,5 +176,90 @@ function getAllCaroussel()
     global $wpdb;
     $AllCaroussel = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "chasseavenircaroussel", ARRAY_A);
     return $AllCaroussel;
+}
+
+    /**
+     * Résumé de deleteDiapo
+     * @param int $idDiapo
+     * @return void
+     * @since 1.5.6
+     * 
+     */
+
+
+     function deleteDiapo(int $idDiapo){
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'chasseavenircaroussel';
+        $wpdb->delete( $table_name, array( 'idCaroussel' => $idDiapo ) );
+        echo '<script type="text/javascript">location.reload();</script>';
+    }
+
+        /**
+         * Résumé de ModifDiapo
+         * @param int $idDiapo
+         * @param string $newName
+         * @return void
+         */
+
+
+    function ModifDiapo(int $idDiapo, String $newName){
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'chasseavenircaroussel';
+        $wpdb->update( $table_name, array( 'idCaroussel' => $idDiapo ), array( 'nomCaroussel' => $newName ) );
+        //echo '<script type="text/javascript">location.reload();</script>';
+    }
+    
+
+
+  /**
+   * Résumé de AddSlide
+   * @return void
+   * @since 1.5.6
+   * @param null
+   * Modifié : -
+   * Permet d'ajouter une slide
+   */
+function AddSlide(){
+
+}
+
+    /**
+     * Résumé de getAllSlide
+     * @return void
+     * @since 1.5.6
+     * @param $idDiapo
+     * Modifié : -
+     * Permet d'afficher toutes les slides d'un diaporama donnée
+     */
+function getAllSlide(int $idDiapo){
+
+}
+
+
+
+    /**
+    * Résumé de DeleteSlide
+    * @param int $idDiapo 
+    * @param int $idSlide
+    * @return void
+    * @since 1.5.6
+    * Modifié : -
+    * Permet de supprimer une slide d'une dispo définie
+    */
+function DeleteSlide(int $idDiapo, int $idSlide){
+
+}
+
+/**
+ * Résumé de ModifSlide
+ * @param int $idDiapo
+ * @param int $idSlide
+ * @return void
+ * @since 1.5.6
+ * Modifié : -
+ * Permet de modifier une slide d'une dispo définie
+ */
+function ModifSlide(int $idDiapo, int $idSlide){
+
 }
 ?>
