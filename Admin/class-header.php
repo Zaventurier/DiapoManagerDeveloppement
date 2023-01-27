@@ -104,6 +104,21 @@ function render_header() {
         } 
 }
 
+    /**
+     * Résumé de getAllCaroussel
+     * @return mixed
+     * @since 1.5.0
+     * Modifié : -
+     */
+
+     function getAllCaroussel()
+     {
+         error_log('getAllCaroussel > Fonction appellé avec succès !');
+         global $wpdb;
+         $AllCaroussel = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "chasseavenircaroussel", ARRAY_A);
+         return $AllCaroussel;
+     }
+
 
 /**
  * Résumé de Create_Caroussel

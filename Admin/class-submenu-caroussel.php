@@ -39,13 +39,13 @@ class Submenu_Diapo
                     <?php
                     //Appel de la fonction qui gère le header
                     render_header();
-                    if(isset($_POST['diapo'])){
+                    if (isset($_POST['diapo'])) {
                         $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
                         $id = isset($_POST['id']) ? $_POST['id'] : '';
-                    }else{
+                    } else {
                         $nom = "";
                         $id = "";
-                    }  
+                    }
                     ?>
                     <hr style="border-top: 2px solid gray;">
                     <div class="row">
@@ -54,25 +54,30 @@ class Submenu_Diapo
                                 <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $nom ?>" disabled>
                                 <label for="floatingInputValue">Nom du Diaporama</label>
                                 <div class="ModifDiapo" style="margin-top:5px;">
-                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" disabled ><i class="bi bi-pencil-square"></i></button>
+                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" ><i class="bi bi-pencil-square"></i></button>
                                     <button value="<?php echo $id; ?>" type="submit" name="deleteDiapo" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
                                 </div>
                             </form>
                             <?php
                             /**
-                             * Vérification : Si les champs du formulaire sont null, on ne fait rien
-                             */                        
-                            //Vérification des conditions du formulaire
+                             * Vérification : 
+                             * Si le champs du nom est null ou vide, alors on affiche un message d'erreur
+                             * Sinon, on effectue la suppression
+                             */
                             if (isset($_POST['deleteDiapo'])) {
-                                //Si le bouton supprimer est cliquer
-                                $idDiapo = $_POST['deleteDiapo'];
-                                deleteDiapo($idDiapo);
+                                if ($_POST['deleteDiapo'] == null) {
+                                    echo '<div class="alert alert-danger" role="alert">Aucun diaporama n\'à été sélectionné !</div>';
+                                } else {
+                                    //Si le bouton supprimer est cliquer
+                                    $idDiapo = $_POST['deleteDiapo'];
+                                   deleteDiapo($idDiapo);
+                                }
                             }
                             if (isset($_POST['modifyDiapo'])) {
                                 //Si le bouton modifier est cliquer
-                                $newName = $_POST['nomDiapo'];
-                                $idDiapo = $_POST['modifyDiapo'];
-                                ModifDiapo($idDiapo, $newName);                            
+                                //$newName = $_POST['nomDiapo'];
+                                //$idDiapo = $_POST['modifyDiapo'];
+                                //ModifDiapo($idDiapo, $newName);                            
                             }
                             ?>
                             <hr style="border-top: 2px solid gray;">
@@ -97,6 +102,15 @@ class Submenu_Diapo
                                 <label for="floatingInputValue">Nom du Slide</label>
                                 <div class="ModifImage" style="margin-top:5px;">
                                     <button type="submit" name="deleteImage" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
+                                    <?php
+                                        if (isset($_POST['deleteImage'])) {
+                                            if ($_POST['deleteImage'] == null) {
+                                                echo '<div class="alert alert-danger" role="alert">Aucune image n\'à été sélectionné !</div>';
+                                            } else {
+                                                echo '<div class="alert alert-danger" role="alert">Cette fonctionnalité est actuellement désactivé !</div>';
+                                            }
+                                        }
+                                    ?>  
                                 </div>
                             </form>
                             <hr style="border-top: 2px solid gray;">
@@ -153,30 +167,15 @@ class Submenu_Diapo
                 </script>
             </html>
             <?php
-            if(isset($_POST['SuppDiapo'])) {
+            if (isset($_POST['SuppDiapo'])) {
                 echo '
                 <div class="alert alert-info alert-dismissible fade show">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
               </div>';
             }
+                    }
     }
-}
-
-/**
- * Résumé de getAllCaroussel
- * @return mixed
- * @since 1.5.0
- * Modifié : -
- */
-
-function getAllCaroussel()
-{
-    error_log('getAllCaroussel > Fonction appellé avec succès !');
-    global $wpdb;
-    $AllCaroussel = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "chasseavenircaroussel", ARRAY_A);
-    return $AllCaroussel;
-}
 
     /**
      * Résumé de deleteDiapo
@@ -187,41 +186,44 @@ function getAllCaroussel()
      */
 
 
-     function deleteDiapo(int $idDiapo){
+    function deleteDiapo(int $idDiapo)
+    {
         global $wpdb;
         $table_name = $wpdb->prefix . 'chasseavenircaroussel';
-        $wpdb->delete( $table_name, array( 'idCaroussel' => $idDiapo ) );
+        $wpdb->delete($table_name, array('idCaroussel' => $idDiapo));
         echo '<script type="text/javascript">location.reload();</script>';
     }
 
-        /**
-         * Résumé de ModifDiapo
-         * @param int $idDiapo
-         * @param string $newName
-         * @return void
-         */
+    /**
+     * Résumé de ModifDiapo
+     * @param int $idDiapo
+     * @param string $newName
+     * @return void
+     */
 
 
-    function ModifDiapo(int $idDiapo, String $newName){
+    function ModifDiapo(int $idDiapo, string $newName)
+    {
         global $wpdb;
         $table_name = $wpdb->prefix . 'chasseavenircaroussel';
-        $wpdb->update( $table_name, array( 'idCaroussel' => $idDiapo ), array( 'nomCaroussel' => $newName ) );
+        $wpdb->update($table_name, array('idCaroussel' => $idDiapo), array('nomCaroussel' => $newName));
         //echo '<script type="text/javascript">location.reload();</script>';
     }
-    
 
 
-  /**
-   * Résumé de AddSlide
-   * @return void
-   * @since 1.5.6
-   * @param null
-   * Modifié : -
-   * Permet d'ajouter une slide
-   */
-function AddSlide(){
 
-}
+    /**
+     * Résumé de AddSlide
+     * @return void
+     * @since 1.5.6
+     * @param null
+     * Modifié : -
+     * Permet d'ajouter une slide
+     */
+    function AddSlide()
+    {
+
+    }
 
     /**
      * Résumé de getAllSlide
@@ -231,35 +233,38 @@ function AddSlide(){
      * Modifié : -
      * Permet d'afficher toutes les slides d'un diaporama donnée
      */
-function getAllSlide(int $idDiapo){
+    function getAllSlide(int $idDiapo)
+    {
 
-}
+    }
 
 
 
     /**
-    * Résumé de DeleteSlide
-    * @param int $idDiapo 
-    * @param int $idSlide
-    * @return void
-    * @since 1.5.6
-    * Modifié : -
-    * Permet de supprimer une slide d'une dispo définie
-    */
-function DeleteSlide(int $idDiapo, int $idSlide){
+     * Résumé de DeleteSlide
+     * @param int $idDiapo 
+     * @param int $idSlide
+     * @return void
+     * @since 1.5.6
+     * Modifié : -
+     * Permet de supprimer une slide d'une dispo définie
+     */
+    function DeleteSlide(int $idDiapo, int $idSlide)
+    {
 
-}
+    }
 
-/**
- * Résumé de ModifSlide
- * @param int $idDiapo
- * @param int $idSlide
- * @return void
- * @since 1.5.6
- * Modifié : -
- * Permet de modifier une slide d'une dispo définie
- */
-function ModifSlide(int $idDiapo, int $idSlide){
+    /**
+     * Résumé de ModifSlide
+     * @param int $idDiapo
+     * @param int $idSlide
+     * @return void
+     * @since 1.5.6
+     * Modifié : -
+     * Permet de modifier une slide d'une dispo définie
+     */
+    function ModifSlide(int $idDiapo, int $idSlide)
+    {
 
-}
+    }
 ?>
