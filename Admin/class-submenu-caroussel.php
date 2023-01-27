@@ -54,7 +54,7 @@ class Submenu_Diapo
                                 <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $nom ?>" disabled>
                                 <label for="floatingInputValue">Nom du Diaporama</label>
                                 <div class="ModifDiapo" style="margin-top:5px;">
-                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" ><i class="bi bi-pencil-square"></i></button>
+                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" disabled ><i class="bi bi-pencil-square"></i></button>
                                     <button value="<?php echo $id; ?>" type="submit" name="deleteDiapo" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
                                 </div>
                             </form>
@@ -66,7 +66,7 @@ class Submenu_Diapo
                              */
                             if (isset($_POST['deleteDiapo'])) {
                                 if ($_POST['deleteDiapo'] == null) {
-                                    echo '<div class="alert alert-danger" role="alert">Aucun diaporama n\'à été sélectionné !</div>';
+                                    echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun diaporama n\'à été sélectionné !</div>';
                                 } else {
                                     //Si le bouton supprimer est cliquer
                                     $idDiapo = $_POST['deleteDiapo'];
@@ -74,10 +74,14 @@ class Submenu_Diapo
                                 }
                             }
                             if (isset($_POST['modifyDiapo'])) {
+                                if ($_POST['modifyDiapo'] == null) {
+                                    echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">La saisit d\'un nom est obigatoire !</div>';
+                                }else {
                                 //Si le bouton modifier est cliquer
-                                //$newName = $_POST['nomDiapo'];
-                                //$idDiapo = $_POST['modifyDiapo'];
-                                //ModifDiapo($idDiapo, $newName);                            
+                                $newName = $_POST['nomDiapo'];
+                                $idDiapo = $_POST['modifyDiapo'];
+                                ModifDiapo($idDiapo, $newName);   
+                                }
                             }
                             ?>
                             <hr style="border-top: 2px solid gray;">
@@ -105,9 +109,9 @@ class Submenu_Diapo
                                     <?php
                                         if (isset($_POST['deleteImage'])) {
                                             if ($_POST['deleteImage'] == null) {
-                                                echo '<div class="alert alert-danger" role="alert">Aucune image n\'à été sélectionné !</div>';
+                                                echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucune image n\'à été sélectionné !</div>';
                                             } else {
-                                                echo '<div class="alert alert-danger" role="alert">Cette fonctionnalité est actuellement désactivé !</div>';
+                                                echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Cette fonctionnalité est actuellement désactivé !</div>';
                                             }
                                         }
                                     ?>  
@@ -126,7 +130,7 @@ class Submenu_Diapo
                         <div class="modal-dialog" style="margin-top:15%;margin-left:20%;">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un Slide pour <?php echo $nom; ?></h1>
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un Slide pour <u><?php echo $nom; ?></u></h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close">
                                     </button>
@@ -134,6 +138,10 @@ class Submenu_Diapo
                                 <div class="modal-body">
                                     <form method="post">
                                         <input type="text" name="nomCarousselModif" placeholder="Saisissez un nom " style="margin-bottom:4%;width:50%"></input>
+                                        <div class="mb-3">
+                                            <label class="form-label">Dépôt d'un fichier</label>
+                                            <input class="form-control" type="file" id="formFileDisabled">
+                                        </div>
                                         <div class="modal-footer" style="display:block;text-align:center;">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;border-color:red;"><i class="bi bi-x"></i></button>
                                             <button value="<?php echo $id ?>" type="submit" name="Modifier" class="btn btn-primary" style="background-color:green;border-color:green;"><i class="bi bi-check2"></i></button>
