@@ -70,6 +70,7 @@ class Submenu_Diapo
                                 } else {
                                     //Si le bouton supprimer est cliquer
                                     $idDiapo = $_POST['deleteDiapo'];
+                                    deleteAllSlide($idDiapo);
                                    deleteDiapo($idDiapo);
                                 }
                             }
@@ -96,9 +97,9 @@ class Submenu_Diapo
                             <hr style="border-top: 2px solid gray;">
                         </div>
                         <div class="col-md-7 text-center" style='border-bottom:2px solid gray; height: 75vh;'>
-                            Affichages de toutes les images présentes dans le diaporama 
-                            <?php
-                            ?>                
+                        <?php
+                        //$AllSlide = $this->getAllSlide($id);
+                        ?>    
                         </div>
                         <div class="col-md-2 text-center" style='border-left:2px solid gray;border-bottom:2px solid gray;height:75vh;background:#efefee;'>
                             <form class="form-floating" action="" method="post">
@@ -121,11 +122,12 @@ class Submenu_Diapo
                             <form class="form-floating" action="" method="post">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 <label for="floatingInputValue">Description</label>
-                                <button type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green; margin-top:5px;"><i class="bi bi-check2"></i></button>
+                                <button type="submit" name="ModifDesc" class="btn btn-primary" style="background-color:green;border-color:green; margin-top:5px;"><i class="bi bi-check2"></i></button>
                             </form>
                             <hr style="border-top: 2px solid gray;">
                         </div>
                     </div>
+                    <!-- Modal pour l'ajout s'un slide -->
                     <div class="modal" id="AddSlide" tabindex="-1" aria-labelledby="AddSlide" aria-hidden="true">
                         <div class="modal-dialog" style="margin-top:15%;margin-left:20%;">
                             <div class="modal-content">
@@ -136,15 +138,16 @@ class Submenu_Diapo
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="post">
-                                        <input type="text" name="nomCarousselModif" placeholder="Saisissez un nom " style="margin-bottom:4%;width:50%"></input>
+                                    <form method="post" action="" enctype="multipart/form-data">
+                                        <input type="text" name="nomSlide" placeholder="Saisissez un nom " style="margin-bottom:4%;width:50%"></input>
                                         <div class="mb-3">
                                             <label class="form-label">Dépôt d'un fichier</label>
-                                            <input class="form-control" type="file" id="formFileDisabled">
+                                            <input class="form-control" type="file" id="image" name="image">
                                         </div>
+                                        <input type="hidden" name="idDiapo" value="<?php echo $id ?>">
                                         <div class="modal-footer" style="display:block;text-align:center;">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color:red;border-color:red;"><i class="bi bi-x"></i></button>
-                                            <button value="<?php echo $id ?>" type="submit" name="Modifier" class="btn btn-primary" style="background-color:green;border-color:green;"><i class="bi bi-check2"></i></button>
+                                            <button value="" type="submit" name="AddASlide" class="btn btn-primary" style="background-color:green;border-color:green;"><i class="bi bi-check2"></i></button>
                                         </div>
                                     </form>
                                 </div>
@@ -152,11 +155,69 @@ class Submenu_Diapo
                         </div>
                     </div>
                     <?php
-                    if (isset($_POST['Modifier'])) {
-                        //NF pour le moment...
-                    }
+                    if (isset($_POST['AddASlide'])) {
 
-                    ?>
+                        $nomSlide = $_POST['nomSlide'];
+                        $idCaroussel = $_POST['idDiapo'];
+
+
+
+                        
+                        $fileName = $_FILES['image']['name'];
+                        $fileTmpName = $_FILES['image']['tmp_name'];
+                        $fileSize = $_FILES['image']['size'];
+                        $fileError = $_FILES['image']['error'];
+                        $fileType = $_FILES['image']['type'];
+
+                        $fileExt = explode('.', $fileName);
+                        $fileActualExt = strtolower(end($fileExt));
+                        //Liste des extensions autorisés.
+                        $allowed = array('jpg', 'jpeg', 'png', 'pdf', 'svg');
+
+                        if (in_array($fileActualExt, $allowed)) {
+                            if ($fileError === 0) {
+                                //Taille maximale du fichier : 10MO
+                                if ($fileSize < 52428800) {
+                                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                                    //Définir le chemin d'upload
+                                    $upload_dir = wp_upload_dir();
+                                    $fileDestination = $upload_dir['basedir'] . '/' . $fileNameNew;
+                                    move_uploaded_file($fileTmpName, $fileDestination);
+
+                                    // Insérer l'image dans la médiathèque
+                                    $wp_filetype = wp_check_filetype(basename($fileName), null);
+                                    $attachment = array(
+                                        'guid' => $upload_dir['baseurl'] . '/' . basename($fileNameNew),
+                                        'post_mime_type' => $wp_filetype['type'],
+                                        'post_title' => preg_replace('/\.[^.]+$/', '', basename($fileName)),
+                                        'post_content' => '',
+                                        'post_status' => 'inherit'
+                                    );
+                                    $attach_id = wp_insert_attachment($attachment, $fileDestination);
+                                    $attach_data = wp_generate_attachment_metadata($attach_id, $fileDestination);
+                                    wp_update_attachment_metadata($attach_id, $attach_data);
+                                    //echo "<img src='images/check.png'>Image ajoutée à la médiathèque avec succès !<br/>";
+                                } else {
+                                    error_log('Erreur : le fichier est trop volumineux !');
+                                    exit;
+                                }
+                            } else {
+                                error_log('Une erreur inconnu s\'est produite durant le téléversement du fichier !');
+                                exit;
+                            }
+                        } else {
+                            error_log('Erreur : l\'extension ' . $fileActualExt . ' est incompatible !');
+                            exit;
+                        }
+                        $data = array(
+                            'idSlide' => Null,
+                            'nomSlide' => $nomSlide,
+                            'idCaroussel' => $idCaroussel,
+                            'mediaLibraryId' => $attach_id
+                        );
+                        //Appel de la fonction AddSlide dans lequel on passe notre tableau en paramètre
+                        AddSlide($data);
+                    }?>
                 </body>
                 <!-- Import du JS de Bootsrap 5.3.0  -->
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
@@ -190,7 +251,7 @@ class Submenu_Diapo
      * @param int $idDiapo
      * @return void
      * @since 1.5.6
-     * 
+     * Modifié : -
      */
 
 
@@ -207,6 +268,8 @@ class Submenu_Diapo
      * @param int $idDiapo
      * @param string $newName
      * @return void
+     * @since 1.5.6
+     * Modifié : -
      */
 
 
@@ -224,26 +287,52 @@ class Submenu_Diapo
      * Résumé de AddSlide
      * @return void
      * @since 1.5.6
-     * @param null
-     * Modifié : -
-     * Permet d'ajouter une slide
+     * @param $array
+     * Modifié : 1.5.9
+     * Permet d'ajouter une slide : les données à ajouté sont passés en paramètre dans un tableau associatif
      */
-    function AddSlide()
-    {
+function AddSlide($array){
+    error_log("[AddSlide] > Fonction appellé avec succés !");
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'chasseavenirslide';
 
+    $resultat = $wpdb->insert($table_name, $array);
+
+    if (!$resultat) {
+        error_log('[AddSlide] > Une erreur est survenue lors de l\'ajout du slide !');
+        error_log($wpdb->print_error());
+    }else{
+        echo '<script type="text/javascript">location.reload();</script>';
+        error_log('[AddSlide] > L\'ajout s\'est déroulé avec succés !');
     }
+}
 
     /**
      * Résumé de getAllSlide
-     * @return void
+     * @return array $resultat
      * @since 1.5.6
      * @param $idDiapo
-     * Modifié : -
+     * Modifié : 1.5.9
      * Permet d'afficher toutes les slides d'un diaporama donnée
      */
-    function getAllSlide(int $idDiapo)
-    {
+    function getAllSlide(int $idDiapo){
+        error_log('[getAllSlide] > Fonction appellé avec succés !');
+        global $wpdb;
+        $table_name = $wpdb->prefix. 'chasseavenirslide';
 
+        $resultat = $wpdb->get_results(" SELECT wp.guid, ca.*
+        FROM $table_name slide 
+        INNER JOIN wp_posts wp 
+        ON wp.ID = slide.mediaLibraryId");
+
+        return $resultat;
+
+        if(!$resultat){
+            error_log('[getAllSlide] > Une erreur est survenue durant la récupération des slides !');
+        }else{
+            echo '<script type="text/javascript">location.reload();</script>';
+            error_log('[getAllSlide] > Requête éxcuté avec succés !');
+        }
     }
 
 
@@ -269,10 +358,28 @@ class Submenu_Diapo
      * @return void
      * @since 1.5.6
      * Modifié : -
-     * Permet de modifier une slide d'une dispo définie
+     * Permet de modifier une slide d'une dispo définie => Actuellement impossible
      */
     function ModifSlide(int $idDiapo, int $idSlide)
     {
 
+    }
+
+      /**
+       * Résumé de deleteAllSlide
+       * @return void
+       * @param int $idDiapo
+       * @since 1.5.9
+       * Modifié : -
+       * Permet de supprimer toutes les slides d'un diaporama définit : cette fonction est à utilisée uniquement pour la suppression
+       * du diaporama
+       */
+
+    function deleteAllSlide(int $idDiapo){
+        error_log('[deleteAllSlide] > Fonction appellé avec succés!');
+        global $wpdb;
+        $table_name = $wpdb->prefix. 'chasseavenirslide';
+        $wpdb->delete($table_name, array('idCaroussel' => $idDiapo));
+        echo '<script type="text/javascript">location.reload();</script>';
     }
 ?>

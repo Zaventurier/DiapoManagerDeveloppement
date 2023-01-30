@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin utilise Bootstrap 5.0.3 importer directement dedans pour le visuel. Ceci peut causer des soucis de compatibilité avec certains plugins/thèmes
  * Author: Guillaume Pascail
- * Version: 1.5.8 - 27/01/2023
+ * Version: 1.5.9 - 30/01/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -176,6 +176,7 @@ function Create_Slide(){
         $reqSlide = "CREATE TABLE IF NOT EXISTS $slide (
             idSlide mediumInt(11) NOT NULL AUTO_INCREMENT,
             nomSlide varchar(50) NOT NULL,
+            descriptionSlide varchar(350) NULL,
             idCaroussel mediumInt(11) NOT NULL,
             mediaLibraryId mediumInt(11) NOT NULL,
             PRIMARY KEY(idSlide),
