@@ -1,0 +1,703 @@
+[31-Jan-2023 07:31:05 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:31:05 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:04 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:04 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:06 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:06 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:10 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:10 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:20 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:20 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:22 UTC] [deleteAllSlide] > Fonction appellé avec succés!
+[31-Jan-2023 07:32:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:55 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:55 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:55 UTC] Create_Caroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:32:55 UTC] Create_Caroussel > Insertion effectué avec succès !
+[31-Jan-2023 07:32:56 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:32:56 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:33:00 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:33:00 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:33:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:33:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:33:11 UTC] [AddSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:33:11 UTC] [AddSlide] > L'ajout s'est déroulé avec succés !
+[31-Jan-2023 07:33:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:33:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:38:35 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:38:35 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:38:35 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to countSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:353
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(100): countSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 353
+[31-Jan-2023 07:38:53 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:38:53 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:38:53 UTC] [countSlide] > Fonction appellé avec succés!
+[31-Jan-2023 07:39:35 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:39:35 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:39:35 UTC] Create_Caroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:39:35 UTC] Create_Caroussel > Insertion effectué avec succès !
+[31-Jan-2023 07:39:36 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:39:36 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:39:36 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to countSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:353
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(100): countSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 353
+[31-Jan-2023 07:39:39 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:39:39 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:39:39 UTC] [countSlide] > Fonction appellé avec succés!
+[31-Jan-2023 07:39:45 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:39:45 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:39:45 UTC] [countSlide] > Fonction appellé avec succés!
+[31-Jan-2023 07:42:45 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:42:45 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:42:45 UTC] PHP Notice:  Undefined index: nomDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100
+[31-Jan-2023 07:42:45 UTC] PHP Stack trace:
+[31-Jan-2023 07:42:45 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 07:42:45 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 07:42:45 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 07:42:45 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 07:42:45 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 07:43:33 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:43:33 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:43:33 UTC] PHP Notice:  Undefined index: deleteDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100
+[31-Jan-2023 07:43:33 UTC] PHP Stack trace:
+[31-Jan-2023 07:43:33 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 07:43:33 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 07:43:33 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 07:43:33 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 07:43:33 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 07:44:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:44:02 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:44:02 UTC] PHP Notice:  Undefined index: deleteDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100
+[31-Jan-2023 07:44:02 UTC] PHP Stack trace:
+[31-Jan-2023 07:44:02 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 07:44:02 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 07:44:02 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 07:44:02 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 07:44:02 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 07:44:04 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:44:04 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:44:04 UTC] PHP Notice:  Undefined index: deleteDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100
+[31-Jan-2023 07:44:04 UTC] PHP Stack trace:
+[31-Jan-2023 07:44:04 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 07:44:04 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 07:44:04 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 07:44:04 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 07:44:04 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 07:44:07 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:44:07 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:44:07 UTC] PHP Notice:  Undefined index: deleteDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100
+[31-Jan-2023 07:44:07 UTC] PHP Stack trace:
+[31-Jan-2023 07:44:07 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 07:44:07 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 07:44:07 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 07:44:07 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 07:44:07 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 07:44:08 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:44:08 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:44:08 UTC] PHP Notice:  Undefined index: deleteDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 100
+[31-Jan-2023 07:44:08 UTC] PHP Stack trace:
+[31-Jan-2023 07:44:08 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 07:44:08 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 07:44:08 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 07:44:08 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 07:44:08 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 07:44:25 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:44:25 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:45:23 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:45:23 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:45:23 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:318
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 318
+[31-Jan-2023 07:45:52 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:45:52 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:45:52 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:45:52 UTC] WordPress database error Table 'ca' inconnue for query  SELECT wp.guid, ca.*
+        FROM wp_chasseavenirslide slide 
+        INNER JOIN wp_posts wp 
+        ON wp.ID = slide.mediaLibraryId made by do_action('chasseavenir87_page_chasseavenir-caroussel'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Diapo->render_diapo_page, getAllSlide
+[31-Jan-2023 07:46:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:46:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:46:22 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:318
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 318
+[31-Jan-2023 07:46:24 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:46:24 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:46:24 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:50:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:50:50 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:50:50 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:50:50 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:105
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 105
+[31-Jan-2023 07:51:15 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:51:15 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:51:15 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:332
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 332
+[31-Jan-2023 07:51:17 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:51:17 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:51:17 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:51:17 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:105
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#4 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 105
+[31-Jan-2023 07:54:24 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:54:24 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:54:24 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:332
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 332
+[31-Jan-2023 07:54:26 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:54:26 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:54:26 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:54:26 UTC] PHP Notice:  Undefined index: nomCaroussel in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 110
+[31-Jan-2023 07:54:26 UTC] PHP Stack trace:
+[31-Jan-2023 07:54:26 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 07:54:26 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 07:54:26 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 07:54:26 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 07:54:26 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 07:54:59 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:54:59 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:54:59 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:332
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 332
+[31-Jan-2023 07:55:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:55:01 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:55:01 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:55:06 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:55:06 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:55:06 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 07:55:24 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 07:55:24 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 07:55:24 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:332
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 332
+[31-Jan-2023 08:06:53 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:06:53 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:06:53 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:349
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 349
+[31-Jan-2023 08:06:56 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:06:56 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:06:56 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:06:58 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:06:58 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:06:58 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:349
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 349
+[31-Jan-2023 08:07:27 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:07:27 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:07:27 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:07:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:07:31 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:07:31 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:07:34 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:07:34 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:07:34 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:07:37 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:07:37 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:07:37 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:07:39 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:07:39 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:07:39 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:08:04 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:08:04 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:08:04 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:08:08 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:08:08 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:08:08 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:09:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:09:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:09:22 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:349
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 349
+[31-Jan-2023 08:09:26 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:09:26 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:09:26 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:09:28 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:09:28 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:09:28 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:09:32 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:09:32 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:09:32 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:349
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 349
+[31-Jan-2023 08:09:47 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:09:47 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:09:47 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:09:47 UTC] WordPress database error Erreur de syntaxe près de '' à la ligne 1 for query  SELECT wp.guid, slide.* FROM wp_chasseavenirslide slide INNER JOIN wp_posts wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel =   made by do_action('chasseavenir87_page_chasseavenir-caroussel'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Diapo->render_diapo_page, getAllSlide
+[31-Jan-2023 08:09:56 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:09:56 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:09:56 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:09:59 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:09:59 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:09:59 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:10:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:10:02 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:10:02 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:10:02 UTC] WordPress database error Erreur de syntaxe près de '' à la ligne 1 for query  SELECT wp.guid, slide.* FROM wp_chasseavenirslide slide INNER JOIN wp_posts wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel =   made by do_action('chasseavenir87_page_chasseavenir-caroussel'), WP_Hook->do_action, WP_Hook->apply_filters, Submenu_Diapo->render_diapo_page, getAllSlide
+[31-Jan-2023 08:10:27 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:10:27 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:10:27 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:349
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 349
+[31-Jan-2023 08:10:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:10:31 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:10:31 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:10:34 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:10:34 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:10:34 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:10:46 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:10:46 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:10:46 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to getAllSlide() must be of the type int, string given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 101 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:349
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(101): getAllSlide('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 349
+[31-Jan-2023 08:12:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:12:31 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:12:31 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:12:33 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:12:33 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:12:33 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:12:35 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:12:35 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:12:35 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:12:37 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:12:37 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:12:37 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:12:54 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:12:54 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:12:54 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:13:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:13:31 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:13:31 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:13:33 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:13:33 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:13:33 UTC] [deleteAllSlide] > Fonction appellé avec succés!
+[31-Jan-2023 08:13:33 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:13:35 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:13:35 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:13:35 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:13:41 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:13:41 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:13:41 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:01 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:01 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:03 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:03 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:03 UTC] [deleteAllSlide] > Fonction appellé avec succés!
+[31-Jan-2023 08:14:03 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:04 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:04 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:04 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:18 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:18 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:18 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:20 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:20 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:20 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:48 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:48 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:48 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:50 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:50 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:14:52 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:14:52 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:14:52 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:15:59 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:15:59 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:15:59 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:16:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:16:01 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:16:01 UTC] [deleteAllSlide] > Fonction appellé avec succés!
+[31-Jan-2023 08:16:01 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:16:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:16:02 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:16:02 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 08:19:27 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:19:27 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:19:27 UTC] PHP Notice:  Undefined variable: idDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 99
+[31-Jan-2023 08:19:27 UTC] PHP Stack trace:
+[31-Jan-2023 08:19:27 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 08:19:27 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 08:19:27 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 08:19:27 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 08:19:27 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 08:19:27 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to countSlide() must be of the type int, null given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 99 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:381
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(99): countSlide(NULL)
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 381
+[31-Jan-2023 08:19:51 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:19:51 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:19:51 UTC] PHP Notice:  Undefined variable: idDiapo in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 99
+[31-Jan-2023 08:19:51 UTC] PHP Stack trace:
+[31-Jan-2023 08:19:51 UTC] PHP   1. {main}() C:\wamp64\www\WordPressTest\wp-admin\admin.php:0
+[31-Jan-2023 08:19:51 UTC] PHP   2. do_action() C:\wamp64\www\WordPressTest\wp-admin\admin.php:259
+[31-Jan-2023 08:19:51 UTC] PHP   3. WP_Hook->do_action() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:517
+[31-Jan-2023 08:19:51 UTC] PHP   4. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:332
+[31-Jan-2023 08:19:51 UTC] PHP   5. Submenu_Diapo->render_diapo_page() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[31-Jan-2023 08:19:51 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to countSlide() must be of the type int, null given, called in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 99 and defined in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php:381
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php(99): countSlide(NULL)
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu_Diapo->render_diapo_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\admin.php(259): do_action('chasseavenir87_...')
+#5 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 381
+[31-Jan-2023 08:20:45 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 08:20:45 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 08:20:45 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:23:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:23:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:23:11 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:23:19 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:23:19 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:23:19 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:23:20 UTC] [AddSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:23:20 UTC] [AddSlide] > L'ajout s'est déroulé avec succés !
+[31-Jan-2023 09:23:20 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:23:20 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:23:20 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:23:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:23:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:23:22 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:23:26 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:23:26 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:23:26 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:23:34 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:23:34 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:23:34 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:33:07 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:33:07 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:33:07 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:33:21 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:33:21 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:33:21 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:33:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:33:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:33:22 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:18 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:18 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:18 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:19 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:19 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:19 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:21 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:21 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:21 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:24 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:24 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:24 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:41 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:41 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:41 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:43 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:43 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:43 UTC] [deleteAllSlide] > Fonction appellé avec succés!
+[31-Jan-2023 09:34:43 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:44 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:44 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:44 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:34:59 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:59 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:59 UTC] Create_Caroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:59 UTC] Create_Caroussel > Insertion effectué avec succès !
+[31-Jan-2023 09:34:59 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:34:59 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:34:59 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:35:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:35:02 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:35:02 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:35:09 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:35:09 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:35:09 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:35:09 UTC] [AddSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:35:09 UTC] [AddSlide] > L'ajout s'est déroulé avec succés !
+[31-Jan-2023 09:35:10 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:35:10 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:35:10 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:35:16 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:35:16 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:35:16 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:36:06 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:36:06 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:36:06 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:36:08 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:36:08 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:36:08 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:36:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:36:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:36:11 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:36:27 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:36:27 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:36:27 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:36:46 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:36:46 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:36:46 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:36:48 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:36:48 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:36:48 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:36:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:36:50 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:36:50 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:45:55 UTC] PHP Parse error:  syntax error, unexpected '}' in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu-caroussel.php on line 154
+[31-Jan-2023 09:46:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:46:50 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:46:50 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:46:51 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:46:51 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:46:51 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:46:53 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:46:53 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:46:53 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:46:55 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:46:55 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:46:55 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:46:58 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:46:58 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:46:58 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:47:00 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:47:00 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:47:00 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:47:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:47:02 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:47:02 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:47:09 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:47:09 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:47:09 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:47:10 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:47:10 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:47:10 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:54:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:54:31 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:54:31 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:54:55 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:54:55 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:54:55 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 09:54:57 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 09:54:57 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 09:54:57 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:05:48 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des Images !
+[31-Jan-2023 10:05:48 UTC] Fonction getAllImage() éxecuté avec succés !
+[31-Jan-2023 10:05:53 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'aide !
+[31-Jan-2023 10:05:54 UTC] [ChasseAvenir87] > Utilisateur présent sur page d'ajout d'image !
+[31-Jan-2023 10:05:57 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'aide !
+[31-Jan-2023 10:05:58 UTC] [ChasseAvenir87] > Utilisateur présent sur page d'ajout d'image !
+[31-Jan-2023 10:06:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des Images !
+[31-Jan-2023 10:06:22 UTC] Fonction getAllImage() éxecuté avec succés !
+[31-Jan-2023 10:06:51 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_menu_page(), 0 passed in C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu.php on line 80 and at least 4 expected in C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php:1305
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-content\plugins\ChasseAvenir87\Admin\class-submenu.php(80): add_menu_page()
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): Submenu->add_options_page('')
+#2 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#3 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\wamp64\www\WordPressTest\wp-admin\includes\menu.php(155): do_action('admin_menu', '')
+#5 C:\wamp64\www\WordPressTest\wp-admin\menu.php(428): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\WordPressTest\wp-admin\admin.php(158): require('C:\\wamp64\\www\\W...')
+#7 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(10): require_on in C:\wamp64\www\WordPressTest\wp-admin\includes\plugin.php on line 1305
+[31-Jan-2023 10:07:02 UTC] [ChasseAvenir87] > Utilisateur présent sur page d'ajout d'image !
+[31-Jan-2023 10:10:30 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'aide !
+[31-Jan-2023 10:10:34 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des Images !
+[31-Jan-2023 10:10:34 UTC] Fonction getAllImage() éxecuté avec succés !
+[31-Jan-2023 10:10:35 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:10:35 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:10:35 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:15:07 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:15:07 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:15:07 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:15:09 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:15:09 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:15:09 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:15:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:15:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:15:11 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:17:16 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:17:16 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:17:16 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:17:17 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:17:17 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:17:17 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:17:20 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:17:20 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:17:20 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:17:21 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:17:21 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:17:21 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:17:21 UTC] [deleteSlide] > Fonction appellé avec succés!
+[31-Jan-2023 10:17:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:17:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:17:22 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:17:23 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:17:23 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:17:23 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:18:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:18:31 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:18:31 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:18:58 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:18:58 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:18:58 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:00 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:00 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:00 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:17 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:17 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:17 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:17 UTC] [AddSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:17 UTC] [AddSlide] > L'ajout s'est déroulé avec succés !
+[31-Jan-2023 10:19:18 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:18 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:18 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:20 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:20 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:20 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:22 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:22 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:22 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:38 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:38 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:38 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:40 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:40 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:40 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:19:42 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:19:42 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:19:42 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:21:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:21:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:21:11 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:21:24 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:21:24 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:21:24 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:21:26 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:21:26 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:21:26 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:21:26 UTC] [deleteSlide] > Fonction appellé avec succés!
+[31-Jan-2023 10:21:26 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:21:26 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:21:26 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:21:29 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:21:29 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:21:29 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:21:48 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:21:48 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:21:48 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:21:56 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:21:56 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:21:56 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:22:03 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:22:03 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:22:03 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:22:03 UTC] [AddSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:22:03 UTC] [AddSlide] > L'ajout s'est déroulé avec succés !
+[31-Jan-2023 10:22:03 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:22:03 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:22:03 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:22:04 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:22:04 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:22:04 UTC] [getAllSlide] > Fonction appellé avec succés !
+[31-Jan-2023 10:52:00 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[31-Jan-2023 10:52:00 UTC] getAllCaroussel > Fonction appellé avec succès !
+[31-Jan-2023 10:52:00 UTC] [getAllSlide] > Fonction appellé avec succés !

@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin utilise Bootstrap 5.0.3 importer directement dedans pour le visuel. Ceci peut causer des soucis de compatibilité avec certains plugins/thèmes
  * Author: Guillaume Pascail
- * Version: 1.5.9 - 30/01/2023
+ * Version: 1.5.10 - 31/01/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -202,7 +202,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.4.1';
+    public $ver = '1.5.10';
 
     public function __construct(){
 

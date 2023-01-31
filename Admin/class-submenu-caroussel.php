@@ -44,7 +44,7 @@ class Submenu_Diapo
                         $id = isset($_POST['id']) ? $_POST['id'] : '';
                     } else {
                         $nom = "";
-                        $id = "";
+                        $id = 0;
                     }
                     ?>
                     <hr style="border-top: 2px solid gray;">
@@ -65,7 +65,7 @@ class Submenu_Diapo
                              * Sinon, on effectue la suppression
                              */
                             if (isset($_POST['deleteDiapo'])) {
-                                if ($_POST['deleteDiapo'] == null) {
+                                if ($_POST['deleteDiapo'] == 0) {
                                     echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun diaporama n\'à été sélectionné !</div>';
                                 } else {
                                     //Si le bouton supprimer est cliquer
@@ -75,7 +75,7 @@ class Submenu_Diapo
                                 }
                             }
                             if (isset($_POST['modifyDiapo'])) {
-                                if ($_POST['modifyDiapo'] == null) {
+                                if ($_POST['modifyDiapo'] == 0) {
                                     echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">La saisit d\'un nom est obigatoire !</div>';
                                 }else {
                                 //Si le bouton modifier est cliquer
@@ -95,24 +95,64 @@ class Submenu_Diapo
                                 <input class="form-control" type="text" aria-label="readonly input example" style="height:150px" readonly>
                             </div>
                             <hr style="border-top: 2px solid gray;">
+                            <div class="nbrSlide"
+                            ><?php
+                            /*$slide = countSlide($idDiapo);
+                            echo 'Il y à : '.$slide. ' dans le diaporama '.$nom;*/
+                            ?>
+                            </div>
                         </div>
                         <div class="col-md-7 text-center" style='border-bottom:2px solid gray; height: 75vh;'>
                         <?php
-                        //$AllSlide = $this->getAllSlide($id);
+                        $AllSlide = getAllSlide($id);
+                        foreach($AllSlide as $unSlide){?>
+                            <div class="">
+                                <form action="" method="post">
+                                    <input type="hidden" name="idSlide" value="<?php echo $unSlide['idSlide'];?>">
+                                    <input type="hidden" name="SlideName" value="<?php echo $unSlide['nomSlide'];?> ">
+                                    <input type="hidden" name="DescSlide" value="<?php echo $unSlide['descriptionSlide'];?>">
+                                    <input type="hidden" name="idDiapo" value="<?php echo $unSlide['idCaroussel'];?>">
+                                    <input type="hidden" name="mediaLibraryId" value="<?php echo $unSlide['mediaLibraryId'];?>">
+                                    <button value=" " data-bs-toggle="modal" data-bs-target="#data" type="submit" name="slide" class="btn"
+                                        style="border:none;border-radius:initial;background:rgb(250, 250, 188);cursor:pointer;font-family: Helvetica;">
+                                        <i class="bi bi-images"></i>
+                                        <?php echo $unSlide['guid'];?> 
+                                    </button>
+                                </form>
+                            </div>
+                        <?php
+                        }
                         ?>    
-                        </div>
+                        </div><?php
+                        if (isset($_POST['slide'])) {
+                            $SlideName = isset($_POST['SlideName']) ? $_POST['SlideName'] : '';
+                            $idSlide = isset($_POST['idSlide']) ? $_POST['idSlide'] : '';
+                            $description = isset($_POST['descriptionSlide']) ? $_POST['descriptionSlide'] : '';
+                            $DiapoId = isset($_POST['idDiapo'])? $_POST['idDiapo'] : '';
+                            $mediaLibraryId = isset($_POST['mediaLibraryId']) ? $_POST['mediaLibraryId'] : '';
+                        } else {
+                            $SlideName = "";
+                            $idSlide = "";
+                            $description = "";
+                            $DiapoId = "";
+                            $mediaLibraryId = "";
+                        }
+                        ?>
                         <div class="col-md-2 text-center" style='border-left:2px solid gray;border-bottom:2px solid gray;height:75vh;background:#efefee;'>
                             <form class="form-floating" action="" method="post">
-                                <input type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" disabled>
+                                <input type="hidden" name="idSlide" value="<?php echo $idSlide;?>">
+                                <input type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $SlideName ?>" disabled>
                                 <label for="floatingInputValue">Nom du Slide</label>
                                 <div class="ModifImage" style="margin-top:5px;">
-                                    <button type="submit" name="deleteImage" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
+                                    <button type="submit" name="deleteSlide" value="<?php echo $idSlide;?>" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
                                     <?php
-                                        if (isset($_POST['deleteImage'])) {
-                                            if ($_POST['deleteImage'] == null) {
-                                                echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucune image n\'à été sélectionné !</div>';
+                                        if (isset($_POST['deleteSlide'])) {
+                                            if ($_POST['deleteSlide'] == null) {
+                                                echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun slide n\'à été sélectionné !</div>';
                                             } else {
-                                                echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Cette fonctionnalité est actuellement désactivé !</div>';
+                                                $idSlide = $_POST['idSlide'];
+                                                //error_log('');
+                                                deleteSlide($idSlide);
                                             }
                                         }
                                     ?>  
@@ -120,9 +160,9 @@ class Submenu_Diapo
                             </form>
                             <hr style="border-top: 2px solid gray;">
                             <form class="form-floating" action="" method="post">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value="<?php echo $description ?>" disabled></textarea>
                                 <label for="floatingInputValue">Description</label>
-                                <button type="submit" name="ModifDesc" class="btn btn-primary" style="background-color:green;border-color:green; margin-top:5px;"><i class="bi bi-check2"></i></button>
+                                <button type="submit" name="ModifDesc" class="btn btn-primary" style="background-color:green;border-color:green; margin-top:5px;" disabled><i class="bi bi-check2"></i></button>
                             </form>
                             <hr style="border-top: 2px solid gray;">
                         </div>
@@ -320,10 +360,7 @@ function AddSlide($array){
         global $wpdb;
         $table_name = $wpdb->prefix. 'chasseavenirslide';
 
-        $resultat = $wpdb->get_results(" SELECT wp.guid, ca.*
-        FROM $table_name slide 
-        INNER JOIN wp_posts wp 
-        ON wp.ID = slide.mediaLibraryId");
+        $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN wp_posts wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ", ARRAY_A);
 
         return $resultat;
 
@@ -335,20 +372,40 @@ function AddSlide($array){
         }
     }
 
+        /**
+         * Résumé de countSlide
+         * @param int $idDiapo
+         * @return int 
+         * @since 1.5.10
+         * Modifié : -
+         * Retourne le nombre de slides pour un diaporama passée en paramètre 
+         */
+
+    function countSlide(int $idDiapo){
+        error_log('[countSlide] > Fonction appellé avec succés!');
+        global $wpdb;
+        $table_name = $wpdb->prefix. 'chasseavenirslide';
+
+        $resultat = $wpdb->get_var("SELECT COUNT(*) FROM $table_name WHERE idCaroussel = $idDiapo");
+        return $resultat;
+    }
+
 
 
     /**
-     * Résumé de DeleteSlide
-     * @param int $idDiapo 
+     * Résumé de deleteSlide 
      * @param int $idSlide
      * @return void
      * @since 1.5.6
-     * Modifié : -
+     * Modifié : 1.5.10
      * Permet de supprimer une slide d'une dispo définie
      */
-    function DeleteSlide(int $idDiapo, int $idSlide)
-    {
-
+    function deleteSlide(int $idSlide){
+        error_log('[deleteSlide] > Fonction appellé avec succés!');
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'chasseavenirslide';
+        $wpdb->delete($table_name, array('idSlide' => $idSlide));
+        echo '<script type="text/javascript">location.reload();</script>';
     }
 
     /**
