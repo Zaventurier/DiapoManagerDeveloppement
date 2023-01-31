@@ -8,9 +8,9 @@
  * @wordpress-plugin
  * Plugin Name: ChasseAvenir87
  * Plugin URI: 
- * Description: Créer, Gérer et Supprimer vos Caroussels, Images depuis un simple pannel - Le plugin utilise Bootstrap 5.0.3 importer directement dedans pour le visuel. Ceci peut causer des soucis de compatibilité avec certains plugins/thèmes
+ * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via un shortcode ! Ce plugin est encore en version de développement et peut engranger des erreurs ! Nous vous conseillons de désactiver le débogage sur votre site pour éviter les failles de sécurités ! Le plugin reçoit 2 mises à jours régulières qui ajoute de nouvelles fonctionalités ainsi que des Patchs de bugs qui gênent le fonctionnement de celui-ci !
  * Author: Guillaume Pascail
- * Version: 1.5.10 - 31/01/2023
+ * Version: 1.5.11 - 31/01/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -202,7 +202,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.5.10';
+    public $ver = '1.5.11';
 
     public function __construct(){
 

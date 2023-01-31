@@ -1,7 +1,6 @@
 <?php
-session_start();
 /**
- * Fichier permettant l'affichage de la page "Gérer les Caroussels"
+ *Fichier permettant l'affichage de la page "Gérer les Caroussels"
  *
  * Fourni les fonctionnalité nécessaire pour le rendu de la page.
  *
@@ -49,13 +48,14 @@ class Submenu_Diapo
                     ?>
                     <hr style="border-top: 2px solid gray;">
                     <div class="row">
-                        <div class="col-md-2 text-center" style='border-right:2px solid gray;border-bottom:2px solid gray; height:75vh;background:#efefee;'>
+                        <div class="col-md-2 text-center" style='border-right:2px solid gray;border-top:2px solid gray;border-bottom:2px solid gray; height:75vh;background:#efefee;'>
                             <form class="form-floating" action="" method="post">
                                 <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $nom ?>" disabled>
                                 <label for="floatingInputValue">Nom du Diaporama</label>
                                 <div class="ModifDiapo" style="margin-top:5px;">
                                     <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" disabled ><i class="bi bi-pencil-square"></i></button>
                                     <button value="<?php echo $id; ?>" type="submit" name="deleteDiapo" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
+                                    <button value="<?php echo $id; ?>" type="submit" name="deleteAllSlides" class="btn btn-primary" style="background-color:orange; border-color:orange;"><i class="bi bi-trash"></i></button>
                                 </div>
                             </form>
                             <?php
@@ -84,6 +84,14 @@ class Submenu_Diapo
                                 ModifDiapo($idDiapo, $newName);   
                                 }
                             }
+                            if (isset($_POST['deleteAllSlides'])) {
+                                if ($_POST['deleteAllSlides'] == 0) {
+                                    echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun diaporama n\'à été sélectionné !</div>';
+                                }else{
+                                    $idDiapo = $_POST['deleteAllSlides'];
+                                    deleteAllSlide($idDiapo);
+                                }
+                            }
                             ?>
                             <hr style="border-top: 2px solid gray;">
                             <div class="AddSlide">
@@ -95,34 +103,27 @@ class Submenu_Diapo
                                 <input class="form-control" type="text" aria-label="readonly input example" style="height:150px" readonly>
                             </div>
                             <hr style="border-top: 2px solid gray;">
-                            <div class="nbrSlide"
-                            ><?php
-                            /*$slide = countSlide($idDiapo);
-                            echo 'Il y à : '.$slide. ' dans le diaporama '.$nom;*/
-                            ?>
-                            </div>
                         </div>
-                        <div class="col-md-7 text-center" style='border-bottom:2px solid gray; height: 75vh;'>
-                        <?php
-                        $AllSlide = getAllSlide($id);
-                        foreach($AllSlide as $unSlide){?>
-                            <div class="">
-                                <form action="" method="post">
-                                    <input type="hidden" name="idSlide" value="<?php echo $unSlide['idSlide'];?>">
-                                    <input type="hidden" name="SlideName" value="<?php echo $unSlide['nomSlide'];?> ">
-                                    <input type="hidden" name="DescSlide" value="<?php echo $unSlide['descriptionSlide'];?>">
-                                    <input type="hidden" name="idDiapo" value="<?php echo $unSlide['idCaroussel'];?>">
-                                    <input type="hidden" name="mediaLibraryId" value="<?php echo $unSlide['mediaLibraryId'];?>">
-                                    <button value=" " data-bs-toggle="modal" data-bs-target="#data" type="submit" name="slide" class="btn"
-                                        style="border:none;border-radius:initial;background:rgb(250, 250, 188);cursor:pointer;font-family: Helvetica;">
-                                        <i class="bi bi-images"></i>
-                                        <?php echo $unSlide['guid'];?> 
-                                    </button>
-                                </form>
-                            </div>
-                        <?php
-                        }
-                        ?>    
+                        <div class="col-md-9 text-center" style='height: 75vh;'>
+                            <?php
+                            $AllSlide = getAllSlide($id);
+                            foreach($AllSlide as $unSlide){?>
+                                <div class="unSlide">
+                                    <form action="" method="post">
+                                        <input type="hidden" name="idSlide" value="<?php echo $unSlide['idSlide'];?>">
+                                        <input type="hidden" name="SlideName" value="<?php echo $unSlide['nomSlide'];?> ">
+                                        <input type="hidden" name="DescSlide" value="<?php echo $unSlide['descriptionSlide'];?>">
+                                        <input type="hidden" name="idDiapo" value="<?php echo $unSlide['idCaroussel'];?>">
+                                        <input type="hidden" name="mediaLibraryId" value="<?php echo $unSlide['mediaLibraryId'];?>">
+                                        <img src="<?php echo $unSlide['guid'];?>" style="height:100px; margin-right:100%;">
+                                        <input type="input" class="form-control" id="floatingInputValue" style="width:20%;margin-top:10px;" value="<?php echo $unSlide['nomSlide'] ?>" disabled>
+                                        <button type="submit" name="deleteSlide" value="<?php echo $unSlide['nomSlide'];?>" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
+
+                                    </form>
+                                </div>
+                            <?php
+                            }
+                            ?>    
                         </div><?php
                         if (isset($_POST['slide'])) {
                             $SlideName = isset($_POST['SlideName']) ? $_POST['SlideName'] : '';
@@ -137,35 +138,17 @@ class Submenu_Diapo
                             $DiapoId = "";
                             $mediaLibraryId = "";
                         }
-                        ?>
-                        <div class="col-md-2 text-center" style='border-left:2px solid gray;border-bottom:2px solid gray;height:75vh;background:#efefee;'>
-                            <form class="form-floating" action="" method="post">
-                                <input type="hidden" name="idSlide" value="<?php echo $idSlide;?>">
-                                <input type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $SlideName ?>" disabled>
-                                <label for="floatingInputValue">Nom du Slide</label>
-                                <div class="ModifImage" style="margin-top:5px;">
-                                    <button type="submit" name="deleteSlide" value="<?php echo $idSlide;?>" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
-                                    <?php
-                                        if (isset($_POST['deleteSlide'])) {
-                                            if ($_POST['deleteSlide'] == null) {
-                                                echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun slide n\'à été sélectionné !</div>';
-                                            } else {
-                                                $idSlide = $_POST['idSlide'];
-                                                //error_log('');
-                                                deleteSlide($idSlide);
-                                            }
-                                        }
-                                    ?>  
-                                </div>
-                            </form>
-                            <hr style="border-top: 2px solid gray;">
-                            <form class="form-floating" action="" method="post">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value="<?php echo $description ?>" disabled></textarea>
-                                <label for="floatingInputValue">Description</label>
-                                <button type="submit" name="ModifDesc" class="btn btn-primary" style="background-color:green;border-color:green; margin-top:5px;" disabled><i class="bi bi-check2"></i></button>
-                            </form>
-                            <hr style="border-top: 2px solid gray;">
-                        </div>
+
+                        if (isset($_POST['deleteSlide'])) {
+                            if ($_POST['deleteSlide'] == null) {
+                                echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun slide n\'à été sélectionné !</div>';
+                            } else {
+                                $idSlide = $_POST['idSlide'];
+                                //error_log('');
+                                deleteSlide($idSlide);
+                            }
+                        }
+                        ?>                              
                     </div>
                     <!-- Modal pour l'ajout s'un slide -->
                     <div class="modal" id="AddSlide" tabindex="-1" aria-labelledby="AddSlide" aria-hidden="true">
@@ -283,8 +266,8 @@ class Submenu_Diapo
                 <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
               </div>';
             }
-                    }
     }
+}
 
     /**
      * Résumé de deleteDiapo

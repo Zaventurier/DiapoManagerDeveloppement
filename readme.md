@@ -1,14 +1,10 @@
 ==== Plugin ChasseAvenir87 ====
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
-Version 1.5.10 - 31 Janvier 2023
+Version 1.5.11 - 31 Janvier 2023
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
-La dernière version du plugin permet d'ajouter des images, de les uploads dans la médiathèque.
-Actuellement, seuls les fonctionnalités suivantes sont disponible :
-> Ajout d'image;
-> Un menu et des sous-menus personnalisés (ou presque);
-> Une gestion quasi indépendante des caroussels sur votre site;
+La dernière version permet d'ajouter des images à votre diaporama et à les gérer efficacement grâce à une interface simple d'utilisation.
 
 [/!\] > Depuis la version 1.5.0, le plugin utilise Boostrap 5.0.3 nécessaire à son fonctionnement. Cette utilisation peut révéler une incompatibilité avec certains thèmes/plugins. Certaines fonctionnalités nécessiteron une mise à jour de Bootsrap, ce qui sera spécifié dans se Patch Note.
 [/!\] > Depuis la version 1.5.2, le plugin utilise la bibiothèque d'icônes de Boostrap 1.10.3 nécessaire à son fonctionnement. Cette utilisation peut entraîner de potentielles incompatibilité avec certains thèmes/plugins.
@@ -167,7 +163,27 @@ Nous rappelons que ce plugin est réalisé en France à donc comme langue le fra
 > Modification de la structure des tables de la base de données;
 > Lors de la suppression d'un diaporama, l'ensemble des slides sont supprimés;
 
-31 Janvier 2023 - 1.5.10 > [Version Actuelle]
+31 Janvier 2023 - 1.5.10 > [Version Ancienne]
 > [Fonctionnalité] > Affichage du chemon des slides (Début de l'affichage des slides);
 > [Fonctionnalité Rétiré] > ajout d'image via le premier formulaire;
 > [Ajout] > Dossiers contenants les sauvegardes de précédent codes au cas de problèmes;
+
+31 Janvier 2023 - 1.5.11 > [Version Actuelle]
+> [Bug Résolu] > Le plugin entrait en conflit avec l'API Rest;
+> Affichage des slides pour chaque diaporama;
+> [Fonctionnalité] > Possibilité de supprimer toutes les slides d'un diaporama sans supprimer le diaporama;
+> Modification du graphisme de la page gestion des diaporamas;
+> Modification du texte de description du Plugin;
+> Suppression des logs contenus dans le fichier debug.log;
+
+01 Février 2023 - 1.5.12 [Version Future]
+> A venir...
+
+01 Février 2023 - 1.5.13 [Version Future]
+> A venir...
+
+02 Février 2023 - 1.6.0 [Version Future]
+> A venir...
+
+02 Février 2023 - 1.6.1 [Version Future]
+> Version correctrice de la 1.6.0...
