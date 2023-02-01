@@ -50,10 +50,10 @@ class Submenu_Diapo
                     <div class="row">
                         <div class="col-md-2 text-center" style='border-right:2px solid gray;border-top:2px solid gray;border-bottom:2px solid gray; height:75vh;background:#efefee;'>
                             <form class="form-floating" action="" method="post">
-                                <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $nom ?>" disabled>
+                                <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $nom ?>">
                                 <label for="floatingInputValue">Nom du Diaporama</label>
                                 <div class="ModifDiapo" style="margin-top:5px;">
-                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" disabled ><i class="bi bi-pencil-square"></i></button>
+                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;"><i class="bi bi-pencil-square"></i></button>
                                     <button value="<?php echo $id; ?>" type="submit" name="deleteDiapo" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
                                     <button value="<?php echo $id; ?>" type="submit" name="deleteAllSlides" class="btn btn-primary" style="background-color:orange; border-color:orange;"><i class="bi bi-trash"></i></button>
                                 </div>
@@ -130,12 +130,10 @@ class Submenu_Diapo
                                         </div>
                                         <div class="desc" style="width:33.33%;float:left;">
                                             <div class="description" style="width:50%; height:100px; float:left;">
-                                                <input class="form-control" type="text" aria-label="readonly input example" value="<?php echo $unSlide['descriptionSlide'];?>" readonly>
+                                                <input name="desc" class="form-control" type="text" aria-label="readonly input example" value="<?php echo $unSlide['descriptionSlide'];?>">
                                             </div>
                                             <div class="btnModifDesc" style="width:50%; height:100px; float:left;">
-                                                <button type="submit" name="ModifDesc" value="<?php echo $unSlide['idSlide'];?>" class="btn btn-primary" style="background-color:green; border-color:green;" disabled>
-                                                    <i class="bi bi-trash3"></i>
-                                                </button>
+                                            <button value="<?php echo $unSlide['idSlide'] ?>" data-bs-toggle="modal" data-bs-target="#ModifDesc" type="submit" name="ModifDesc" class="btn btn-outline-secondary">Modifier</button>
                                             </div>
                                         </div>
                                     </form>
@@ -167,7 +165,13 @@ class Submenu_Diapo
                                 deleteSlide($idSlide);
                             }
                         }
-                        ?>                              
+                        if (isset($_POST['ModifDesc'])) {
+                            $NewDesc = $_POST['desc'];
+                            $idSlideA = $_POST['idSlide'];
+
+                            modifDesc($NewDesc, $idSlideA);
+                        }
+                        ?>
                     </div>
                     <!-- Modal pour l'ajout s'un slide -->
                     <div class="modal" id="AddSlide" tabindex="-1" aria-labelledby="AddSlide" aria-hidden="true">
@@ -319,8 +323,8 @@ class Submenu_Diapo
     {
         global $wpdb;
         $table_name = $wpdb->prefix . 'chasseavenircaroussel';
-        $wpdb->update($table_name, array('idCaroussel' => $idDiapo), array('nomCaroussel' => $newName));
-        //echo '<script type="text/javascript">location.reload();</script>';
+        $wpdb->update($table_name, array('nomCaroussel' => $newName), array('idCaroussel' => $idDiapo));
+        echo '<script type="text/javascript">location.reload();</script>';
     }
 
 
@@ -422,6 +426,34 @@ function AddSlide($array){
     function ModifSlide(int $idDiapo, int $idSlide)
     {
 
+    }
+
+        /**
+         * Résumé de modifDesc
+         * @param string $desc
+         * @param int $idSlide
+         * @return void
+         * @since 1.5.13
+         */
+
+
+    function modifDesc(String $desc, int $idSlide){
+        global $wpdb;
+        $table_name = $wpdb->prefix . "chasseavenirslide";
+        $wpdb->update($table_name, array( 
+              'descriptionSlide' => $desc), 
+            array( 
+              'idSlide' => $idSlide
+            ), 
+            array( 
+              '%s', 
+              '%s' 
+            ), 
+            array( 
+              '%d' 
+            ) 
+          );
+        echo '<script type="text/javascript">location.reload();</script>';
     }
 
       /**

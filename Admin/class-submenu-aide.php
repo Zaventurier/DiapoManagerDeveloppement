@@ -16,7 +16,7 @@
    * @return void
    * Cette fonction gère l'affichage du sous menu Aide
    * @since 1.1.3
-   * Modification : 1.5.12
+   * Modification : 1.5.13
    */
     public function render_aide_page(){
         error_log('[ChasseAvenir87] > Utilisateur présent sur la page d\'info !');
@@ -33,11 +33,19 @@
                     </style>
                 </head>
                 <body>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <p class="card-text">Plugin Version : 1.5.12<br/>Dernière mise à jour : 01/02/2023 - 12h</p>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text">Plugin Version : 1.5.13<br/>Dernière mise à jour : 01/02/2023 - 17h</p>
+                        </div>
                     </div>
-                </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="bootstrap-logo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Framework Utilisés :</h5>
+                            <p class="card-text">Boostrap 5.3.0</p>
+                            <a href="https://blog.getbootstrap.com" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
                 </body>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
             </html>
