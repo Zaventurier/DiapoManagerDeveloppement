@@ -55,7 +55,7 @@ private $maintenance;
  * @param Submenu_Page $submenu_page A reference to the class that renders the
  * page for the plugin.
  */
-public function __construct( $submenu_page /*$submenu_aide*/ ) {
+public function __construct( $submenu_page ) {
     $this->submenu_page = $submenu_page;
     $this->submenu_aide = new Submenu_Aide();
     $this->submenu_images = new Submenu_Images();
@@ -89,10 +89,10 @@ public function add_options_page() {
     // Ajout du sous-menu "Aide"
     add_submenu_page(
         'administrator-page',
-        'Aide',
-        'Aide',
+        'Infos',
+        'Infos',
         'manage_options',
-        'chasseavenir-aide',
+        'chasseavenir-info',
         array( $this->submenu_aide, 'render_aide_page' )
         );
     // Ajout du sous-menu "Gérer les images"

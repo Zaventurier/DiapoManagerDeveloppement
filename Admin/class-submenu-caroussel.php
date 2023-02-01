@@ -108,17 +108,36 @@ class Submenu_Diapo
                             <?php
                             $AllSlide = getAllSlide($id);
                             foreach($AllSlide as $unSlide){?>
-                                <div class="unSlide">
+                                <div class="unSlide" style="justify-content: space-between;height:100px; padding-bottom:50px;">
                                     <form action="" method="post">
                                         <input type="hidden" name="idSlide" value="<?php echo $unSlide['idSlide'];?>">
                                         <input type="hidden" name="SlideName" value="<?php echo $unSlide['nomSlide'];?> ">
                                         <input type="hidden" name="DescSlide" value="<?php echo $unSlide['descriptionSlide'];?>">
                                         <input type="hidden" name="idDiapo" value="<?php echo $unSlide['idCaroussel'];?>">
                                         <input type="hidden" name="mediaLibraryId" value="<?php echo $unSlide['mediaLibraryId'];?>">
-                                        <img src="<?php echo $unSlide['guid'];?>" style="height:100px; margin-right:100%;">
-                                        <input type="input" class="form-control" id="floatingInputValue" style="width:20%;margin-top:10px;" value="<?php echo $unSlide['nomSlide'] ?>" disabled>
-                                        <button type="submit" name="deleteSlide" value="<?php echo $unSlide['nomSlide'];?>" class="btn btn-primary" style="background-color:red; border-color:red;"><i class="bi bi-trash3"></i></button>
-
+                                        <div class="imgSlide" style="width:33.33%; height:100px; float:left;">
+                                            <img src="<?php echo $unSlide['guid'];?>" style="height:100px; margin-right:100%;">
+                                        </div>
+                                        <div class="nomSlide" style="width:33.33%; height:100px; float:left;">
+                                            <div class="nom" style="width:50%; height:100px; float:left;">
+                                                <input type="input" class="form-control" id="floatingInputValue" style="width:110%;margin-top:10px;" value="<?php echo $unSlide['nomSlide'] ?>" disabled>
+                                            </div>
+                                            <div class="btnDelete" style="width:50%; height:100px; float:left;">
+                                                <button type="submit" name="deleteSlide" value="<?php echo $unSlide['nomSlide'];?>" class="btn btn-primary" style="background-color:red; border-color:red;">
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="desc" style="width:33.33%;float:left;">
+                                            <div class="description" style="width:50%; height:100px; float:left;">
+                                                <input class="form-control" type="text" aria-label="readonly input example" value="<?php echo $unSlide['descriptionSlide'];?>" readonly>
+                                            </div>
+                                            <div class="btnModifDesc" style="width:50%; height:100px; float:left;">
+                                                <button type="submit" name="ModifDesc" value="<?php echo $unSlide['idSlide'];?>" class="btn btn-primary" style="background-color:green; border-color:green;" disabled>
+                                                    <i class="bi bi-trash3"></i>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             <?php
