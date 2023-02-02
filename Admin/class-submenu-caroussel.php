@@ -102,7 +102,7 @@ class Submenu_Diapo
                             <hr style="border-top: 2px solid gray;">
                             <div class="mb-3">
                                 <label class="form-label">Utiliser le shortcode :</label>
-                                <input class="form-control" type="text" aria-label="readonly input example" style="height:150px" readonly>
+                                <input class="form-control" type="text" aria-label="readonly input example" value="<?php echo '[carrousel id='. $id .']'?>" readonly>
                             </div>
                             <hr style="border-top: 2px solid gray;">
                         </div>

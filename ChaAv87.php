@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via un shortcode ! Ce plugin est encore en version de développement et peut engranger des erreurs ! Nous vous conseillons de désactiver le débogage sur votre site pour éviter les failles de sécurités ! Le plugin reçoit 2 mises à jours régulières qui ajoute de nouvelles fonctionalités ainsi que des Patchs de bugs qui gênent le fonctionnement de celui-ci !
  * Author: Guillaume Pascail
- * Version: 1.6.0 - 02/02/2023
+ * Version: 1.6.1 - 02/02/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -219,13 +219,24 @@ add_action( 'admin_menu', 'capitaine_remove_menu_pages' );*/
   /**
    * Résumé de get_diaporama_by_id
    * @param int $id
-   * @return void
+   * @return mixed
    * @since 1.6.0
    * Modifié : - 
    */
 
-function get_diaporama_by_id(int $id){
+function get_diaporama_by_id(int $idDiapo){
+    global $wpdb;
+    $table_name = $wpdb->prefix. 'chasseavenircaroussel';
+    $resultat = $wpdb->get_results(" SELECT * FROM $table_name WHERE idCaroussel = $idDiapo ", ARRAY_A);
+    return $resultat;
+}
 
+function get_images_by_diaporama_id(int $idDiapo){
+    error_log('[getAllSlide] > Fonction appellé avec succés !');
+    global $wpdb;
+    $table_name = $wpdb->prefix. 'chasseavenirslide';
+    $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN wp_posts wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ", ARRAY_A);
+    return $resultat;
 }
 
 
@@ -259,7 +270,7 @@ function get_diaporama_by_id(int $id){
         $slides = '';
         foreach ($images as $image) {
             $slides .= '<div class="slide">';
-            $slides .= '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+            $slides .= '<img src="' . $image['guid'] . '" alt="">';
             $slides .= '</div>';
         }
     
