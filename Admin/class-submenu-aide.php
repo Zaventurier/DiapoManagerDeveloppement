@@ -35,7 +35,7 @@
                 <body>
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <p class="card-text">Plugin Version : 1.5.13<br/>Dernière mise à jour : 01/02/2023 - 17h</p>
+                            <p class="card-text">Plugin Version : 1.6.0<br/>Dernière mise à jour : 02/02/2023 - 11h50</p>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">

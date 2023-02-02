@@ -5,9 +5,11 @@
  * Fourni les fonctionnalité nécessaire pour le rendu de la page.
  *
  * @since 1.4.1
- * Modifié : -
+ * Modifié : 1.5.13
  */
 
+
+//On initialise le fichier de débogage pour bébuger le code.
 ini_set('error_log', dirname(__FILE__) . '/debug.log');
 //On inclut le fichier qui contient la gestion du header
 require_once plugin_dir_path(__FILE__) . '/class-header.php';
@@ -205,10 +207,6 @@ class Submenu_Diapo
 
                         $nomSlide = $_POST['nomSlide'];
                         $idCaroussel = $_POST['idDiapo'];
-
-
-
-                        
                         $fileName = $_FILES['image']['name'];
                         $fileTmpName = $_FILES['image']['tmp_name'];
                         $fileSize = $_FILES['image']['size'];

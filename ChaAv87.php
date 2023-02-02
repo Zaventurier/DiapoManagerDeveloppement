@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via un shortcode ! Ce plugin est encore en version de développement et peut engranger des erreurs ! Nous vous conseillons de désactiver le débogage sur votre site pour éviter les failles de sécurités ! Le plugin reçoit 2 mises à jours régulières qui ajoute de nouvelles fonctionalités ainsi que des Patchs de bugs qui gênent le fonctionnement de celui-ci !
  * Author: Guillaume Pascail
- * Version: 1.5.13 - 01/02/2023
+ * Version: 1.6.0 - 02/02/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -25,52 +25,20 @@
  }
  
  //error_log('');
- ini_set('error_log', dirname(__FILE__) . '/Admin/logs/debug.log');
+ ini_set('error_log', dirname(__FILE__) . '/debug.log');
+ //ini_set('error_log', dirname(__FILE__) . '/Admin/logs/debug.log');
  
  /**
   * Appel des fonctions qui vont s'éxécuter à l'activation du plugin
   * @since 1.1.2
-  * Modifié : 1.4.2
+  * Modifié : 1.6.0
   * Remarque : __FILE__ signifie que la fonction est présente dans le fichier.
   */
- register_activation_hook(__FILE__, 'Plugin_Activate');//On appelle la fonction Plugin_Activate contenu dans ce fichier
- register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
+
+ //register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
  register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
  register_activation_hook(__FILE__, 'Create_Slide');//Appel de la fonction Create_Slide contenu dans ce fichier.
  
-
-/**
- * Appel des fonctions qui vont s'éxécuter à la désactivation du plugin
- * @since 1.4.4
- * Modifié : - 
- * Remarque : __FILE__ signifie que la fonction est présente dans ce fichier
- */
-
-register_deactivation_hook(__FILE__, 'Plugin_Disable');//On appelle la fonction Plugin_Disable contenu dans ce fichier
-
-
-/**
- * Résumé de Plugin_Activate
- * @return void
- * @since 1.4.4
- * Modifié : -
- * Permet d'afficher un message dans les logs lorsque le plugin est activé.
- */
-function Plugin_Activate(){
-    error_log('Le plugin est désormais activer !');
-}
-
-
-/**
- * Résumé de : Plugin_Disable
- * @return void
- * @since 1.4.4
- * Modifié : -
- * Permet d'afficher un message dans les logs lorsque le plugin est désactivé.
- */
-function Plugin_Disable() {
-    error_log('Le plugin est désormais désactiver !');
-}
 
 /**
  * Résumé de Prepare_To_Run
@@ -89,7 +57,6 @@ function Prepare_To_Run() {
     $table_name = $wpdb->prefix . "chasseavenirImage";
     $charset_collate = $wpdb->get_charset_collate();
     error_log('Fonction Prepare_To_Run : Fonction correctement appellé !');
-
     if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
         error_log('Fonction Prepare_To_Run : Préparation de la requête !');
         $sql = "CREATE TABLE $table_name (
@@ -115,7 +82,6 @@ function Prepare_To_Run() {
             error_log('Fonction Prepare_To_Run : Requête éxécuté avec succés !');
         }else{
             error_log('Echec lors de l"éxecution de la requête :' . $wpdb->print_error());
-
         }
     }else{
         error_log('La table chasseavenirimages étant existante, pas besoin de la créer !');
@@ -196,6 +162,13 @@ function Create_Slide(){
     }
 }
 
+function message() {
+
+}
+add_action('admin_notices', 'message');
+    
+    
+
 class ChaAv87{
     
     /**
@@ -243,24 +216,57 @@ add_action( 'admin_menu', 'capitaine_remove_menu_pages' );*/
     //$this->admin->add_page($titre, 'ChasseAvenir87');
    }
 
-   /*function StyleFormulaire() {
-    wp_enqueue_style( 'StyleFormulaire', plugin_dir_url( __FILE__ ) . 'inc/css/form.css' );
-    }
-    add_action( 'wp_enqueue_scripts', 'StyleFormulaire' );*/
+  /**
+   * Résumé de get_diaporama_by_id
+   * @param int $id
+   * @return void
+   * @since 1.6.0
+   * Modifié : - 
+   */
+
+function get_diaporama_by_id(int $id){
+
+}
 
 
    /**
     * Fonction carrousel_shortcode
     * @return string
     * Cette fonction définit un caroussel qu'on pourra intégrer avec un shortcode.
+    *
+    * @since 1.0.0
+    * Modifié : -
     */
-   function carrousel_shortcode() {
-    return '<div id="mon-carrousel">
-                <div class="slide">Slide 1</div>
-                <div class="slide">Slide 2</div>
-                <div class="slide">Slide 3</div>
-            </div>';
-}
+    function carrousel_shortcode($atts) {
+        // Récupérer l'argument du shortcode
+        $atts = shortcode_atts(
+            array(
+                'id' => 0,
+            ), $atts, 'carrousel'
+        );
+        $id = (int) $atts['id'];
+    
+        // Récupérer les informations sur le diaporama choisi
+        $diaporama = get_diaporama_by_id($id);
+        if (!$diaporama) {
+            return '';
+        }
+    
+        // Récupérer les images du diaporama
+        $images = get_images_by_diaporama_id($id);
+    
+        // Initialiser le code HTML pour les diapositives
+        $slides = '';
+        foreach ($images as $image) {
+            $slides .= '<div class="slide">';
+            $slides .= '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+            $slides .= '</div>';
+        }
+    
+        // Retourner le code HTML complet pour le carrousel
+        return '<div id="mon-carrousel">' . $slides . '</div>';
+    }
+    
 //add_shortcode permet de définir, en tapant [carousel] d'éxécuter la fonction carrousel_shortcode et d'intégrer le code dans la page souhaité.
 add_shortcode( 'carrousel', 'carrousel_shortcode' );
 

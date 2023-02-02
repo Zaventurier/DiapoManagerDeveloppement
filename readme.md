@@ -1,7 +1,7 @@
 ==== Plugin ChasseAvenir87 ====
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
-Version 1.5.13 - 31 Janvier 2023
+Version 1.6.0 - 02 Janvier 2023
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
 La dernière version permet d'ajouter des images à votre diaporama et à les gérer efficacement grâce à une interface simple d'utilisation.
@@ -187,7 +187,7 @@ La page "Info" regrouppera toutes les infos à savoir sur le Plugin (La version,
 > L'utilisateur à désormais la possibilité de modifié le nom de son diaporama à l'infini;
 
 02 Février 2023 - 1.6.0 > [Version Future]
-> A venir...
+> [Bug résolu] > Il n'y à plus de caratères de sorties innatendues !
 
 02 Février 2023 - 1.6.1 > [Version Future]
 > Version correctrice de la 1.6.0...
