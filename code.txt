@@ -1,0 +1,41 @@
+       <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            ' . $slides. '
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      ----------------------------------------------------------------------------
+        foreach ($images as $image) {
+            $slides .= '<div class="carousel-item">';//<div class="slide">
+            $slides .= '<img src="' . $image['guid'] . '" class="d-block w-100" alt="">';//<img src="' . $image['guid'] . '" alt="">
+            $slides .= '<div class="carousel-caption d-none d-md-block">';//</div>
+            $slides .= '<h5>' . $image['nomSlide'] . '</h5>';//Mettre le nom ici
+            $slides .= '<p>' . $image['descriptionSlide'] . '</p>';//Mettra la description ici
+            $slides .= '</div>';
+            $slides .= '</div>';
+        }
+-----------------------------------------------------------------------------------------------------------------
+$slides .= '<div class="slide">';
+            $slides .= '<img src="' . $image['guid'] . '" alt="">';
+            $slides .= '</div>';
+        }
+    
+        // Retourner le code HTML complet pour le carrousel
+        return '<div id="mon-carrousel">' . $slides . '</div>';
+
+
+

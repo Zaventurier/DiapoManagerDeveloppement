@@ -37,36 +37,73 @@
                     <div class="col-4">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h5 class="card-title">Questions-Réponses</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Une question ? Vous aurez peut être la réponse ici !</h6>
-                                <p class="card-text">Découvrez toutes les questions récurentes sur le fonctionnement de ce plugin.</p>
-                                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-diamond" viewBox="0 0 16 16">
-                                <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
-                                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-                                </svg>Ce Question-Réponse est compatible aux versions 1.6 et supérieures ! Il n'est plus à jour pour les versions antérieures !</p><br/>
-                                <p><i>Plugin ChasseAvenir87 - Version 1.6.1 - 02 Février 2023</i></p>
+                                <h5 class="card-title">Présentation du Plugin</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Tout savoir sur ce plugin</h6>
+                                <p class="card-text">Toutes les informations à savoir sur le fonctionnement de ce plugin.</p>                                
                             </div>
                         </div>
                     </div>
-                    <div class="col-8">
-                        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-                            <h4 id="question1">Quels Framework utilise le plugin ?
-                            <p>Notre plugin utilise la dernière version de Boostrap (5.3.0).<br/>
-                               Nous utilisons également la bibliothèque d'image de Boostrap (1.10.3)</p>
-                            <h4 id="question2">Quelles sont les fonctionnalités du plugin et comment s'en servir ?</h4>
-                            <p>Ce plugin à pour objectifs de vous aider à gérer au mieux vos différents diaporamas !<br/>
-                               Vous pouvez Créer, Supprimer et gérer images et descriptions dans chacun de vos diaporamas, de manière simple et pratique.<br/>
-                               Il vous suffit de cliquer sur les boutons indiqué pour réaliser des actions.</p>
-                            <h4 id="question3">Que faire si je désire supprimer toutes les diapositive de mon diaporama sans supprimer celui-ci ?</h4>
-                            <p>Pour ce faire, vous pouvez cliquer sur le bouton orange de votre interface <i><u>(veillez à avoir cliquer sur le diaporama en question avant)</u></i><br/>
-                               et cela supprimera l'entièreté des diapositives ! Attention : si vous confirmer la suppression, l'action sera irreversible et vous perdrez tout !</p>
-                            <h4 id="question4">Quelle est la marche à suivre pour créer un diaporama ?</h4>
-                            <p>Pour créer votre diaporama, suivez les étapes suivantes :<br/>
-                               1- Créer un diaporama (en haut à gauche de votre interface)<br/>
-                               2- Saisissez le nom que vous souhaitez à votre diaporama et cliquer sur le bouton valider (en vert) : le diaporama apparâit désormais dans la barre en haut.<br/>
-                               3- <i>(Si vous voulez modifier le nom de votre diaporama)</i>, effacer l'ancien nom et saisissez le nouveau et cliquer sur le bouton vert en dessous.<br/>
-                               4- Si vous avez cliquer sur le diaporama, cliquer sur le bouton "Ajouter un Slide" et saisissez son nom et choisissez une image.<br/>
-                               5- Vous pouvez désormais modifier la description ou supprimer le slide directement depuis votre interface.</p>
+                    <div class="col-7" style="padding-top:20px;">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Quels Framework utilise le plugin ?
+                                </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Notre plugin utilise la dernière version de Boostrap (5.3.0) ainsi que la dernière version de la bibliothèque d'image de Boostrap (1.10.3).</p><br/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Quelles sont les fonctionnalités du plugin et comment s'en servir ?
+                                </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Ce plugin à pour objectifs de vous aider à gérer au mieux vos différents diaporamas !<br/>
+                                            Vous pouvez Créer, Supprimer et gérer images et descriptions dans chacun de vos diaporamas, de manière simple et pratique.<br/>
+                                            Il vous suffit de cliquer sur les boutons indiqué pour réaliser des actions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Que faire si je désire supprimer toutes les diapositive de mon diaporama sans supprimer celui-ci ?
+                                </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Pour ce faire, vous pouvez cliquer sur le bouton orange de votre interface <i><u>(veillez à avoir cliquer sur le diaporama en question avant)</u></i><br/>
+                                            et cela supprimera l'entièreté des diapositives ! Attention : si vous confirmer la suppression, l'action sera irreversible et vous perdrez tout !
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourth" aria-expanded="false" aria-controls="collapseFourth">
+                                    Quelle est la marche à suivre pour créer un diaporama ?
+                                </button>
+                                </h2>
+                                <div id="collapseFourth" class="accordion-collapse collapse" aria-labelledby="headingFourth" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Pour créer votre diaporama, suivez les étapes suivantes :<br/>
+                                            1- Créer un diaporama (en haut à gauche de votre interface)<br/>
+                                            2- Saisissez le nom que vous souhaitez à votre diaporama et cliquer sur le bouton valider (en vert) : le diaporama apparâit désormais dans la barre en haut.<br/>
+                                            3- <i>(Si vous voulez modifier le nom de votre diaporama)</i>, effacer l'ancien nom et saisissez le nouveau et cliquer sur le bouton vert en dessous.<br/>
+                                            4- Si vous avez cliquer sur le diaporama, cliquer sur le bouton "Ajouter un Slide" et saisissez son nom et choisissez une image.<br/>
+                                            5- Vous pouvez désormais modifier la description ou supprimer le slide directement depuis votre interface.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

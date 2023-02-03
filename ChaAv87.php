@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via un shortcode ! Ce plugin est encore en version de développement et peut engranger des erreurs ! Nous vous conseillons de désactiver le débogage sur votre site pour éviter les failles de sécurités ! Le plugin reçoit 2 mises à jours régulières qui ajoute de nouvelles fonctionalités ainsi que des Patchs de bugs qui gênent le fonctionnement de celui-ci !
  * Author: Guillaume Pascail
- * Version: 1.6.1 - 02/02/2023
+ * Version: 1.6.2 - 03/02/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -19,6 +19,8 @@
  //Fichiers requis
  require_once( ABSPATH . 'wp-includes/shortcodes.php' );
  require_once plugin_dir_path(__FILE__) . 'inc/ChAv-functions.php';
+
+ //$css_url = plugin_dir_url( __FILE__ ). 'inc/css/diapo.css';
  
  if ( ! defined( 'ABSPATH' ) ) {
      die;
@@ -175,7 +177,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.5.13';
+    public $ver = '1.6.2';
 
     public function __construct(){
 
@@ -265,18 +267,29 @@ function get_images_by_diaporama_id(int $idDiapo){
     
         // Récupérer les images du diaporama
         $images = get_images_by_diaporama_id($id);
+
+        //chargement du fichier CSS
+        wp_register_style('slideshow-style', get_site_url() . '/wp-content/plugins/ChasseAvenir87/inc/css/diapo.css');
+        wp_enqueue_style('slideshow-style');
+        
+        //Chargement du fichier JS
+        wp_register_script('slideshow-script', get_site_url() . '/wp-content/plugins/ChasseAvenir87/inc/js/diapo.js');
+        wp_enqueue_script('slideshow-script');
     
         // Initialiser le code HTML pour les diapositives
         $slides = '';
         foreach ($images as $image) {
-            $slides .= '<div class="slide">';
-            $slides .= '<img src="' . $image['guid'] . '" alt="">';
-            $slides .= '</div>';
+            $slides .= '<div class="mySlides fade">';
+            $slides .= '<img src=' .$image['guid']. ' style="width: 100%;"/>';
+            $slides .= '</div>';   
         }
-    
         // Retourner le code HTML complet pour le carrousel
-        return '<div id="mon-carrousel">' . $slides . '</div>';
-    }
+        return '<div "class=slideshow-container">
+                    '.$slides.'
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>';
+}
     
 //add_shortcode permet de définir, en tapant [carousel] d'éxécuter la fonction carrousel_shortcode et d'intégrer le code dans la page souhaité.
 add_shortcode( 'carrousel', 'carrousel_shortcode' );
