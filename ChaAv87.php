@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via un shortcode ! Ce plugin est encore en version de développement et peut engranger des erreurs ! Nous vous conseillons de désactiver le débogage sur votre site pour éviter les failles de sécurités ! Le plugin reçoit 2 mises à jours régulières qui ajoute de nouvelles fonctionalités ainsi que des Patchs de bugs qui gênent le fonctionnement de celui-ci !
  * Author: Guillaume Pascail
- * Version: 1.6.4 - 06/02/2023
+ * Version: 1.6.5 - 06/02/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -177,7 +177,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.6.2';
+    public $ver = '1.6.5';
 
     public function __construct(){
 
@@ -248,7 +248,7 @@ function get_images_by_diaporama_id(int $idDiapo){
     * Cette fonction définit un caroussel qu'on pourra intégrer avec un shortcode.
     *
     * @since 1.0.0
-    * Modifié : -
+    * Modifié : 1.6.5
     */
     function carrousel_shortcode($atts) {
         // Récupérer l'argument du shortcode
@@ -269,29 +269,53 @@ function get_images_by_diaporama_id(int $idDiapo){
         $images = get_images_by_diaporama_id($id);
 
         //chargement du fichier CSS
-        wp_register_style('slideshow-style', get_site_url() . '/wp-content/plugins/ChasseAvenir87/inc/css/diapo.css');
-        wp_enqueue_style('slideshow-style');
+        wp_register_style('bootstrap-style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+        wp_enqueue_style('bootstrap-style');
         
-        //Chargement du fichier JS
-        wp_register_script('slideshow-script', get_site_url() . '/wp-content/plugins/ChasseAvenir87/inc/js/diapo.js');
-        wp_enqueue_script('slideshow-script');
+        // Chargement du CDN JS de Bootstrap
+        wp_register_script('bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
+        wp_enqueue_script('bootstrap-script');
     
         // Initialiser le code HTML pour les diapositives
         $slides = '';
         foreach ($images as $image) {
-            $slides .= '<div class="mySlides fade">';
-            $slides .= '<img src=' .$image['guid']. ' style="width: 700px;"/>';
-            $slides .= '</div>';   
-        }
+            $slides .= '<div class="carousel-item active">';
+            $slides .= '<img src=' .$image['guid']. ' class="d-block w-100" alt="...">';
+            $slides .= '<div class="image-description">' . $image['descriptionSlide'] . '</div>';
+            $slides .= '</div>';
+        } 
         // Retourner le code HTML complet pour le carrousel
-        return '<div "class=slideshow-container">
-                    '.$slides.'
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)" style="margin-right: 24.7%;">&#10095;</a>
+        return '<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        ' .$slides.'
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>';
 }
     
 //add_shortcode permet de définir, en tapant [carousel] d'éxécuter la fonction carrousel_shortcode et d'intégrer le code dans la page souhaité.
 add_shortcode( 'carrousel', 'carrousel_shortcode' );
 
+
+
+    /**
+     * Résumé de diaporama_shortcode
+     * @param mixed $atts
+     * @return void
+     * @since 1.6.5
+     * Modifié : -
+     * Deuxième shortcode : Celui-ci permettra à l'utilisateur de choisir le caroussel dans défilement automatique.
+     */
+
+
+    function diaporama_shortcode($atts){
+
+    }
 ?>

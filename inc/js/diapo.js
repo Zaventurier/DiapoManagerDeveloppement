@@ -1,6 +1,16 @@
 var slideIndex = 1;
       showSlides(slideIndex);
 
+      setInterval(function () {
+        slideIndex++;
+        if (slideIndex > slides.length) {
+        slideIndex = 1;
+        }
+        showSlides(slideIndex);
+        }, 1000); // défilement toutes les 1000 millisecondes (1 seconde)
+
+
+
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
@@ -22,9 +32,9 @@ var slideIndex = 1;
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
+        /*for (i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
-        }
+        }*/
         slides[slideIndex - 1].style.display = "block";
         //dots[slideIndex - 1].className += " active";
       }

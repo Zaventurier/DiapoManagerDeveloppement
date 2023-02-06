@@ -30,7 +30,9 @@ if(! defined('ABSPATH')){
 
 
 
+
 class Submenu_Page{
+
     function render(){
         error_log('[ChasseAvenir87] > Utilisateur présent sur la page d\'info !');
         // Code pour afficher le contenu de la page "Aide"?>
@@ -53,6 +55,11 @@ class Submenu_Page{
                                 <h5 class="card-title">Présentation du Plugin</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Tout savoir sur ce plugin</h6>
                                 <p class="card-text">Toutes les informations à savoir sur le fonctionnement de ce plugin.</p>                                
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-text">Version 1.6.5 - Février 2023</p>                                
                             </div>
                         </div>
                     </div>
@@ -114,6 +121,20 @@ class Submenu_Page{
                                             4- Si vous avez cliquer sur le diaporama, cliquer sur le bouton "Ajouter un Slide" et saisissez son nom et choisissez une image.<br/>
                                             5- Vous pouvez désormais modifier la description ou supprimer le slide directement depuis votre interface.
                                         </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseFifth">
+                                    Une fois mon diaporama créé dans l'interface, comment puis-je l'afficher ?
+                                </button>
+                                </h2>
+                                <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Pour afficher votre diaporama, vous devez copier <i>(Sélection puis CTRL+C)</i> le Shortcode qui s'affiche dans l'interface <i>(par exemple caroussel id=45")</i><br/>
+                                        Ensuite, vous devez aller dans la page dans laquelle vous voulez afficher votre diaporama, cliquer sur "+" et cliquer sur Shortcode.<br/>
+                                        Pour finir, coller <i>(CTRL + V)</i> le shortcode à l'intérieur et cliquer sur "Mettre à jour" ! Et voilà, votre diaporama est ajouté !</p>
                                     </div>
                                 </div>
                             </div>
