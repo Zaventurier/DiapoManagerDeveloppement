@@ -13,14 +13,6 @@
  * @since 1.1.0
  * Modifié : -
  */
-
-/**
- * Résumé de load_plugin_styles
- * @return void
- * @since 1.2.1
- * Modifié : -
- * Fonction permettant d'importer la feuille de style
- */
 //error_log('');
 ini_set('error_log', dirname(__FILE__) . '/debug.log');
 
@@ -59,7 +51,9 @@ class Submenu_Page{
                         </div>
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <p class="card-text">Version 1.6.5 - Février 2023</p>                                
+                                <p class="card-text">Version 1.6.6 - Février 2023</p>
+                                <p>Une remarque, une question ou un bug à signaler ? Rendez-vous ici :</p>
+                                <a href="https://forms.gle/bKkDHFd4Lgt7d3r29" class="btn btn-secondary"><i class="bi bi-google"></i></a>                                
                             </div>
                         </div>
                     </div>
@@ -107,7 +101,7 @@ class Submenu_Page{
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
+                                <h2 class="accordion-header" id="headingFourth">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourth" aria-expanded="false" aria-controls="collapseFourth">
                                     Quelle est la marche à suivre pour créer un diaporama ?
                                 </button>
@@ -125,16 +119,42 @@ class Submenu_Page{
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
+                                <h2 class="accordion-header" id="headingFifth">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifth" aria-expanded="false" aria-controls="collapseFifth">
                                     Une fois mon diaporama créé dans l'interface, comment puis-je l'afficher ?
                                 </button>
                                 </h2>
                                 <div id="collapseFifth" class="accordion-collapse collapse" aria-labelledby="headingFifth" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Pour afficher votre diaporama, vous devez copier <i>(Sélection puis CTRL+C)</i> le Shortcode qui s'affiche dans l'interface <i>(par exemple caroussel id=45")</i><br/>
-                                        Ensuite, vous devez aller dans la page dans laquelle vous voulez afficher votre diaporama, cliquer sur "+" et cliquer sur Shortcode.<br/>
-                                        Pour finir, coller <i>(CTRL + V)</i> le shortcode à l'intérieur et cliquer sur "Mettre à jour" ! Et voilà, votre diaporama est ajouté !</p>
+                                        <p>Il vous suffit de copier le shortcode de votre choix et de le coller dans une baliser "Code court" dans la page de votre choix.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Quels sont les différents type de diaporama possible dans grâce à ce plugin ?
+                                </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Vous pouvez créer 2 types de diapormas différents :<br/>
+                                        - Le diaporama automatique : l'image se change automatiquement <i>(vous pouvez tout de même faire défiler les images grâces aux flêches)</i><br/>
+                                        - Le diaporama manuel : Le diaporama ne défile pas automatiquement : il faut obligatoirement utiliser les flêches pour changer.<br/>
+                                        <strong>A noter qu'il est actuellement impossible de définir le temps de défilement du diaporama <i>(car définit par Boostrap)</i></strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Informations complémentaires
+                                </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Plugin créer par PASCAIL Guillaume en Janvier-Février 2023. En cas de problèmes, se référer en premier lieu à cette FAQ.<br/>
+                                        En cas de bugs ou remarques, un formulaire google à été mis en place ou vous pouvez les écrires pour me les faire parvenir.</p>
                                     </div>
                                 </div>
                             </div>

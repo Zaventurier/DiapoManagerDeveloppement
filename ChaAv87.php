@@ -8,9 +8,9 @@
  * @wordpress-plugin
  * Plugin Name: ChasseAvenir87
  * Plugin URI: 
- * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via un shortcode ! Ce plugin est encore en version de développement et peut engranger des erreurs ! Nous vous conseillons de désactiver le débogage sur votre site pour éviter les failles de sécurités ! Le plugin reçoit 2 mises à jours régulières qui ajoute de nouvelles fonctionalités ainsi que des Patchs de bugs qui gênent le fonctionnement de celui-ci !
+ * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: 1.6.5 - 06/02/2023
+ * Version: 1.6.6 - 06/02/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -19,8 +19,6 @@
  //Fichiers requis
  require_once( ABSPATH . 'wp-includes/shortcodes.php' );
  require_once plugin_dir_path(__FILE__) . 'inc/ChAv-functions.php';
-
- //$css_url = plugin_dir_url( __FILE__ ). 'inc/css/diapo.css';
  
  if ( ! defined( 'ABSPATH' ) ) {
      die;
@@ -28,7 +26,6 @@
  
  //error_log('');
  ini_set('error_log', dirname(__FILE__) . '/debug.log');
- //ini_set('error_log', dirname(__FILE__) . '/Admin/logs/debug.log');
  
  /**
   * Appel des fonctions qui vont s'éxécuter à l'activation du plugin
@@ -51,7 +48,9 @@
  * Remarque : la table n'est pas relié au reste de la base de données et les images sont gérés de façon indépendantes du reste du site
  * @since 1.1.2
  * Modifié : 1.1.4
+ * Désactivé : 1.6.6
  */
+/*
 function Prepare_To_Run() {
     global $wpdb;
     //Ici, on inclut le préfixe des tables WordPress au nom saisit. On va donc vérifier si il y à une table wp_ChasseAvenir87
@@ -89,14 +88,31 @@ function Prepare_To_Run() {
         error_log('La table chasseavenirimages étant existante, pas besoin de la créer !');
     }
 }
+*/
 
 
+
+
+  /**
+   * Résumé de Delete_Caroussel
+   * @return void
+   * @param null
+   * @since 1.5.1
+   * Modifié : -
+   * Désactivé : 1.6.6
+   */
+/*
 function Delete_Caroussel(){
     global $wpdb;
     $nom_table = $wpdb->prefix . 'chasseavenircaroussel';
     $charset_collate = $wpdb->get_charset_collate();
     error_log('Fonction Create_Caroussel : Fonction correctement appellé !');
 }
+*/
+
+
+
+
   /**
    * Résumé de Create_Caroussel
    * @return void
@@ -177,7 +193,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.6.5';
+    public $ver = '1.6.6';
 
     public function __construct(){
 
@@ -195,11 +211,6 @@ class ChaAv87{
     
    add_action( 'plugins_loaded', 'tutsplus_custom_admin_settings' );
 
-   /*function capitaine_remove_menu_pages() {
-	remove_menu_page( 'tools.php' );
-    remove_menu_page( 'edit-comments.php' );
-}
-add_action( 'admin_menu', 'capitaine_remove_menu_pages' );*/
    /**
     * Starts the plugin.
     *
@@ -214,8 +225,6 @@ add_action( 'admin_menu', 'capitaine_remove_menu_pages' );*/
 
    function ajouter_page_menu(){
     $titre = chasseAvenir87() ? 'ChasseAvenir87' : 'ChasseAvenir';
-
-    //$this->admin->add_page($titre, 'ChasseAvenir87');
    }
 
   /**
@@ -245,7 +254,7 @@ function get_images_by_diaporama_id(int $idDiapo){
    /**
     * Fonction carrousel_shortcode
     * @return string
-    * Cette fonction définit un caroussel qu'on pourra intégrer avec un shortcode.
+    * Cette fonction définit un diaporama automatique.
     *
     * @since 1.0.0
     * Modifié : 1.6.5
@@ -278,8 +287,14 @@ function get_images_by_diaporama_id(int $idDiapo){
     
         // Initialiser le code HTML pour les diapositives
         $slides = '';
+        $first = true;
         foreach ($images as $image) {
-            $slides .= '<div class="carousel-item active">';
+            $slides .= '<div class="carousel-item';
+            if ($first) {
+                $slides .= ' active';
+                $first = false;
+            }
+            $slides .= '">';
             $slides .= '<img src=' .$image['guid']. ' class="d-block w-100" alt="...">';
             $slides .= '<div class="image-description">' . $image['descriptionSlide'] . '</div>';
             $slides .= '</div>';
@@ -301,21 +316,75 @@ function get_images_by_diaporama_id(int $idDiapo){
 }
     
 //add_shortcode permet de définir, en tapant [carousel] d'éxécuter la fonction carrousel_shortcode et d'intégrer le code dans la page souhaité.
-add_shortcode( 'carrousel', 'carrousel_shortcode' );
+add_shortcode( 'DiapoA', 'carrousel_shortcode' );
 
 
 
     /**
      * Résumé de diaporama_shortcode
      * @param mixed $atts
-     * @return void
+     * @return string
      * @since 1.6.5
      * Modifié : -
-     * Deuxième shortcode : Celui-ci permettra à l'utilisateur de choisir le caroussel dans défilement automatique.
+     * Deuxième shortcode : Celui-ci permettra à l'utilisateur de choisir le caroussel manuel.
      */
 
 
     function diaporama_shortcode($atts){
+        // Récupérer l'argument du shortcode
+        $atts = shortcode_atts(
+            array(
+                'id' => 0,
+            ), $atts, 'carrousel'
+        );
+        $id = (int) $atts['id'];
+    
+        // Récupérer les informations sur le diaporama choisi
+        $diaporama = get_diaporama_by_id($id);
+        if (!$diaporama) {
+            return '';
+        }
+    
+        // Récupérer les images du diaporama
+        $images = get_images_by_diaporama_id($id);
 
+         //chargement du fichier CSS
+         wp_register_style('bootstrap-style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
+         wp_enqueue_style('bootstrap-style');
+         
+         // Chargement du CDN JS de Bootstrap
+         wp_register_script('bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
+         wp_enqueue_script('bootstrap-script');
+
+        $slide = '';
+        $first = true;
+        foreach ($images as $image) {
+            $slide .= '<div class="carousel-item';
+            if ($first) {
+                $slide .= ' active';
+                $first = false;
+            }
+            $slide .= '">';
+            $slide .= '<img src=' .$image['guid']. ' class="d-block w-100" alt="...">';
+            $slide .= '<div class="image-description">' . $image['descriptionSlide'] . '</div>';
+            $slide .= '</div>';
+        } 
+        // Retourner le code HTML complet pour le carrousel
+        return '<div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        ' .$slide.'
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>';
     }
+
+//On configure le shortcode : celui-ci permet de placer un diaporama non automatique.
+add_shortcode( 'DiapoM', 'diaporama_shortcode' );
 ?>
