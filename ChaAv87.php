@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via un shortcode ! Ce plugin est encore en version de développement et peut engranger des erreurs ! Nous vous conseillons de désactiver le débogage sur votre site pour éviter les failles de sécurités ! Le plugin reçoit 2 mises à jours régulières qui ajoute de nouvelles fonctionalités ainsi que des Patchs de bugs qui gênent le fonctionnement de celui-ci !
  * Author: Guillaume Pascail
- * Version: 1.6.2 - 03/02/2023
+ * Version: 1.6.3 - 06/02/2023
  * Author URI: 
  * License: 
  * License URI: 
@@ -280,14 +280,14 @@ function get_images_by_diaporama_id(int $idDiapo){
         $slides = '';
         foreach ($images as $image) {
             $slides .= '<div class="mySlides fade">';
-            $slides .= '<img src=' .$image['guid']. ' style="width: 100%;"/>';
+            $slides .= '<img src=' .$image['guid']. ' style="width: 700px;"/>';
             $slides .= '</div>';   
         }
         // Retourner le code HTML complet pour le carrousel
         return '<div "class=slideshow-container">
                     '.$slides.'
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="next" onclick="plusSlides(1)" style="margin-right: 24.7%;">&#10095;</a>
                 </div>';
 }
     

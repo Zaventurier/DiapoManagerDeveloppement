@@ -12,7 +12,7 @@
     vertical-align: middle;
   }
   .slideshow-container {
-    max-width: 1000px;
+    max-width: 100%;
     position: relative;
     margin: auto;
   }
@@ -24,13 +24,15 @@
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    margin-top:10%;
+    text-decoration: none;
+    
   }
   /* Position de "next button" à la droite */
   .next {
