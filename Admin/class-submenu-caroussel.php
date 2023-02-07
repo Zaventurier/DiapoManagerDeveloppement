@@ -138,7 +138,7 @@ class Submenu_Diapo
                                         <div class="desc" style="width:46%;float:left;">
                                             <div class="description" style="width:50%; height:100px; float:left;">
                                                 <div class="form-floating">
-                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" value=""><?php echo $unSlide['descriptionSlide'];?></textarea>
+                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" value="" name="desc"><?php echo $unSlide['descriptionSlide'];?></textarea>
                                                 </div>
                                             </div>
                                             <div class="btnModifDesc" style="width:50%; height:100px; float:left;">
