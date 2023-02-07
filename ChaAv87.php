@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: Bêta 1.7.0
+ * Version: Bêta 1.7.3
  * Author URI: 
  * License: 
  * License URI: 
@@ -305,12 +305,12 @@ function get_images_by_diaporama_id(int $idDiapo){
                     <div class="carousel-inner">
                         ' .$slides.'
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style="height: 365px;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style="height: 365px;">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>';
@@ -375,12 +375,12 @@ add_shortcode( 'DiapoA', 'carrousel_shortcode' );
                     <div class="carousel-inner">
                         ' .$slide.'
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"style="height: 365px;>
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;"></span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"style="height: 365px;>
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>';
