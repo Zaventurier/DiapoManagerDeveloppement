@@ -122,7 +122,7 @@ class Submenu_Diapo
                                         <input type="hidden" name="DescSlide" value="<?php echo $unSlide['descriptionSlide'];?>">
                                         <input type="hidden" name="idDiapo" value="<?php echo $unSlide['idCaroussel'];?>">
                                         <input type="hidden" name="mediaLibraryId" value="<?php echo $unSlide['mediaLibraryId'];?>">
-                                        <div class="imgSlide" style="width:33.33%; height:100px; float:left;">
+                                        <div class="imgSlide" style="width:20%; height:100px; float:left;">
                                             <img src="<?php echo $unSlide['guid'];?>" style="height:100px; margin-right:100%;">
                                         </div>
                                         <div class="nomSlide" style="width:33.33%; height:100px; float:left;">
@@ -135,12 +135,14 @@ class Submenu_Diapo
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="desc" style="width:33.33%;float:left;">
+                                        <div class="desc" style="width:46%;float:left;">
                                             <div class="description" style="width:50%; height:100px; float:left;">
-                                                <input name="desc" class="form-control" type="text" aria-label="readonly input example" value="<?php echo $unSlide['descriptionSlide'];?>">
+                                                <div class="form-floating">
+                                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" value=""><?php echo $unSlide['descriptionSlide'];?></textarea>
+                                                </div>
                                             </div>
                                             <div class="btnModifDesc" style="width:50%; height:100px; float:left;">
-                                            <button value="<?php echo $unSlide['idSlide'] ?>" data-bs-toggle="modal" data-bs-target="#ModifDesc" type="submit" name="ModifDesc" class="btn btn-outline-secondary">Modifier</button>
+                                                <button value="<?php echo $unSlide['idSlide'] ?>" data-bs-toggle="modal" data-bs-target="#ModifDesc" type="submit" name="ModifDesc" class="btn btn-outline-secondary">Modifier</button>
                                             </div>
                                         </div>
                                     </form>
