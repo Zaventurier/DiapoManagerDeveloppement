@@ -111,7 +111,7 @@ class Submenu_Diapo
                             </div>
                             <hr style="border-top: 2px solid gray;">
                         </div>
-                        <div class="col-md-9 text-center" style='height: 75vh;'>
+                        <div class="col-md-9 text-center" style='height: 100vh;'>
                             <?php
                             $AllSlide = getAllSlide($id);
                             foreach($AllSlide as $unSlide){?>

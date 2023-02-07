@@ -154,7 +154,8 @@ class Submenu_Page{
                                 <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <p>Plugin créer par PASCAIL Guillaume en Janvier-Février 2023. En cas de problèmes, se référer en premier lieu à cette FAQ.<br/>
-                                        En cas de bugs ou remarques, un formulaire google à été mis en place ou vous pouvez les écrires pour me les faire parvenir.</p>
+                                        En cas de bugs ou remarques, un formulaire google à été mis en place ou vous pouvez les écrires pour me les faire parvenir.
+                                        <i class="bi bi-exclamation-square"></i> : Lorsque l'id est égal à 0, le plugin n'aura pas la possibilité de créer de diaporama !</p>
                                     </div>
                                 </div>
                             </div>

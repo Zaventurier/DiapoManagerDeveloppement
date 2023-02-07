@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: 1.6.6 - 06/02/2023
+ * Version: Bêta 1.7.0
  * Author URI: 
  * License: 
  * License URI: 
