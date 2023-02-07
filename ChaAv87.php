@@ -246,7 +246,8 @@ function get_images_by_diaporama_id(int $idDiapo){
     error_log('[getAllSlide] > Fonction appellé avec succés !');
     global $wpdb;
     $table_name = $wpdb->prefix. 'chasseavenirslide';
-    $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN wp_posts wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ", ARRAY_A);
+    $wppost = $wpdb->prefix . 'posts';
+    $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN $wppost wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ", ARRAY_A);
     return $resultat;
 }
 
