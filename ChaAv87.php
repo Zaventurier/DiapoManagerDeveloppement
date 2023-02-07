@@ -375,11 +375,11 @@ add_shortcode( 'DiapoA', 'carrousel_shortcode' );
                     <div class="carousel-inner">
                         ' .$slide.'
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"style="height: 365px;>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"style="height: 365px;">
                         <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"style="height: 365px;>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"style="height: 365px;">
                         <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
