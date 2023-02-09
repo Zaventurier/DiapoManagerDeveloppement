@@ -1,0 +1,49 @@
+[08-Feb-2023 15:25:35 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[08-Feb-2023 15:25:35 UTC] Create_Slide() : Fonction appellé avec succés !
+[08-Feb-2023 15:29:33 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[08-Feb-2023 15:29:33 UTC] Create_Slide() : Fonction appellé avec succés !
+[08-Feb-2023 15:29:46 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[08-Feb-2023 15:29:46 UTC] Create_Slide() : Fonction appellé avec succés !
+[09-Feb-2023 10:01:13 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[09-Feb-2023 10:01:13 UTC] Create_Slide() : Fonction appellé avec succés !
+[09-Feb-2023 10:03:48 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[09-Feb-2023 10:03:48 UTC] Create_Slide() : Fonction appellé avec succés !
+[09-Feb-2023 10:07:20 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[09-Feb-2023 10:07:20 UTC] Create_Slide() : Fonction appellé avec succés !
+[09-Feb-2023 10:11:46 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[09-Feb-2023 10:11:46 UTC] Fonction Create_Caroussel : Requête préparé avec succés !
+[09-Feb-2023 10:11:46 UTC] WordPress database error  for query CREATE TABLE wp_chasseavenircaroussel (
+            idCaroussel mediumint(11) NOT NULL AUTO_INCREMENT,
+            nomCaroussel varchar(30) NOT NULL,
+            PRIMARY KEY  (idCaroussel)
+        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by activate_plugin, do_action('activate_ChasseAvenir87/ChaAv87.php'), WP_Hook->do_action, WP_Hook->apply_filters, Create_Caroussel
+[09-Feb-2023 10:11:46 UTC] Create_Slide() : Fonction appellé avec succés !
+[09-Feb-2023 10:11:46 UTC] Create_Slide : Requête préparé avec succcés !
+[09-Feb-2023 10:44:32 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[09-Feb-2023 10:44:34 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 10:44:34 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:34 UTC] [getAllSlide] > Fonction appellé avec succés !
+[09-Feb-2023 10:44:40 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 10:44:40 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:40 UTC] Create_Caroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:40 UTC] Create_Caroussel > Insertion effectué avec succès !
+[09-Feb-2023 10:44:41 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 10:44:41 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:41 UTC] [getAllSlide] > Fonction appellé avec succés !
+[09-Feb-2023 10:44:42 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 10:44:42 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:42 UTC] [getAllSlide] > Fonction appellé avec succés !
+[09-Feb-2023 10:44:51 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 10:44:51 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:51 UTC] [getAllSlide] > Fonction appellé avec succés !
+[09-Feb-2023 10:44:52 UTC] [AddSlide] > Fonction appellé avec succés !
+[09-Feb-2023 10:44:52 UTC] [AddSlide] > L'ajout s'est déroulé avec succés !
+[09-Feb-2023 10:44:52 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 10:44:52 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:52 UTC] [getAllSlide] > Fonction appellé avec succés !
+[09-Feb-2023 10:44:53 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 10:44:53 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 10:44:53 UTC] [getAllSlide] > Fonction appellé avec succés !
+[09-Feb-2023 12:42:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[09-Feb-2023 12:42:50 UTC] getAllCaroussel > Fonction appellé avec succès !
+[09-Feb-2023 12:42:50 UTC] [getAllSlide] > Fonction appellé avec succés !

@@ -218,3 +218,6 @@ La page "Info" regrouppera toutes les infos à savoir sur le Plugin (La version,
 
 07 Février 2023 > 1.7.0 > [Version Bêta 1]
 > Passage en version Bêta : Vérification du bon fonctionnement de l'application.
+
+09 Février 2023 > 1.8.1 > [Version Actuelle]
+> Publication du plugin : Correction de divers bugs (nottament la création d'une table qui ne fonctionnait pas).

@@ -15,6 +15,10 @@
 
  //error_log('');
 ini_set('error_log', dirname(__FILE__) . '/debug.log');
+require_once plugin_dir_path(__FILE__) . 'class-submenu-page.php';
+require_once plugin_dir_path(__FILE__) . 'class-submenu-aide.php';
+require_once plugin_dir_path(__FILE__) . 'class-subemnu-images.php';
+require_once plugin_dir_path(__FILE__) . 'class-submenu-caroussel.php';
 class Submenu {
 
 

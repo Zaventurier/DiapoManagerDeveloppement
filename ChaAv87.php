@@ -10,7 +10,7 @@
  * Plugin URI: 
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: Bêta 1.7.4
+ * Version: 1.8.1
  * Author URI: 
  * License: 
  * License URI: 
@@ -19,6 +19,7 @@
  //Fichiers requis
  require_once( ABSPATH . 'wp-includes/shortcodes.php' );
  require_once plugin_dir_path(__FILE__) . 'inc/ChAv-functions.php';
+ require_once plugin_dir_path(__FILE__) . 'Admin/class-submenu.php';
  
  if ( ! defined( 'ABSPATH' ) ) {
      die;
@@ -164,13 +165,11 @@ function Create_Slide(){
             idCaroussel mediumInt(11) NOT NULL,
             mediaLibraryId mediumInt(11) NOT NULL,
             PRIMARY KEY(idSlide),
-            FOREIGN KEY (idCaroussel) REFERENCES $tableCar(idCaroussel),
-            FOREIGN KEY (mediaLibraryId) REFERENCES $wppost(ID)
+            FOREIGN KEY (idCaroussel) REFERENCES $tableCar(idCaroussel)
             )$charset_collate";
         error_log('Create_Slide : Requête préparé avec succcés !');
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($reqSlide);
-        //Vérification et affichage message dans les logs
         if(dbDelta($reqSlide)){
             error_log('La reqûete à été exécuté avec succès !');
         }else {

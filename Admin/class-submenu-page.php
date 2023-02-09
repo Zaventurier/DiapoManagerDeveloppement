@@ -51,7 +51,7 @@ class Submenu_Page{
                         </div>
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <p class="card-text">Version 1.6.6 - Février 2023</p>
+                                <p class="card-text">Version 1.8 - Février 2023</p>
                                 <p>Une remarque, une question ou un bug à signaler ? Rendez-vous ici :</p>
                                 <a href="https://forms.gle/bKkDHFd4Lgt7d3r29" class="btn btn-secondary"><i class="bi bi-google"></i></a>                                
                             </div>
