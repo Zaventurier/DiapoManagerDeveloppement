@@ -6,13 +6,13 @@
  *
  *
  * @wordpress-plugin
- * Plugin Name: ChasseAvenir87
- * Plugin URI: 
+ * Plugin Name: DiapoManager
+ * Plugin URI: https://https://github.com/Zaventurier/DiapoManager
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: 1.8.1
- * Author URI: 
- * License: 
+ * Version: 1.8.2
+ * Author URI: https://github.com/Zaventurier/
+ * License: No License
  * License URI: 
  */
 
@@ -125,7 +125,7 @@ function Delete_Caroussel(){
 
 function Create_Caroussel(){
     global $wpdb;
-    $nom_table = $wpdb->prefix . 'chasseavenircaroussel';
+    $nom_table = $wpdb->prefix . 'diapomanagercaroussel';
     $charset_collate = $wpdb->get_charset_collate();
     error_log('Fonction Create_Caroussel : Fonction correctement appellé !');
     /*On vérifie et on ajoute ici une seconde table pour la gestion des caroussels sur l'entièreté du site*/
@@ -152,8 +152,8 @@ function Create_Caroussel(){
 
 function Create_Slide(){
     global $wpdb;
-    $slide = $wpdb->prefix . 'chasseavenirslide';
-    $tableCar = $wpdb->prefix . 'chasseavenircaroussel';
+    $slide = $wpdb->prefix . 'diapomanagerslide';
+    $tableCar = $wpdb->prefix . 'diapomanagercaroussel';
     $wppost = $wpdb->prefix . 'posts';
     $charset_collate = $wpdb->get_charset_collate();
     error_log('Create_Slide() : Fonction appellé avec succés !');
@@ -192,7 +192,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.6.6';
+    public $ver = '1.8.1';
 
     public function __construct(){
 
@@ -223,7 +223,7 @@ class ChaAv87{
    }
 
    function ajouter_page_menu(){
-    $titre = chasseAvenir87() ? 'ChasseAvenir87' : 'ChasseAvenir';
+    $titre = DiapoManager() ? 'DiapoManager' : 'diapomanager';
    }
 
   /**
@@ -236,7 +236,7 @@ class ChaAv87{
 
 function get_diaporama_by_id(int $idDiapo){
     global $wpdb;
-    $table_name = $wpdb->prefix. 'chasseavenircaroussel';
+    $table_name = $wpdb->prefix. 'diapomanagercaroussel';
     $resultat = $wpdb->get_results(" SELECT * FROM $table_name WHERE idCaroussel = $idDiapo ", ARRAY_A);
     return $resultat;
 }
@@ -244,7 +244,7 @@ function get_diaporama_by_id(int $idDiapo){
 function get_images_by_diaporama_id(int $idDiapo){
     error_log('[getAllSlide] > Fonction appellé avec succés !');
     global $wpdb;
-    $table_name = $wpdb->prefix. 'chasseavenirslide';
+    $table_name = $wpdb->prefix. 'diapomanagerslide';
     $wppost = $wpdb->prefix . 'posts';
     $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN $wppost wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ", ARRAY_A);
     return $resultat;

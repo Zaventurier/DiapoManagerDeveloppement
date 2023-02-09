@@ -1,7 +1,9 @@
-==== Plugin ChasseAvenir87 ====
+==== Plugin DiapoManager ====
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
-Version Bêta 1.7.0 - 06 Février 2023
+Changement de nom : 09 Février 2023
+Version 1.8.2 - 09 Février 2023
+Licence : Pas de Licence actuellement
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
 La dernière version permet d'ajouter des images à votre diaporama et à les gérer efficacement grâce à une interface simple d'utilisation.
@@ -26,7 +28,7 @@ Dans notre code, nous gardons une syntaxe particulière :
 * Un petit résumé de la fonction
 **/
 
-Nous rappelons que ce plugin est réalisé en France à donc comme langue le français.
+Nous rappelons que ce plugin est réalisé en France et a donc comme langue le français.
 
 [Remarque] : L'initialisation du répertoire GitHub ne coincident pas avec le début du projet : le 10 Janvier 2022
 
@@ -207,7 +209,7 @@ La page "Info" regrouppera toutes les infos à savoir sur le Plugin (La version,
 > [Remarque] > Le diaporama utilise la dernière version de bootstrap (5.3.0);
 > Préparation futur mise à jour;
 
-06 Février 2023 - 1.6.6 > [Version Actuelle]
+06 Février 2023 - 1.6.6 > [Version Ancienne]
 > Changement du shortcode : le nom à changé pour qu'il soit plus représentatif de sa fonction;
 > [Fonctionnalité] > Un nouveau shortcode à été ajouté permettant de créer un diaporama qui ne défile pas tout seul;
 > Il y à désormais 2 shortcodes pour le plugin;
@@ -216,8 +218,13 @@ La page "Info" regrouppera toutes les infos à savoir sur le Plugin (La version,
 > Modificcation de la description du plugin;
 > Nettoyage du code (suppression du code désormais inutile - on à gardé certaines fonctions au cas ou, mais elles ont été désactivé);
 
-07 Février 2023 > 1.7.0 > [Version Bêta 1]
+07 Février 2023 > 1.7.0 > [Version Ancienne]
 > Passage en version Bêta : Vérification du bon fonctionnement de l'application.
 
-09 Février 2023 > 1.8.1 > [Version Actuelle]
+09 Février 2023 > 1.8.1 > [Version Ancienne]
 > Publication du plugin : Correction de divers bugs (nottament la création d'une table qui ne fonctionnait pas).
+
+09 Février 2023 - 1.8.2 > **[Version Actuelle]**
+C'est un grand pas dans le développement de cette extension : Un nouveau nom : **DiapoManager**;
+J'ai également décidé de placer le répertoire GitHub de ce projet en libre consultation : vous pourrez vous inspirer du code ce cette extension, le copier pour développer vos propres fonctionnalités. Sachez que je continuerez à proposer de nouvelles fonctionnalités et des mises à jours correctrices de cette extension. Vous pouvez me signaler tout les bugs/Améliorations pour ce plugin dans la partie Issues de ce répertoire GitHub. Ce code restera tout de même le point initial de ce projet.
+Amusez vous avec cette extension WordPress !

@@ -115,7 +115,7 @@ function render_header() {
      {
          error_log('getAllCaroussel > Fonction appellé avec succès !');
          global $wpdb;
-         $AllCaroussel = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "chasseavenircaroussel", ARRAY_A);
+         $AllCaroussel = $wpdb->get_results("SELECT * FROM " . $wpdb->prefix . "diapomanagercaroussel", ARRAY_A);
          return $AllCaroussel;
      }
 
@@ -139,7 +139,7 @@ function Creer_Caroussel(array $array)
         //alert(1);
         exit;
     } else {
-        $result = $wpdb->insert($wpdb->prefix . "chasseavenircaroussel", $array);
+        $result = $wpdb->insert($wpdb->prefix . "diapomanagercaroussel", $array);
         if (!$result) {
             error_log('Create_Caroussel > Une erreur est survenu lors de l\'insertion dans la base de données : ' . $wpdb->print_error());
             $wpdb->print_error();

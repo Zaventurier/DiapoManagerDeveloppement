@@ -78,12 +78,12 @@ public function __construct( $submenu_page ) {
  * @return void
  * Cette fonction gère le menu qui s'affiche sur le tableau de bord WordPress
  * @since 1.1.0
- * Modifié : 1.4.1
+ * Modifié : 1.8.2
  */
 public function add_options_page() {
     add_menu_page(
-        'ChasseAvenir87', //titre de la page d'options qui sera affiché en haut de l'écran dans le menu d'administration de WordPress.
-        'ChasseAvenir87', //nom qui apparaîtra dans le menu d'administration de WordPress.
+        'DiapoManager', //titre de la page d'options qui sera affiché en haut de l'écran dans le menu d'administration de WordPress.
+        'DiapoManager', //nom qui apparaîtra dans le menu d'administration de WordPress.
         'manage_options',//niveau de permission requis pour accéder à cette page d'options.
         'info-page', //l'identifiant unique de la page d'options qui sera utilisé pour construire l'URL de la page.
         array( $this->submenu_page, 'render' ),//méthode de la classe qui est utilisée pour afficher le contenu de la page d'options.
@@ -108,7 +108,7 @@ public function add_options_page() {
         'chasseavenir-images', 
         array( $this->submenu_images, 'render_images_page' )//
     );*/
-    //Ajout du sous-menu "Gérer les Caroussels"
+    //Ajout du sous-menu "Gérer les Diaporamas"
     add_submenu_page(
         'info-page',
         'Gérer les Diaporamas',

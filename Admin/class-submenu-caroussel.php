@@ -309,7 +309,7 @@ class Submenu_Diapo
     function deleteDiapo(int $idDiapo)
     {
         global $wpdb;
-        $table_name = $wpdb->prefix . 'chasseavenircaroussel';
+        $table_name = $wpdb->prefix . 'diapomanagercaroussel';
         $wpdb->delete($table_name, array('idCaroussel' => $idDiapo));
         echo '<script type="text/javascript">location.reload();</script>';
     }
@@ -327,7 +327,7 @@ class Submenu_Diapo
     function ModifDiapo(int $idDiapo, string $newName)
     {
         global $wpdb;
-        $table_name = $wpdb->prefix . 'chasseavenircaroussel';
+        $table_name = $wpdb->prefix . 'diapomanagercaroussel';
         $wpdb->update($table_name, array('nomCaroussel' => $newName), array('idCaroussel' => $idDiapo));
         echo '<script type="text/javascript">location.reload();</script>';
     }
@@ -345,7 +345,7 @@ class Submenu_Diapo
 function AddSlide($array){
     error_log("[AddSlide] > Fonction appellé avec succés !");
     global $wpdb;
-    $table_name = $wpdb->prefix . 'chasseavenirslide';
+    $table_name = $wpdb->prefix . 'diapomanagerslide';
 
     $resultat = $wpdb->insert($table_name, $array);
 
@@ -369,7 +369,7 @@ function AddSlide($array){
     function getAllSlide(int $idDiapo){
         error_log('[getAllSlide] > Fonction appellé avec succés !');
         global $wpdb;
-        $table_name = $wpdb->prefix. 'chasseavenirslide';
+        $table_name = $wpdb->prefix. 'diapomanagerslide';
         $wppost = $wpdb->prefix . 'posts';
 
         $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN $wppost wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ", ARRAY_A);
@@ -396,7 +396,7 @@ function AddSlide($array){
     function countSlide(int $idDiapo){
         error_log('[countSlide] > Fonction appellé avec succés!');
         global $wpdb;
-        $table_name = $wpdb->prefix. 'chasseavenirslide';
+        $table_name = $wpdb->prefix. 'diapomanagerslide';
 
         $resultat = $wpdb->get_var("SELECT COUNT(*) FROM $table_name WHERE idCaroussel = $idDiapo");
         return $resultat;
@@ -415,7 +415,7 @@ function AddSlide($array){
     function deleteSlide(int $idSlide){
         error_log('[deleteSlide] > Fonction appellé avec succés!');
         global $wpdb;
-        $table_name = $wpdb->prefix . 'chasseavenirslide';
+        $table_name = $wpdb->prefix . 'diapomanagerslide';
         $wpdb->delete($table_name, array('idSlide' => $idSlide));
         echo '<script type="text/javascript">location.reload();</script>';
     }
@@ -445,7 +445,7 @@ function AddSlide($array){
 
     function modifDesc(String $desc, int $idSlide){
         global $wpdb;
-        $table_name = $wpdb->prefix . "chasseavenirslide";
+        $table_name = $wpdb->prefix . "diapomanagerslide";
         $wpdb->update($table_name, array( 
               'descriptionSlide' => $desc), 
             array( 
@@ -475,7 +475,7 @@ function AddSlide($array){
     function deleteAllSlide(int $idDiapo){
         error_log('[deleteAllSlide] > Fonction appellé avec succés!');
         global $wpdb;
-        $table_name = $wpdb->prefix. 'chasseavenirslide';
+        $table_name = $wpdb->prefix. 'diapomanagerslide';
         $wpdb->delete($table_name, array('idCaroussel' => $idDiapo));
         echo '<script type="text/javascript">location.reload();</script>';
     }
