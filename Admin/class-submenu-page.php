@@ -51,7 +51,7 @@ class Submenu_Page{
                         </div>
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <p class="card-text">Version 1.8.2 - Février 2023</p>                                
+                                <p class="card-text">Version 1.8.3 - Février 2023</p>                                
                             </div>
                         </div>
                     </div>

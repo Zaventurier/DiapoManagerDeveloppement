@@ -7,10 +7,10 @@
  *
  * @wordpress-plugin
  * Plugin Name: DiapoManager
- * Plugin URI: https://https://github.com/Zaventurier/DiapoManager
+ * Plugin URI: https://github.com/Zaventurier/DiapoManagerDeveloppement
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: 1.8.2
+ * Version: 1.8.3
  * Author URI: https://github.com/Zaventurier/
  * License: No License
  * License URI: 
@@ -38,79 +38,6 @@
  //register_activation_hook(__FILE__,'Prepare_To_Run');//On appelle la fonction Prepare_To_Run contenu dans ce fichier.
  register_activation_hook(__FILE__, 'Create_Caroussel');//On appelle la fonction Create_Caroussel contenu dans ce fichier.
  register_activation_hook(__FILE__, 'Create_Slide');//Appel de la fonction Create_Slide contenu dans ce fichier.
- 
-
-/**
- * Résumé de Prepare_To_Run
- * @return void
- * Fonction qui vérifie si il y à une table nommé ChasseAvenir87.
- * Si une table portant ce nom est déjà existante, alors la fonction ne fera rien.
- * Cette fonction ne gère pas les différentes erreurs qui pourrait être occasionnés.
- * Remarque : la table n'est pas relié au reste de la base de données et les images sont gérés de façon indépendantes du reste du site
- * @since 1.1.2
- * Modifié : 1.1.4
- * Désactivé : 1.6.6
- */
-/*
-function Prepare_To_Run() {
-    global $wpdb;
-    //Ici, on inclut le préfixe des tables WordPress au nom saisit. On va donc vérifier si il y à une table wp_ChasseAvenir87
-    //Si elle n'existe pas, on va donc la créer.
-    $table_name = $wpdb->prefix . "chasseavenirImage";
-    $charset_collate = $wpdb->get_charset_collate();
-    error_log('Fonction Prepare_To_Run : Fonction correctement appellé !');
-    if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
-        error_log('Fonction Prepare_To_Run : Préparation de la requête !');
-        $sql = "CREATE TABLE $table_name (
-            idImage mediumint(11) NOT NULL AUTO_INCREMENT,
-            cheminImage varchar(100) NOT NULL,
-            nomImage varchar(255) NOT NULL,
-            DescriptionImage text NULL,
-            extensionImage varchar(10) NOT NULL,
-            poidsImage varchar (15) NOT NULL,
-            dateAjout datetime NOT NULL,
-            estSupprime boolean NOT NULL DEFAULT 0,
-            dateSuppression datetime NULL,
-            mediaLibraryId mediumint(11) NOT NULL,
-            PRIMARY KEY (idImage),
-            FOREIGN KEY (mediaLibraryId) REFERENCES wp_posts(ID)
-            ) $charset_collate;";
-        error_log('Fonction Prepare_To_Run : Requête préparé avec succés !');
-        //Cette fonction necessite l'utilisation d'un fichier particulier : on va donc le chercher
-        //ABSPATH permet de revenir à la racine du site
-        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-        dbDelta( $sql );
-        if(dbDelta($sql) == true){
-            error_log('Fonction Prepare_To_Run : Requête éxécuté avec succés !');
-        }else{
-            error_log('Echec lors de l"éxecution de la requête :' . $wpdb->print_error());
-        }
-    }else{
-        error_log('La table chasseavenirimages étant existante, pas besoin de la créer !');
-    }
-}
-*/
-
-
-
-
-  /**
-   * Résumé de Delete_Caroussel
-   * @return void
-   * @param null
-   * @since 1.5.1
-   * Modifié : -
-   * Désactivé : 1.6.6
-   */
-/*
-function Delete_Caroussel(){
-    global $wpdb;
-    $nom_table = $wpdb->prefix . 'chasseavenircaroussel';
-    $charset_collate = $wpdb->get_charset_collate();
-    error_log('Fonction Create_Caroussel : Fonction correctement appellé !');
-}
-*/
-
 
 
 
@@ -146,7 +73,7 @@ function Create_Caroussel(){
    * Résumé de : Create_Slide
    * @return void
    * @since 1.5.1
-   * Modifié : -
+   * Modifié : 1.8.2
    * Créer une table SLIDE ayant pour clé étrangère la table posts de WordPress et Caroussel du plugin
    */
 
@@ -192,7 +119,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.8.1';
+    public $ver = '1.8.3';
 
     public function __construct(){
 
@@ -246,7 +173,7 @@ function get_images_by_diaporama_id(int $idDiapo){
     global $wpdb;
     $table_name = $wpdb->prefix. 'diapomanagerslide';
     $wppost = $wpdb->prefix . 'posts';
-    $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN $wppost wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ", ARRAY_A);
+    $resultat = $wpdb->get_results(" SELECT wp.guid, slide.* FROM $table_name slide INNER JOIN $wppost wp ON wp.ID = slide.mediaLibraryId WHERE idCaroussel = $idDiapo ORDER BY slide.idSlide ASC ", ARRAY_A);
     return $resultat;
 }
 
@@ -295,8 +222,8 @@ function get_images_by_diaporama_id(int $idDiapo){
                 $first = false;
             }
             $slides .= '">';
-            $slides .= '<img src=' .$image['guid']. ' class="d-block w-100" alt="...">';
-            $slides .= '<div class="image-description">' . $image['descriptionSlide'] . '</div>';
+            $slides .= '<img src=' .$image['guid']. ' class="d-block w-100" style="height:400px;width:100%">';
+            $slides .= '<div class="image-description" style="text-align:center;">' . $image['descriptionSlide'] . '</div>';
             $slides .= '</div>';
         } 
         // Retourner le code HTML complet pour le carrousel
@@ -365,7 +292,7 @@ add_shortcode( 'DiapoA', 'carrousel_shortcode' );
                 $first = false;
             }
             $slide .= '">';
-            $slide .= '<img src=' .$image['guid']. ' class="d-block w-100" alt="...">';
+            $slide .= '<img src=' .$image['guid']. ' class="d-block w-100" style="height:400px;width:100%">';
             $slide .= '<div class="image-description">' . $image['descriptionSlide'] . '</div>';
             $slide .= '</div>';
         } 

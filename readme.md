@@ -2,7 +2,7 @@
 Développé par : Guillaume PASCAIL
 Date création : 10 Janvier 2023
 Changement de nom : 09 Février 2023
-Version 1.8.2 - 09 Février 2023
+Version 1.8.3 - 10 Février 2023
 Licence : Pas de Licence actuellement
 
 Ce plugin sert à gérer des images et des caroussels (diaporamas) avec les images.
@@ -224,7 +224,11 @@ La page "Info" regrouppera toutes les infos à savoir sur le Plugin (La version,
 09 Février 2023 > 1.8.1 > [Version Ancienne]
 > Publication du plugin : Correction de divers bugs (nottament la création d'une table qui ne fonctionnait pas).
 
-09 Février 2023 - 1.8.2 > **[Version Actuelle]**
+09 Février 2023 - 1.8.2 > [Version Ancienne]
 C'est un grand pas dans le développement de cette extension : Un nouveau nom : **DiapoManager**;
 J'ai également décidé de placer le répertoire GitHub de ce projet en libre consultation : vous pourrez vous inspirer du code ce cette extension, le copier pour développer vos propres fonctionnalités. Sachez que je continuerez à proposer de nouvelles fonctionnalités et des mises à jours correctrices de cette extension. Vous pouvez me signaler tout les bugs/Améliorations pour ce plugin dans la partie Issues de ce répertoire GitHub. Ce code restera tout de même le point initial de ce projet.
 Amusez vous avec cette extension WordPress !
+
+10 Février 2023 > 1.8.3 > **[Version Actuelle]**
+> Ajustements et patchs de quelques bugs :
+- Les images sont désormais fixé quand à leur taille
