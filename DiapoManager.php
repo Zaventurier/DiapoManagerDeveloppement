@@ -1,6 +1,6 @@
 <?php
 /**
- * Fichier de démarrage
+ * Fichier de configuration
  *
  * Ceci est le fichier principal qui sera lu par WordPress.
  *
@@ -10,7 +10,7 @@
  * Plugin URI: https://github.com/Zaventurier/DiapoManagerDeveloppement
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: 1.8.3
+ * Version: 1.8.4
  * Author URI: https://github.com/Zaventurier/
  * License: No License
  * License URI: 
@@ -119,7 +119,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.8.3';
+    public $ver = '1.8.4';
 
     public function __construct(){
 
@@ -207,6 +207,10 @@ function get_images_by_diaporama_id(int $idDiapo){
         //chargement du fichier CSS
         wp_register_style('bootstrap-style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
         wp_enqueue_style('bootstrap-style');
+
+        //Chargement du fichier CSS pour modifier le style du caroussel.
+        wp_register_style('DMstyle-css', '/wp-content/plugins/DiapoManager/inc/css/DMstyle.css');
+        wp_enqueue_style('DMstyle-css');
         
         // Chargement du CDN JS de Bootstrap
         wp_register_script('bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
@@ -222,8 +226,8 @@ function get_images_by_diaporama_id(int $idDiapo){
                 $first = false;
             }
             $slides .= '">';
-            $slides .= '<img src=' .$image['guid']. ' class="d-block w-100" style="height:400px;width:100%">';
-            $slides .= '<div class="image-description" style="text-align:center;">' . $image['descriptionSlide'] . '</div>';
+            $slides .= '<div class="DM-image-container"><img src=' .$image['guid']. ' class="d-block"></div>';
+            $slides .= '<div class="DM-image-description" style="text-align:center;">' . $image['descriptionSlide'] . '</div>';
             $slides .= '</div>';
         } 
         // Retourner le code HTML complet pour le carrousel
@@ -275,9 +279,14 @@ add_shortcode( 'DiapoA', 'carrousel_shortcode' );
         // Récupérer les images du diaporama
         $images = get_images_by_diaporama_id($id);
 
-         //chargement du fichier CSS
+         //chargement du fichier CSS Boostrap
          wp_register_style('bootstrap-style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css');
          wp_enqueue_style('bootstrap-style');
+
+
+        //Chargement du fichier CSS pour modifier le style du caroussel.
+         wp_register_style('DMstyle-css', 'inc/css/DMstyle.css');
+         wp_enqueue_style('DMstyle-css');
          
          // Chargement du CDN JS de Bootstrap
          wp_register_script('bootstrap-script', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js');
@@ -292,20 +301,20 @@ add_shortcode( 'DiapoA', 'carrousel_shortcode' );
                 $first = false;
             }
             $slide .= '">';
-            $slide .= '<img src=' .$image['guid']. ' class="d-block w-100" style="height:400px;width:100%">';
-            $slide .= '<div class="image-description">' . $image['descriptionSlide'] . '</div>';
+            $slide .= '<div class="DM-image-container"><img src=' .$image['guid']. ' class="d-block w-100"></div>';
+            $slide .= '<div class="DM-image-description">' . $image['descriptionSlide'] . '</div>';
             $slide .= '</div>';
         } 
         // Retourner le code HTML complet pour le carrousel
-        return '<div id="carouselExample" class="carousel slide">
+        return '<div id="carouselExample" class="carousel slide" style="height:400px;">
                     <div class="carousel-inner">
                         ' .$slide.'
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"style="height: 365px;">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"style="height: 365px;background: none;border: none;">
                         <span class="carousel-control-prev-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"style="height: 365px;">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"style="height: 365px;background: none;border: none;">
                         <span class="carousel-control-next-icon" aria-hidden="true" style="border:3px solid white; padding:4px;width:3rem;height:3rem;"></span>
                         <span class="visually-hidden">Next</span>
                     </button>

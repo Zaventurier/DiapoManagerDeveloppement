@@ -229,6 +229,11 @@ C'est un grand pas dans le développement de cette extension : Un nouveau nom : 
 J'ai également décidé de placer le répertoire GitHub de ce projet en libre consultation : vous pourrez vous inspirer du code ce cette extension, le copier pour développer vos propres fonctionnalités. Sachez que je continuerez à proposer de nouvelles fonctionnalités et des mises à jours correctrices de cette extension. Vous pouvez me signaler tout les bugs/Améliorations pour ce plugin dans la partie Issues de ce répertoire GitHub. Ce code restera tout de même le point initial de ce projet.
 Amusez vous avec cette extension WordPress !
 
-10 Février 2023 > 1.8.3 > **[Version Actuelle]**
+10 Février 2023 > 1.8.3 > [Version Ancienne]
 > Ajustements et patchs de quelques bugs :
 - Les images sont désormais fixé quand à leur taille
+
+21 Février 2023 > 1.8.4 > **[Version Actuelle]**
+> Ajout des boutons pour les liens de téléchargement des documentations;
+> Téléchargement activé pour la documentation utilisateur;
+> Téléchargement activé pour la documentation technique;

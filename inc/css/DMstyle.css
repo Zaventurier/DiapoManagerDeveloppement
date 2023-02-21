@@ -1,0 +1,12 @@
+.carousel-inner{
+    height: 100%;
+}
+.DM-image-container{
+    height:400px;
+    overflow: hidden;
+}
+.DM-image-container img {
+    height: 100%;
+    width: auto;
+    margin: auto;
+}

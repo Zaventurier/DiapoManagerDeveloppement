@@ -25,7 +25,7 @@ class Submenu_Diapo
      */
     function render_diapo_page()
     {
-        error_log('[ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !');
+        error_log('[DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !');
         // Code pour afficher le contenu de la page "Gérer les caroussels"?>
         <DOCTYPE html>
             <html>

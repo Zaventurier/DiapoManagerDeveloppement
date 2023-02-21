@@ -15,14 +15,13 @@
 
  //error_log('');
 ini_set('error_log', dirname(__FILE__) . '/debug.log');
+
+
 require_once plugin_dir_path(__FILE__) . 'class-submenu-page.php';
 require_once plugin_dir_path(__FILE__) . 'class-submenu-aide.php';
 require_once plugin_dir_path(__FILE__) . 'class-subemnu-images.php';
 require_once plugin_dir_path(__FILE__) . 'class-submenu-caroussel.php';
 class Submenu {
-
-
-
     /**
      * Cette class gère le menu et les sous-menu
      * C'est ici que son gérer l'affichage des différents sous-menu
@@ -110,12 +109,12 @@ public function add_options_page() {
     );*/
     //Ajout du sous-menu "Gérer les Diaporamas"
     add_submenu_page(
-        'info-page',
-        'Gérer les Diaporamas',
-        'Gérer les Diaporamas',
-        'manage_options',
-        'chasseavenir-caroussel',
-        array( $this->submenu_caroussel, 'render_diapo_page' )
+        'info-page',//Identifiant de la page parent
+        'Gérer les Diaporamas',//Nom de la page en haut
+        'Gérer les Diaporamas',//Nom de la page dans le menu
+        'manage_options',//Niveau de permission requis pour accéder à cette page
+        'chasseavenir-caroussel',//Identifiant de la sous page
+        array( $this->submenu_caroussel, 'render_diapo_page' )//Tableau contenant la méthode à appellé pour afficher la page
         );
 }
 }

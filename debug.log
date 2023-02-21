@@ -522,3 +522,162 @@
 [10-Feb-2023 08:50:56 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
 [10-Feb-2023 08:50:56 UTC] getAllCaroussel > Fonction appellé avec succès !
 [10-Feb-2023 08:50:56 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 09:44:40 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[10-Feb-2023 09:44:40 UTC] Create_Slide() : Fonction appellé avec succés !
+[10-Feb-2023 09:44:43 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[10-Feb-2023 09:44:45 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 09:44:45 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 09:44:45 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 09:44:51 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 09:45:10 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[10-Feb-2023 09:45:22 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:10:41 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:17:18 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:26:52 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:28:28 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:30:20 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:42:55 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[10-Feb-2023 10:42:57 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:42:57 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:42:57 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:43:01 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:43:01 UTC] Create_Caroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:43:01 UTC] Create_Caroussel > Insertion effectué avec succès !
+[10-Feb-2023 10:43:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:43:02 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:43:02 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:04 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:43:04 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:43:04 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:10 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:43:10 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:43:10 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:11 UTC] [AddSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:11 UTC] [AddSlide] > L'ajout s'est déroulé avec succés !
+[10-Feb-2023 10:43:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:43:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:43:11 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:13 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:43:13 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:43:13 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:54 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:43:56 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:48:03 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:48:04 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:48:07 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[10-Feb-2023 10:48:07 UTC] getAllCaroussel > Fonction appellé avec succès !
+[10-Feb-2023 10:48:07 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:48:13 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 10:49:44 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:09:22 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:11:44 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:12:58 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:14:56 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:16:39 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:17:59 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:18:12 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:18:25 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:19:14 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:19:39 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:21:03 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:21:33 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[10-Feb-2023 13:21:33 UTC] Create_Slide() : Fonction appellé avec succés !
+[10-Feb-2023 13:21:38 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:24:02 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:24:23 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:24:48 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:25:13 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:25:23 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:26:01 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:29:08 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:35:07 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:35:41 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:36:51 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:37:01 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:44:28 UTC] [getAllSlide] > Fonction appellé avec succés !
+[10-Feb-2023 13:51:27 UTC] [getAllSlide] > Fonction appellé avec succés !
+[18-Feb-2023 09:29:13 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[18-Feb-2023 09:29:20 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[18-Feb-2023 09:29:20 UTC] getAllCaroussel > Fonction appellé avec succès !
+[18-Feb-2023 09:29:20 UTC] [getAllSlide] > Fonction appellé avec succés !
+[18-Feb-2023 09:29:23 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[18-Feb-2023 09:29:23 UTC] getAllCaroussel > Fonction appellé avec succès !
+[18-Feb-2023 09:29:23 UTC] [getAllSlide] > Fonction appellé avec succés !
+[18-Feb-2023 09:29:24 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[18-Feb-2023 09:29:24 UTC] getAllCaroussel > Fonction appellé avec succès !
+[18-Feb-2023 09:29:24 UTC] [getAllSlide] > Fonction appellé avec succés !
+[18-Feb-2023 09:29:51 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 07:41:32 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:05:24 UTC] Fonction Create_Caroussel : Fonction correctement appellé !
+[20-Feb-2023 08:05:24 UTC] Create_Slide() : Fonction appellé avec succés !
+[20-Feb-2023 08:05:28 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:05:30 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:30 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:30 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 08:05:42 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:42 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:42 UTC] Create_Caroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:42 UTC] Create_Caroussel > Insertion effectué avec succès !
+[20-Feb-2023 08:05:43 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:43 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:43 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 08:05:45 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:45 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:45 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 08:05:49 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:49 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:49 UTC] [deleteAllSlide] > Fonction appellé avec succés!
+[20-Feb-2023 08:05:49 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 08:05:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:50 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:50 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 08:05:51 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:51 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:51 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 08:05:53 UTC] [ChasseAvenir87] > Utilisateur présent sur la page de Gestion des caroussels !
+[20-Feb-2023 08:05:53 UTC] getAllCaroussel > Fonction appellé avec succès !
+[20-Feb-2023 08:05:53 UTC] [getAllSlide] > Fonction appellé avec succés !
+[20-Feb-2023 08:23:21 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:24:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:25:03 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:26:56 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:27:11 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:27:40 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:28:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:29:07 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:29:27 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:31:46 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 08:33:07 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 10:44:31 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 15:14:40 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 15:15:05 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 15:15:39 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 15:16:52 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[20-Feb-2023 15:17:03 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[21-Feb-2023 10:32:34 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[21-Feb-2023 10:32:38 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[21-Feb-2023 10:32:38 UTC] getAllCaroussel > Fonction appellé avec succès !
+[21-Feb-2023 10:32:38 UTC] [getAllSlide] > Fonction appellé avec succés !
+[21-Feb-2023 10:33:12 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[21-Feb-2023 10:33:12 UTC] getAllCaroussel > Fonction appellé avec succès !
+[21-Feb-2023 10:33:12 UTC] [getAllSlide] > Fonction appellé avec succés !
+[21-Feb-2023 10:33:14 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[21-Feb-2023 10:33:14 UTC] getAllCaroussel > Fonction appellé avec succès !
+[21-Feb-2023 10:33:14 UTC] [deleteAllSlide] > Fonction appellé avec succés!
+[21-Feb-2023 10:33:14 UTC] [getAllSlide] > Fonction appellé avec succés !
+[21-Feb-2023 10:33:14 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[21-Feb-2023 10:33:14 UTC] getAllCaroussel > Fonction appellé avec succès !
+[21-Feb-2023 10:33:14 UTC] [getAllSlide] > Fonction appellé avec succés !
+[21-Feb-2023 10:33:16 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[21-Feb-2023 10:33:16 UTC] getAllCaroussel > Fonction appellé avec succès !
+[21-Feb-2023 10:33:16 UTC] [getAllSlide] > Fonction appellé avec succés !
+[21-Feb-2023 10:33:25 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[21-Feb-2023 10:33:57 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[21-Feb-2023 10:33:57 UTC] getAllCaroussel > Fonction appellé avec succès !
+[21-Feb-2023 10:33:57 UTC] [getAllSlide] > Fonction appellé avec succés !
+[21-Feb-2023 10:34:11 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[21-Feb-2023 10:34:11 UTC] getAllCaroussel > Fonction appellé avec succès !
+[21-Feb-2023 10:34:11 UTC] [getAllSlide] > Fonction appellé avec succés !
+[21-Feb-2023 13:17:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[21-Feb-2023 13:25:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
