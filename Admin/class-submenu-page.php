@@ -11,7 +11,7 @@
  * Fourni les fonctionnalité nécessaire pour le rendu de la page.
  *
  * @since 1.1.0
- * Modifié : -
+ * Modifié : 1.8.5
  */
 //error_log('');
 ini_set('error_log', dirname(__FILE__) . '/debug.log');
@@ -58,8 +58,8 @@ class Submenu_Page{
                             <div class="card-body">
                             <h5 class="card-title">Les documentations</h5>
                                 <p class="card-text">
-                                    <a href="/wp-content/plugins/DiapoManager/download/DocUtil.pdf" download class="btn btn-outline-primary">Doc utilisateur</a><br/><br/>
-                                    <a href="/wp-content/plugins/DiapoManager/download/DocTechinque.pdf" download class="btn btn-outline-secondary" >Doc technique</a>
+                                    <a href="https://github.com/Zaventurier/Fichiers/raw/master/DiapoManager/DiapoManager_DocUtil.pdf" download class="btn btn-outline-primary">Doc utilisateur</a><br/><br/>
+                                    <a href="https://github.com/Zaventurier/Fichiers/raw/master/DiapoManager/DiapoManager_DocTechinque.pdf" download class="btn btn-outline-secondary" >Doc technique</a>
                                 </p>                                
                             </div>
                         </div>

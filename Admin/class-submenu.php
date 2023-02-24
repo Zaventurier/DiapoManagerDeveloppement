@@ -65,9 +65,7 @@ public function __construct( $submenu_page ) {
     $this->submenu_caroussel = new Submenu_Diapo();
  }
  
- /**
- * Ajoute un sous menu dans le menu outils.
- */
+ 
  public function init() {
  add_action( 'admin_menu', array( $this, 'add_options_page' ) );
  }
@@ -113,7 +111,7 @@ public function add_options_page() {
         'Gérer les Diaporamas',//Nom de la page en haut
         'Gérer les Diaporamas',//Nom de la page dans le menu
         'manage_options',//Niveau de permission requis pour accéder à cette page
-        'chasseavenir-caroussel',//Identifiant de la sous page
+        'diapomanager-caroussel',//Identifiant de la sous page
         array( $this->submenu_caroussel, 'render_diapo_page' )//Tableau contenant la méthode à appellé pour afficher la page
         );
 }

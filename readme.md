@@ -233,7 +233,10 @@ Amusez vous avec cette extension WordPress !
 > Ajustements et patchs de quelques bugs :
 - Les images sont désormais fixé quand à leur taille
 
-21 Février 2023 > 1.8.4 > **[Version Actuelle]**
+21 Février 2023 > 1.8.4 > [Version Ancienne]
 > Ajout des boutons pour les liens de téléchargement des documentations;
 > Téléchargement activé pour la documentation utilisateur;
 > Téléchargement activé pour la documentation technique;
+
+22 Février 2023 > 1.8.5 > **[Version Actuelle]**
+> Modification des liens de téléchargement : le téléchargement se fait désormais via un répertoire GitHib distant GitHub;

@@ -681,3 +681,195 @@
 [21-Feb-2023 10:34:11 UTC] [getAllSlide] > Fonction appellé avec succés !
 [21-Feb-2023 13:17:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
 [21-Feb-2023 13:25:01 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[22-Feb-2023 10:00:17 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[22-Feb-2023 10:08:09 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[22-Feb-2023 10:17:50 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[22-Feb-2023 10:21:18 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[22-Feb-2023 10:22:15 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[22-Feb-2023 10:27:16 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[22-Feb-2023 10:44:01 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[22-Feb-2023 10:44:01 UTC] getAllCaroussel > Fonction appellé avec succès !
+[22-Feb-2023 10:44:01 UTC] [getAllSlide] > Fonction appellé avec succés !
+[22-Feb-2023 13:04:34 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[22-Feb-2023 13:04:34 UTC] getAllCaroussel > Fonction appellé avec succès !
+[22-Feb-2023 13:04:34 UTC] [getAllSlide] > Fonction appellé avec succés !
+[24-Feb-2023 09:31:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Submenu::init() in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): tutsplus_custom_admin_settings('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-settings.php(480): do_action('plugins_loaded')
+#4 C:\wamp64\www\WordPressTest\wp-config.php(98): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\WordPressTest\wp-load.php(50): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\WordPressTest\wp-admin\admin.php(34): require_once('C:\\wamp64\\www\\W...')
+#7 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(10): require_once('C:\\wamp64\\www\\W...')
+#8 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php on line 149
+[24-Feb-2023 09:31:49 UTC] PHP Notice:  La fonction is_embed a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:31:49 UTC] PHP Stack trace:
+[24-Feb-2023 09:31:49 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:31:49 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:31:49 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:31:49 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:31:49 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:31:49 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:31:49 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:31:49 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:31:49 UTC] PHP   9. wp_robots_noindex_embeds() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:31:49 UTC] PHP  10. is_embed() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:93
+[24-Feb-2023 09:31:49 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:881
+[24-Feb-2023 09:31:49 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 09:31:49 UTC] PHP Notice:  La fonction is_search a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:31:49 UTC] PHP Stack trace:
+[24-Feb-2023 09:31:49 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:31:49 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:31:49 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:31:49 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:31:49 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:31:49 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:31:49 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:31:49 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:31:49 UTC] PHP   9. wp_robots_noindex_search() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:31:49 UTC] PHP  10. is_search() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:119
+[24-Feb-2023 09:31:49 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:699
+[24-Feb-2023 09:31:49 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 09:31:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Submenu::init() in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): tutsplus_custom_admin_settings('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-settings.php(480): do_action('plugins_loaded')
+#4 C:\wamp64\www\WordPressTest\wp-config.php(98): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\WordPressTest\wp-load.php(50): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\WordPressTest\wp-blog-header.php(13): require_once('C:\\wamp64\\www\\W...')
+#7 C:\wamp64\www\WordPressTest\index.php(17): require('C:\\wamp64\\www\\W...')
+#8 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php on line 149
+[24-Feb-2023 09:31:49 UTC] PHP Notice:  La fonction is_embed a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:31:49 UTC] PHP Stack trace:
+[24-Feb-2023 09:31:49 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:31:49 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:31:49 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:31:49 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:31:49 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:31:49 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:31:49 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:31:49 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:31:49 UTC] PHP   9. wp_robots_noindex_embeds() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:31:49 UTC] PHP  10. is_embed() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:93
+[24-Feb-2023 09:31:49 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:881
+[24-Feb-2023 09:31:49 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 09:31:49 UTC] PHP Notice:  La fonction is_search a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:31:49 UTC] PHP Stack trace:
+[24-Feb-2023 09:31:49 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:31:49 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:31:49 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:31:49 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:31:49 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:31:49 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:31:49 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:31:49 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:31:49 UTC] PHP   9. wp_robots_noindex_search() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:31:49 UTC] PHP  10. is_search() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:119
+[24-Feb-2023 09:31:49 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:699
+[24-Feb-2023 09:31:49 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 09:32:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Submenu::init() in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): tutsplus_custom_admin_settings('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-settings.php(480): do_action('plugins_loaded')
+#4 C:\wamp64\www\WordPressTest\wp-config.php(98): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\WordPressTest\wp-load.php(50): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\WordPressTest\wp-admin\admin.php(34): require_once('C:\\wamp64\\www\\W...')
+#7 C:\wamp64\www\WordPressTest\wp-admin\plugins.php(10): require_once('C:\\wamp64\\www\\W...')
+#8 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php on line 149
+[24-Feb-2023 09:32:03 UTC] PHP Notice:  La fonction is_embed a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:32:03 UTC] PHP Stack trace:
+[24-Feb-2023 09:32:03 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:32:03 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:32:03 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:32:03 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:32:03 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:32:03 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:32:03 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:32:03 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:32:03 UTC] PHP   9. wp_robots_noindex_embeds() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:32:03 UTC] PHP  10. is_embed() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:93
+[24-Feb-2023 09:32:03 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:881
+[24-Feb-2023 09:32:03 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 09:32:03 UTC] PHP Notice:  La fonction is_search a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:32:03 UTC] PHP Stack trace:
+[24-Feb-2023 09:32:03 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:32:03 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:32:03 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:32:03 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:32:03 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:32:03 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:32:03 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:32:03 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:32:03 UTC] PHP   9. wp_robots_noindex_search() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:32:03 UTC] PHP  10. is_search() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:119
+[24-Feb-2023 09:32:03 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:699
+[24-Feb-2023 09:32:03 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 09:32:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Submenu::init() in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php:149
+Stack trace:
+#0 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(308): tutsplus_custom_admin_settings('')
+#1 C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp64\www\WordPressTest\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\wamp64\www\WordPressTest\wp-settings.php(480): do_action('plugins_loaded')
+#4 C:\wamp64\www\WordPressTest\wp-config.php(98): require_once('C:\\wamp64\\www\\W...')
+#5 C:\wamp64\www\WordPressTest\wp-load.php(50): require_once('C:\\wamp64\\www\\W...')
+#6 C:\wamp64\www\WordPressTest\wp-blog-header.php(13): require_once('C:\\wamp64\\www\\W...')
+#7 C:\wamp64\www\WordPressTest\index.php(17): require('C:\\wamp64\\www\\W...')
+#8 {main}
+  thrown in C:\wamp64\www\WordPressTest\wp-content\plugins\DiapoManager\DiapoManager.php on line 149
+[24-Feb-2023 09:32:03 UTC] PHP Notice:  La fonction is_embed a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:32:03 UTC] PHP Stack trace:
+[24-Feb-2023 09:32:03 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:32:03 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:32:03 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:32:03 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:32:03 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:32:03 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:32:03 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:32:03 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:32:03 UTC] PHP   9. wp_robots_noindex_embeds() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:32:03 UTC] PHP  10. is_embed() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:93
+[24-Feb-2023 09:32:03 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:881
+[24-Feb-2023 09:32:03 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 09:32:03 UTC] PHP Notice:  La fonction is_search a été appelée de façon <strong>incorrecte</strong>. Les balises de requête conditionnelle ne fonctionnent pas avant le lancement de la requête. Avant cela, elles renvoient toujours le booléen <code>false</code>. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 3.1.0.) in C:\wamp64\www\WordPressTest\wp-includes\functions.php on line 5835
+[24-Feb-2023 09:32:03 UTC] PHP Stack trace:
+[24-Feb-2023 09:32:03 UTC] PHP   1. WP_Fatal_Error_Handler->handle() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:0
+[24-Feb-2023 09:32:03 UTC] PHP   2. WP_Fatal_Error_Handler->display_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:58
+[24-Feb-2023 09:32:03 UTC] PHP   3. WP_Fatal_Error_Handler->display_default_error_template() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:154
+[24-Feb-2023 09:32:03 UTC] PHP   4. wp_die() C:\wamp64\www\WordPressTest\wp-includes\class-wp-fatal-error-handler.php:239
+[24-Feb-2023 09:32:03 UTC] PHP   5. _default_wp_die_handler() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3713
+[24-Feb-2023 09:32:03 UTC] PHP   6. wp_robots() C:\wamp64\www\WordPressTest\wp-includes\functions.php:3789
+[24-Feb-2023 09:32:03 UTC] PHP   7. apply_filters() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:32
+[24-Feb-2023 09:32:03 UTC] PHP   8. WP_Hook->apply_filters() C:\wamp64\www\WordPressTest\wp-includes\plugin.php:205
+[24-Feb-2023 09:32:03 UTC] PHP   9. wp_robots_noindex_search() C:\wamp64\www\WordPressTest\wp-includes\class-wp-hook.php:308
+[24-Feb-2023 09:32:03 UTC] PHP  10. is_search() C:\wamp64\www\WordPressTest\wp-includes\robots-template.php:119
+[24-Feb-2023 09:32:03 UTC] PHP  11. _doing_it_wrong() C:\wamp64\www\WordPressTest\wp-includes\query.php:699
+[24-Feb-2023 09:32:03 UTC] PHP  12. trigger_error() C:\wamp64\www\WordPressTest\wp-includes\functions.php:5835
+[24-Feb-2023 10:18:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[24-Feb-2023 10:18:04 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[24-Feb-2023 10:18:04 UTC] getAllCaroussel > Fonction appellé avec succès !
+[24-Feb-2023 10:18:04 UTC] [getAllSlide] > Fonction appellé avec succés !
+[24-Feb-2023 10:20:47 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[24-Feb-2023 10:32:52 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[24-Feb-2023 10:32:52 UTC] getAllCaroussel > Fonction appellé avec succès !
+[24-Feb-2023 10:32:52 UTC] [getAllSlide] > Fonction appellé avec succés !
+[24-Feb-2023 10:33:02 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[24-Feb-2023 10:35:24 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[24-Feb-2023 10:35:24 UTC] getAllCaroussel > Fonction appellé avec succès !
+[24-Feb-2023 10:35:24 UTC] [getAllSlide] > Fonction appellé avec succés !
+[24-Feb-2023 10:35:53 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[24-Feb-2023 10:35:53 UTC] getAllCaroussel > Fonction appellé avec succès !
+[24-Feb-2023 10:35:53 UTC] [getAllSlide] > Fonction appellé avec succés !
+[24-Feb-2023 10:36:14 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !
+[24-Feb-2023 10:36:15 UTC] [DiapoManager] > Utilisateur présent sur la page de Gestion des caroussels !
+[24-Feb-2023 10:36:15 UTC] getAllCaroussel > Fonction appellé avec succès !
+[24-Feb-2023 10:36:15 UTC] [getAllSlide] > Fonction appellé avec succés !
+[24-Feb-2023 12:58:25 UTC] [ChasseAvenir87] > Utilisateur présent sur la page d'info !

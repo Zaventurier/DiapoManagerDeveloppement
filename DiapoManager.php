@@ -10,7 +10,7 @@
  * Plugin URI: https://github.com/Zaventurier/DiapoManagerDeveloppement
  * Description: Gérer des diaporamas n'à jamais été aussi simple ! Créer un diaporama, gérer les images et les descriptions que vous voulez et publiez les sur votre site via plusieurs shortcode !
  * Author: Guillaume Pascail
- * Version: 1.8.4
+ * Version: 1.8.5
  * Author URI: https://github.com/Zaventurier/
  * License: No License
  * License URI: 
@@ -119,7 +119,7 @@ class ChaAv87{
      * Summary of ver
      * @var string
      */
-    public $ver = '1.8.4';
+    public $ver = '1.8.5';
 
     public function __construct(){
 
