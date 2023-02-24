@@ -49,7 +49,70 @@ class Submenu_Diapo
                     }
                     ?>
                     <hr style="border-top: 2px solid gray;">
-                    <div class="row">
+                    <div class="row"><?php
+                    if ($id==0) {?>
+                        <div class="col-md-2 text-center" style='border-right:2px solid gray;border-top:2px solid gray;border-bottom:2px solid gray; height:75vh;background:#efefee;'>
+                            <form class="form-floating" action="" method="post">
+                                <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value=""disabled>
+                                <label for="floatingInputValue">Nom du Diaporama</label>
+                                <div class="ModifDiapo" style="margin-top:5px;">
+                                    <button value="<?php echo $id; ?>" type="submit" name="modifyDiapo" class="btn btn-primary" style="background-color:green;border-color:green;" disabled><i class="bi bi-pencil-square"></i></button>
+                                    <button value="<?php echo $id; ?>" type="submit" name="deleteDiapo" class="btn btn-primary" style="background-color:red; border-color:red;" disabled><i class="bi bi-trash3"></i></button>
+                                    <button value="<?php echo $id; ?>" type="submit" name="deleteAllSlides" class="btn btn-primary" style="background-color:orange; border-color:orange;" disabled><i class="bi bi-trash"></i></button>
+                                </div>
+                            </form>
+                            <?php
+                            /**
+                             * Vérification : 
+                             * Si le champs du nom est null ou vide, alors on affiche un message d'erreur
+                             * Sinon, on effectue la suppression
+                             */
+                            if (isset($_POST['deleteDiapo'])) {
+                                if ($_POST['deleteDiapo'] == 0) {
+                                    echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun diaporama n\'à été sélectionné !</div>';
+                                } else {
+                                    //Si le bouton supprimer est cliquer
+                                    $idDiapo = $_POST['deleteDiapo'];
+                                    deleteAllSlide($idDiapo);
+                                   deleteDiapo($idDiapo);
+                                }
+                            }
+                            if (isset($_POST['modifyDiapo'])) {
+                                if ($_POST['modifyDiapo'] == 0) {
+                                    echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">La saisit d\'un nom est obigatoire !</div>';
+                                }else {
+                                //Si le bouton modifier est cliquer
+                                $newName = $_POST['nomDiapo'];
+                                $idDiapo = $_POST['modifyDiapo'];
+                                ModifDiapo($idDiapo, $newName);   
+                                }
+                            }
+                            if (isset($_POST['deleteAllSlides'])) {
+                                if ($_POST['deleteAllSlides'] == 0) {
+                                    echo '<div class="alert alert-danger" role="alert" style="margin-top:10px">Aucun diaporama n\'à été sélectionné !</div>';
+                                }else{
+                                    $idDiapo = $_POST['deleteAllSlides'];
+                                    deleteAllSlide($idDiapo);
+                                }
+                            }
+                            ?>
+                            <hr style="border-top: 2px solid gray;">
+                            <div class="AddSlide">
+                                <button data-bs-toggle="modal" data-bs-target="#AddSlide" type="submit" name="creer" class="btn btn-outline-secondary" disabled><i class="bi bi-plus-lg"></i>Ajouter un Slide</button>
+                            </div>
+                            <hr style="border-top: 2px solid gray;">
+                            <div class="mb-3">
+                                <label class="form-label">Créer un diaporama automatique :</label>
+                                <input class="form-control" type="text" aria-label="readonly input example" value="" disabled>
+                            </div>
+                            <hr style="border-top: 2px solid gray;">
+                            <div class="mb-3">
+                                <label class="form-label">Créer un diaporama manuel :</label>
+                                <input class="form-control" type="text" aria-label="readonly input example" value="" disabled>
+                            </div>
+                            <hr style="border-top: 2px solid gray;">
+                        </div><?php
+                        } else {?>
                         <div class="col-md-2 text-center" style='border-right:2px solid gray;border-top:2px solid gray;border-bottom:2px solid gray; height:75vh;background:#efefee;'>
                             <form class="form-floating" action="" method="post">
                                 <input name="nomDiapo" type="input" class="form-control" id="floatingInputValue" style="width:100%;margin-top:10px;" value="<?php echo $nom ?>">
@@ -110,7 +173,9 @@ class Submenu_Diapo
                                 <input class="form-control" type="text" aria-label="readonly input example" value="<?php echo '[DiapoM id='. $id .']'?>" readonly>
                             </div>
                             <hr style="border-top: 2px solid gray;">
-                        </div>
+                        </div><?php
+                        }
+                        ?>
                         <div class="col-md-9 text-center" style='height: 500vh;'>
                             <?php
                             $AllSlide = getAllSlide($id);

@@ -238,5 +238,8 @@ Amusez vous avec cette extension WordPress !
 > Téléchargement activé pour la documentation utilisateur;
 > Téléchargement activé pour la documentation technique;
 
-22 Février 2023 > 1.8.5 > **[Version Actuelle]**
+22 Février 2023 > 1.8.5 > [Version Ancienne]
 > Modification des liens de téléchargement : le téléchargement se fait désormais via un répertoire GitHib distant GitHub;
+
+24 Février 2023 > 1.8.6 > **[Version Actuelle]**
+> Patch d'un bug majeure : L'utilisateur ne peut plus ajouter de slide si l'id du diaporama ets égal à 0;
